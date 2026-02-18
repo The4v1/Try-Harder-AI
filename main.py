@@ -204,7 +204,7 @@ class TryHarderAI(commands.Bot):
         # Print startup banner
         print("\n" + "="*70)
         print("║" + " "*68 + "║")
-        print("║" + "           🎯 TRY-HARDER-AI BOT ONLINE 🎯".center(66) + "║")
+        print("║" + "🎯 TRY-HARDER-AI BOT ONLINE 🎯".center(66) + "║")
         print("║" + " "*68 + "║")
         print("="*70)
         print(f"║ Bot User:        {str(self.user).ljust(49)} ║")
@@ -638,4 +638,5 @@ if __name__ == "__main__":
         print("  3. You have Python 3.10+ installed")
         print("  4. All dependencies are installed (pip install -r requirements.txt)")
         print(f"\nFor help, see: SETUP.md or QUICKSTART.md")
+
         sys.exit(1)
