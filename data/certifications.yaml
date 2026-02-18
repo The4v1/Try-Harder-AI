@@ -1,0 +1,4528 @@
+# ==========================================
+# Try-Harder-AI Certifications Database
+# ==========================================
+# Comprehensive data for all OffSec certifications
+# Version: 2.0.0
+# Last Updated: 2025
+# No word limit - Complete detailed information
+# ==========================================
+
+metadata:
+  version: "2.0.0"
+  last_updated: "2026-02-15"
+  total_certifications: 12
+  provider: "Offensive Security (OffSec)"
+  maintained_by: "Try-Harder-AI Team"
+
+certifications:
+  # ==========================================
+  # OSCP - Offensive Security Certified Professional
+  # ==========================================
+  OSCP:
+    name: "Offensive Security Certified Professional"
+    code: "OSCP"
+    provider: "Offensive Security"
+    level: "Intermediate"
+    difficulty: "Intermediate to Advanced"
+    
+    description: |
+      The OSCP is the industry's most recognized hands-on penetration testing certification. 
+      It validates your ability to identify vulnerabilities, execute attacks, and demonstrate 
+      a methodical approach to penetration testing. The certification focuses on practical 
+      skills rather than theoretical knowledge, requiring candidates to compromise multiple 
+      machines in a controlled environment and document their findings professionally.
+      
+      What makes OSCP unique is its practical exam format - 23 hours and 45 minutes of 
+      hands-on exploitation followed by 24 hours to submit a comprehensive penetration 
+      testing report. This tests not only technical skills but also time management, 
+      methodology, and professional documentation abilities.
+      
+      OSCP holders are recognized worldwide as competent penetration testers who can 
+      think outside the box and "Try Harder" when faced with challenges.
+    
+    prerequisites:
+      required:
+        - "Solid understanding of TCP/IP networking"
+        - "Basic Linux and Windows administration"
+        - "Fundamental programming/scripting knowledge (Python, Bash)"
+        - "Understanding of information security concepts"
+      
+      recommended:
+        - "6-12 months of IT or security experience"
+        - "Familiarity with Kali Linux"
+        - "Basic understanding of web technologies"
+        - "Experience with virtual machines and networking"
+        - "Completed 20-30 practice machines on platforms like HTB/THM"
+      
+      helpful_certifications:
+        - "CompTIA Security+"
+        - "CompTIA Network+"
+        - "CEH (Certified Ethical Hacker)"
+    
+    exam:
+      duration: "23 hours 45 minutes (practical) + 24 hours (report)"
+      format: "100% Practical Hands-on"
+      passing_score: "70 points out of 100"
+      
+      structure:
+        total_points: 100
+        components:
+          - name: "3 Standalone Machines"
+            points: 60
+            description: "Three independent machines to fully compromise"
+            details: "Each machine worth 20 points (10 for user shell, 10 for root/system)"
+          
+          - name: "Active Directory Set"
+            points: 40
+            description: "One Active Directory environment with multiple machines"
+            details: "Must compromise the entire AD set to receive points"
+          
+          - name: "Bonus Points"
+            points: 10
+            description: "Optional bonus points for completing course exercises and lab report"
+            details: "Submit lab report before exam for 10 bonus points"
+      
+      attempts_included: 2
+      retake_policy: "Additional exam attempts can be purchased separately"
+      proctoring: "Fully proctored via webcam and screen sharing"
+      allowed_breaks: "Unlimited breaks, exam timer continues"
+      
+      report_requirements:
+        - "Professional penetration testing report"
+        - "Executive summary for non-technical audience"
+        - "Detailed technical walkthrough with screenshots"
+        - "Proof-of-concept code and commands"
+        - "Remediation recommendations"
+        - "Must be submitted within 24 hours of exam end"
+      
+      exam_tips:
+        - "Enumerate thoroughly - spend 30-45 minutes on each target initially"
+        - "Screenshot everything as you go, don't wait until the end"
+        - "Start with the easiest-looking target to build confidence"
+        - "If stuck for 2 hours on one target, move to another"
+        - "Take regular breaks every 2-3 hours to stay fresh"
+        - "Use the first 30 minutes to plan your approach"
+        - "Keep detailed notes of all commands and findings"
+        - "Test your VPN connection before exam start"
+        - "Prepare your report template in advance"
+        - "Time management: Aim for 3 standalone machines in first 12-15 hours"
+        - "Don't panic if AD set seems difficult - standalone machines alone can pass"
+        - "Read the exam guide carefully - know what's allowed and forbidden"
+        - "Revert machines if they become unstable"
+        - "Document local.txt and proof.txt hashes immediately"
+        - "Have backup internet connection ready"
+    
+    cost:
+      Course + Cert Bundle: 1749
+      learn_one: 2749
+      currency: "USD"
+      
+      breakdown:
+        course_materials: "Included"
+        lab_access: "90 days (Course + Cert Bundle) or 365 days (Learn One)"
+        exam_attempts: "2 attempts included (Learn One only)"
+        practice_exams: "6 (Learn one only)"
+        
+      additional_costs:
+        extra_lab_time_30_days: 349
+        extra_lab_time_60_days: 579
+        extra_lab_time_90_days: 849
+        single_exam_retake: 249
+        
+      financing_available: true
+      student_discount: false
+      military_discount: true
+    
+    topics:
+      - name: "Information Gathering & Enumeration"
+        weight: 25
+        subtopics:
+          - "Passive information gathering (OSINT)"
+          - "Active information gathering (port scanning, service enumeration)"
+          - "DNS enumeration and zone transfers"
+          - "SNMP enumeration"
+          - "SMB enumeration"
+          - "NFS enumeration"
+          - "Web application enumeration"
+        key_tools:
+          - "nmap"
+          - "gobuster/feroxbuster/dirbuster"
+          - "enum4linux"
+          - "smbclient/smbmap"
+          - "nikto"
+          - "searchsploit"
+        
+      - name: "Vulnerability Scanning & Analysis"
+        weight: 15
+        subtopics:
+          - "Manual vulnerability identification"
+          - "Automated scanning with tools"
+          - "Version identification and exploit matching"
+          - "False positive identification"
+          - "Exploit modification"
+        key_tools:
+          - "Nessus"
+          - "OpenVAS"
+          - "searchsploit"
+          - "ExploitDB"
+        
+      - name: "Web Application Attacks"
+        weight: 20
+        subtopics:
+          - "SQL injection (manual and automated)"
+          - "Cross-site scripting (XSS)"
+          - "File inclusion vulnerabilities (LFI/RFI)"
+          - "File upload vulnerabilities"
+          - "Command injection"
+          - "Authentication bypass"
+          - "Directory traversal"
+          - "Server-side request forgery (SSRF)"
+        key_tools:
+          - "Burp Suite"
+          - "SQLMap"
+          - "ffuf"
+          - "curl/wget"
+          - "Browser developer tools"
+        
+      - name: "Linux Privilege Escalation"
+        weight: 15
+        subtopics:
+          - "SUID/SGID binary exploitation"
+          - "Kernel exploits"
+          - "Sudo misconfigurations"
+          - "Cron job exploitation"
+          - "Path hijacking"
+          - "Capabilities exploitation"
+          - "NFS root squashing"
+          - "Writable files and directories"
+        key_tools:
+          - "LinPEAS"
+          - "LinEnum"
+          - "GTFOBins"
+          - "pspy"
+          - "Linux Exploit Suggester"
+        
+      - name: "Windows Privilege Escalation"
+        weight: 15
+        subtopics:
+          - "Unquoted service paths"
+          - "Service misconfigurations"
+          - "Registry exploits"
+          - "DLL hijacking"
+          - "Scheduled tasks"
+          - "Token impersonation"
+          - "Always Install Elevated"
+          - "Kernel exploits"
+        key_tools:
+          - "WinPEAS"
+          - "PowerUp"
+          - "Sherlock"
+          - "Windows Exploit Suggester"
+          - "accesschk"
+        
+      - name: "Active Directory Attacks"
+        weight: 20
+        subtopics:
+          - "AD enumeration with PowerView and BloodHound"
+          - "Kerberoasting"
+          - "AS-REP Roasting"
+          - "Pass-the-Hash"
+          - "Pass-the-Ticket"
+          - "Token impersonation"
+          - "Lateral movement techniques"
+          - "Domain privilege escalation"
+          - "DCSync attacks"
+        key_tools:
+          - "BloodHound"
+          - "PowerView"
+          - "Rubeus"
+          - "Mimikatz"
+          - "Impacket suite"
+          - "CrackMapExec"
+        
+      - name: "Client-Side Attacks"
+        weight: 5
+        subtopics:
+          - "Social engineering basics"
+          - "Malicious document creation"
+          - "Browser exploitation"
+          - "Phishing techniques"
+        key_tools:
+          - "Metasploit Framework"
+          - "msfvenom"
+          - "Social-Engineer Toolkit (SET)"
+        
+      - name: "Password Attacks"
+        weight: 10
+        subtopics:
+          - "Password cracking (hashes)"
+          - "Brute force attacks"
+          - "Dictionary attacks"
+          - "Password spraying"
+          - "Credential dumping"
+        key_tools:
+          - "Hashcat"
+          - "John the Ripper"
+          - "Hydra"
+          - "Medusa"
+          - "CrackMapExec"
+        
+      - name: "Port Redirection & Tunneling"
+        weight: 5
+        subtopics:
+          - "SSH tunneling"
+          - "Port forwarding"
+          - "Pivoting techniques"
+          - "Proxy chains"
+        key_tools:
+          - "SSH"
+          - "Chisel"
+          - "Ligolo"
+          - "sshuttle"
+          - "socat"
+        
+      - name: "Post-Exploitation"
+        weight: 5
+        subtopics:
+          - "Maintaining access"
+          - "Covering tracks"
+          - "Data exfiltration"
+          - "Screenshot and keylogging"
+        key_tools:
+          - "Metasploit persistence modules"
+          - "Custom scripts"
+        
+      - name: "Report Writing"
+        weight: 5
+        subtopics:
+          - "Professional documentation"
+          - "Executive summary creation"
+          - "Technical writing"
+          - "Screenshot management"
+          - "Remediation recommendations"
+        key_tools:
+          - "Markdown editors"
+          - "Screenshot tools (Flameshot, Greenshot)"
+          - "Note-taking apps (CherryTree, Obsidian)"
+    
+    resources:
+      essential:
+        - name: "PEN-200: Penetration Testing with Kali Linux (Official Course)"
+          type: "Course"
+          cost: "Included"
+          priority: "Critical"
+          url: "https://www.offsec.com/courses/pen-200/"
+          description: "Official OSCP course material with PDF and video content"
+          
+        - name: "OSCP Lab Environment"
+          type: "Practice Lab"
+          cost: "Included"
+          priority: "Critical"
+          description: "Official practice lab with 70+ machines"
+          
+        - name: "TJ Null's OSCP Preparation List"
+          type: "Machine List"
+          cost: "Free"
+          priority: "Critical"
+          url: "https://docs.google.com/spreadsheets/u/1/d/1dwSMIAPIam0PuRBkCiDI88pU3yzrqqHkDtBngUHNCw8/htmlview"
+          description: "Community-curated list of OSCP-like machines"
+          
+        - name: "OSCP Exam Guide"
+          type: "Documentation"
+          cost: "Free"
+          priority: "Critical"
+          url: "https://help.offsec.com/hc/en-us/articles/360040165632-OSCP-Exam-Guide"
+          description: "Official exam policies and requirements"
+      
+      recommended:
+        - name: "HackTheBox VIP"
+          type: "Practice Platform"
+          cost: "$14/month"
+          priority: "High"
+          url: "https://www.hackthebox.com"
+          description: "Retired machines from TJ Null's list"
+          
+        - name: "TryHackMe Offensive Pentesting Path"
+          type: "Learning Path"
+          cost: "$10.99/month"
+          priority: "High"
+          url: "https://tryhackme.com/paths"
+          description: "Structured learning path with beginner-friendly content"
+          
+        - name: "Proving Grounds Practice"
+          type: "Practice Lab"
+          cost: "$19/month"
+          priority: "High"
+          url: "https://www.offsec.com/labs/individual/"
+          description: "OffSec's official practice platform with OSCP-like boxes"
+          
+        - name: "IppSec YouTube Channel"
+          type: "Video Walkthroughs"
+          cost: "Free"
+          priority: "High"
+          url: "https://www.youtube.com/c/ippsec"
+          description: "Detailed video walkthroughs of HTB machines"
+          
+        - name: "0xdf Blog"
+          type: "Written Walkthroughs"
+          cost: "Free"
+          priority: "High"
+          url: "https://0xdf.gitlab.io/"
+          description: "Comprehensive writeups with multiple exploitation paths"
+          
+        - name: "HackTricks"
+          type: "Reference Book"
+          cost: "Free"
+          priority: "High"
+          url: "https://book.hacktricks.xyz/"
+          description: "Comprehensive pentesting methodology and techniques"
+          
+        - name: "GTFOBins"
+          type: "Reference"
+          cost: "Free"
+          priority: "Medium"
+          url: "https://gtfobins.github.io/"
+          description: "Unix binary exploitation for privilege escalation"
+          
+        - name: "LOLBAS"
+          type: "Reference"
+          cost: "Free"
+          priority: "Medium"
+          url: "https://lolbas-project.github.io/"
+          description: "Living Off The Land Binaries And Scripts for Windows"
+          
+        - name: "PayloadsAllTheThings"
+          type: "Repository"
+          cost: "Free"
+          priority: "Medium"
+          url: "https://github.com/swisskyrepo/PayloadsAllTheThings"
+          description: "Collection of useful payloads and bypasses"
+          
+        - name: "Privilege Escalation Awesome Scripts"
+          type: "Tools"
+          cost: "Free"
+          priority: "High"
+          url: "https://github.com/carlospolop/PEASS-ng"
+          description: "LinPEAS and WinPEAS for automated enumeration"
+      
+      practice_platforms:
+        - name: "HackTheBox"
+          url: "https://www.hackthebox.com"
+          cost: "Free (Limited) / $14/month (VIP)"
+          focus: "Retired machines from TJ Null's list"
+          difficulty: "Beginner to Advanced"
+          notes: "Essential for OSCP preparation"
+          
+        - name: "TryHackMe"
+          url: "https://tryhackme.com"
+          cost: "Free (Limited) / $10.99/month (Premium)"
+          focus: "Beginner-friendly guided learning"
+          difficulty: "Beginner to Intermediate"
+          notes: "Great for learning fundamentals"
+          
+        - name: "Proving Grounds Practice"
+          url: "https://www.offsec.com/labs/individual/"
+          cost: "$19/month"
+          focus: "OSCP-style machines by OffSec"
+          difficulty: "Intermediate to Advanced"
+          notes: "Most similar to actual exam"
+          
+        - name: "VulnHub"
+          url: "https://www.vulnhub.com"
+          cost: "Free"
+          focus: "Downloadable vulnerable VMs"
+          difficulty: "All levels"
+          notes: "Great for offline practice"
+          
+        - name: "OffSec Playground"
+          url: "https://www.offsec.com/labs/individual/"
+          cost: "$19/month"
+          focus: "Additional OSCP prep machines"
+          difficulty: "Intermediate"
+          notes: "Complementary to PG Practice"
+      
+      tools:
+        enumeration:
+          - "nmap"
+          - "rustscan"
+          - "autorecon"
+          - "gobuster"
+          - "feroxbuster"
+          - "ffuf"
+          - "enum4linux"
+          - "smbclient"
+          - "smbmap"
+          - "ldapsearch"
+          
+        web_testing:
+          - "Burp Suite Community"
+          - "SQLMap"
+          - "nikto"
+          - "wfuzz"
+          - "wpscan"
+          - "curl"
+          - "Browser DevTools"
+          
+        exploitation:
+          - "Metasploit Framework"
+          - "searchsploit"
+          - "msfvenom"
+          - "nc (netcat)"
+          
+        privilege_escalation:
+          - "LinPEAS"
+          - "WinPEAS"
+          - "linuxprivchecker"
+          - "windows-privesc-check"
+          - "PowerUp.ps1"
+          
+        active_directory:
+          - "BloodHound"
+          - "PowerView"
+          - "Rubeus"
+          - "Mimikatz"
+          - "Impacket"
+          - "CrackMapExec"
+          - "evil-winrm"
+          
+        password_attacks:
+          - "Hashcat"
+          - "John the Ripper"
+          - "Hydra"
+          - "Medusa"
+          
+        post_exploitation:
+          - "chisel"
+          - "ligolo-ng"
+          - "socat"
+          - "ssh"
+          
+        note_taking:
+          - "CherryTree"
+          - "Obsidian"
+          - "Joplin"
+          - "OneNote"
+          
+        screenshot:
+          - "Flameshot"
+          - "Greenshot"
+          - "Shutter"
+    
+    study_plan:
+      total_duration: "12-16 weeks"
+      hours_per_week: "15-20"
+      
+      phases:
+        - name: "Foundation Building"
+          duration: "3-4 weeks"
+          hours_per_week: 15
+          
+          goals:
+            - "Master Linux and Windows command line"
+            - "Understand networking fundamentals"
+            - "Setup lab environment"
+            - "Learn basic enumeration"
+            
+          focus_areas:
+            - "Linux basics (file system, permissions, users)"
+            - "Windows basics (services, registry, AD basics)"
+            - "TCP/IP networking (ports, protocols)"
+            - "Basic scripting (Bash, PowerShell)"
+            - "Kali Linux tools overview"
+            
+          activities:
+            - "Complete TryHackMe Pre-Security path"
+            - "Setup Kali Linux VM"
+            - "Practice 10-15 easy HTB/THM boxes"
+            - "Document methodology"
+            
+          milestones:
+            - "Comfortable with Kali Linux environment"
+            - "Can enumerate services manually"
+            - "Understand basic exploitation flow"
+            - "Completed first 10 practice machines"
+            
+          resources:
+            - "TryHackMe Pre-Security Path"
+            - "PEN-200 Course Modules 1-5"
+            - "Basic enumeration scripts"
+        
+        - name: "Core Skills Development"
+          duration: "5-6 weeks"
+          hours_per_week: 20
+          
+          goals:
+            - "Master web application attacks"
+            - "Learn privilege escalation techniques"
+            - "Understand Active Directory basics"
+            - "Develop consistent methodology"
+            
+          focus_areas:
+            - "OWASP Top 10 vulnerabilities"
+            - "Linux privilege escalation (SUID, sudo, kernel)"
+            - "Windows privilege escalation (services, registry)"
+            - "Active Directory enumeration and basic attacks"
+            - "Metasploit usage"
+            
+          activities:
+            - "Complete 30-40 intermediate machines"
+            - "Focus on TJ Null's OSCP list"
+            - "Practice all privilege escalation vectors"
+            - "Setup home AD lab (GOAD)"
+            
+          milestones:
+            - "Comfortable with common privesc vectors"
+            - "Can identify and exploit web vulnerabilities"
+            - "Understand AD enumeration"
+            - "Completed 40+ total machines"
+            
+          resources:
+            - "PEN-200 Course Modules 6-15"
+            - "HackTricks privilege escalation sections"
+            - "PortSwigger Academy"
+            - "GOAD Lab"
+        
+        - name: "Advanced Techniques"
+          duration: "2-3 weeks"
+          hours_per_week: 20
+          
+          goals:
+            - "Master Active Directory attacks"
+            - "Practice advanced exploitation"
+            - "Improve speed and efficiency"
+            - "Perfect methodology"
+            
+          focus_areas:
+            - "Advanced AD attacks (Kerberoasting, AS-REP, DCSync)"
+            - "Lateral movement and pivoting"
+            - "Advanced web exploitation"
+            - "Report writing practice"
+            
+          activities:
+            - "Complete AD attack chains"
+            - "Practice on Proving Grounds"
+            - "Speed challenges (complete boxes in 2-3 hours)"
+            - "Write practice reports"
+            
+          milestones:
+            - "Can compromise AD environments"
+            - "Comfortable with lateral movement"
+            - "Improved enumeration speed"
+            - "Professional documentation skills"
+            
+          resources:
+            - "PEN-200 Course Modules 16-20"
+            - "Proving Grounds Practice boxes"
+            - "Active Directory attack guides"
+        
+        - name: "Exam Preparation"
+          duration: "2-3 weeks"
+          hours_per_week: 25
+          
+          goals:
+            - "Simulate exam conditions"
+            - "Perfect time management"
+            - "Final knowledge gaps review"
+            - "Mental preparation"
+            
+          focus_areas:
+            - "Mock exams (24-hour sessions)"
+            - "Report writing under time pressure"
+            - "Weak area remediation"
+            - "Exam strategy refinement"
+            
+          activities:
+            - "Complete 2-3 full mock exams"
+            - "Practice Proving Grounds Challenge boxes"
+            - "Review all course material"
+            - "Prepare cheat sheets and templates"
+            
+          milestones:
+            - "Can complete 3 boxes in 12-15 hours"
+            - "Professional report in 3-4 hours"
+            - "All weak areas addressed"
+            - "Exam strategy finalized"
+            
+          resources:
+            - "OffSec Practice Exams (Learn Plus)"
+            - "Proving Grounds Challenge"
+            - "Report templates"
+      
+      week_by_week:
+        week_1:
+          focus: "Environment Setup & Linux Basics"
+          tasks:
+            - "Install and configure Kali Linux"
+            - "Learn Linux command line basics"
+            - "Complete TryHackMe Linux Fundamentals"
+            - "Practice nmap scanning"
+          machines: "2-3 easy Linux boxes"
+          hours: 15
+          
+        week_2:
+          focus: "Windows Basics & Networking"
+          tasks:
+            - "Learn Windows command line and PowerShell"
+            - "Study TCP/IP networking"
+            - "Practice service enumeration"
+            - "Learn SMB enumeration"
+          machines: "2-3 easy Windows boxes"
+          hours: 15
+          
+        week_3:
+          focus: "Web Application Fundamentals"
+          tasks:
+            - "Learn directory enumeration"
+            - "Practice with Burp Suite"
+            - "Study OWASP Top 10"
+            - "Complete PortSwigger SQL injection labs"
+          machines: "3-4 easy web boxes"
+          hours: 15
+          
+        week_4:
+          focus: "Basic Exploitation"
+          tasks:
+            - "Learn searchsploit usage"
+            - "Practice exploit modification"
+            - "Study reverse shells"
+            - "Document methodology"
+          machines: "3-4 boxes focusing on public exploits"
+          hours: 15
+          
+        week_5:
+          focus: "Linux Privilege Escalation"
+          tasks:
+            - "Study SUID/SGID exploitation"
+            - "Learn sudo misconfigurations"
+            - "Practice with LinPEAS"
+            - "Study kernel exploits"
+          machines: "4-5 Linux boxes with various privesc vectors"
+          hours: 20
+          
+        week_6:
+          focus: "Windows Privilege Escalation"
+          tasks:
+            - "Study service misconfigurations"
+            - "Learn registry exploits"
+            - "Practice with WinPEAS"
+            - "Study token impersonation"
+          machines: "4-5 Windows boxes with various privesc vectors"
+          hours: 20
+          
+        week_7:
+          focus: "Web Exploitation Deep Dive"
+          tasks:
+            - "Master SQL injection (manual and automated)"
+            - "Practice file inclusion attacks"
+            - "Learn file upload bypasses"
+            - "Study authentication bypass"
+          machines: "5 web-heavy boxes"
+          hours: 20
+          
+        week_8:
+          focus: "Active Directory Introduction"
+          tasks:
+            - "Setup GOAD lab"
+            - "Learn AD enumeration with BloodHound"
+            - "Study Kerberoasting"
+            - "Practice AS-REP Roasting"
+          machines: "2-3 AD-focused boxes"
+          hours: 20
+          
+        week_9:
+          focus: "Advanced Active Directory"
+          tasks:
+            - "Master lateral movement"
+            - "Practice Pass-the-Hash"
+            - "Learn DCSync attacks"
+            - "Study domain privilege escalation"
+          machines: "3-4 AD boxes"
+          hours: 20
+          
+        week_10:
+          focus: "Advanced Techniques & Speed"
+          tasks:
+            - "Practice pivoting and tunneling"
+            - "Speed challenges on known boxes"
+            - "Advanced web exploitation"
+            - "Buffer overflow practice (if needed)"
+          machines: "5-6 boxes focusing on speed"
+          hours: 20
+          
+        week_11:
+          focus: "Proving Grounds & Weak Areas"
+          tasks:
+            - "Complete PG Practice boxes"
+            - "Address weak areas"
+            - "Practice report writing"
+            - "Build cheat sheets"
+          machines: "5-7 PG boxes"
+          hours: 25
+          
+        week_12:
+          focus: "Mock Exams"
+          tasks:
+            - "First mock exam (24 hours)"
+            - "Review and improve"
+            - "Second mock exam"
+            - "Final preparations"
+          machines: "Mock exam sets"
+          hours: 30
+    
+    tips:
+      general:
+        - "Try Harder doesn't mean brute force - it means enumerate more thoroughly"
+        - "Document everything as you go, not at the end"
+        - "Build a consistent methodology and stick to it"
+        - "Join the OffSec Discord and InfoSec Prep community"
+        - "Don't rely too heavily on automated tools"
+        - "Learn to read and modify exploits, don't just run them"
+        - "Master the basics before moving to advanced topics"
+        - "Quality over quantity - understand each box you complete"
+        
+      study_tips:
+        - "Study consistently - 2 hours daily is better than 14 hours on Sunday"
+        - "Take detailed notes that you can reference during the exam"
+        - "Create cheat sheets for common commands and techniques"
+        - "Practice both manual and automated techniques"
+        - "Review your methodology after every machine"
+        - "Don't just follow walkthroughs - try to root machines yourself first"
+        - "Understand WHY exploits work, not just HOW to run them"
+        
+      exam_day:
+        - "Get a good night's sleep before the exam"
+        - "Prepare meals and snacks in advance"
+        - "Test your VPN connection beforehand"
+        - "Start with enumeration on all targets"
+        - "Pick the easiest-looking target first"
+        - "Take breaks every 2-3 hours"
+        - "Don't get tunnel vision on one target"
+        - "Screenshot local.txt and proof.txt immediately"
+        - "Keep your notes organized throughout"
+        - "Leave 3-4 hours for report writing"
+        
+      common_mistakes:
+        - "Not enumerating thoroughly before attempting exploitation"
+        - "Giving up too quickly when stuck"
+        - "Not taking screenshots or proper notes"
+        - "Trying to run before you can walk (skipping fundamentals)"
+        - "Only learning one way to exploit something"
+        - "Not practicing report writing before the exam"
+        - "Burning out from over-studying"
+        - "Relying too much on Metasploit"
+    
+    career:
+      job_roles:
+        - "Penetration Tester"
+        - "Security Analyst"
+        - "Vulnerability Assessor"
+        - "Red Team Operator"
+        - "Security Consultant"
+        - "Application Security Tester"
+        
+      salary_range:
+        entry_level: "$65,000 - $85,000"
+        mid_level: "$85,000 - $120,000"
+        senior_level: "$120,000 - $180,000+"
+        location_note: "Salaries vary significantly by location and company"
+        
+      next_certifications:
+        - "OSEP (Offensive Security Experienced Penetration Tester)"
+        - "OSWE (Offensive Security Web Expert)"
+        - "CRTO (Certified Red Team Operator)"
+        - "PNPT (Practical Network Penetration Tester)"
+        
+      industry_recognition:
+        - "Highly valued in cybersecurity industry"
+        - "Often required or preferred for pentesting roles"
+        - "Recognized globally"
+        - "Demonstrates practical, hands-on skills"
+        - "ANSI accredited"
+    
+    community:
+      discord_servers:
+        - name: "OffSec Official Discord"
+          url: "https://discord.gg/offsec"
+          description: "Official OffSec community"
+          
+        - name: "InfoSec Prep Discord"
+          url: "https://discord.gg/infosecprep"
+          description: "OSCP-focused study community"
+          
+        - name: "NetSecFocus (Trophy Bot)"
+          url: "https://discord.gg/netsecfocus"
+          description: "HTB-focused with trophy tracking"
+          
+      subreddits:
+        - "r/oscp"
+        - "r/HowToHack"
+        - "r/netsec"
+        - "r/AskNetsec"
+        
+      youtube_channels:
+        - "IppSec"
+        - "John Hammond"
+        - "The Cyber Mentor"
+        - "HackerSploit"
+        
+      blogs:
+        - "0xdf Blog"
+        - "Rana Khalil"
+        - "Hacking Articles"
+    
+    success_rate:
+      first_attempt: "25-40%"
+      with_retake: "60-75%"
+      
+      factors_affecting_success:
+        - "Prior IT/security experience"
+        - "Study time invested (200-400 hours typical)"
+        - "Number of practice machines completed (40-60+ recommended)"
+        - "Understanding of fundamentals"
+        - "Methodology development"
+        - "Report writing skills"
+
+  # ==========================================
+  # OSEP - Offensive Security Experienced Penetration Tester
+  # ==========================================
+  OSEP:
+    name: "Offensive Security Experienced Penetration Tester"
+    code: "OSEP"
+    provider: "Offensive Security"
+    level: "Advanced"
+    difficulty: "Advanced"
+    
+    description: |
+      OSEP is an advanced penetration testing certification that goes beyond OSCP, focusing 
+      on modern enterprise environments and evasion techniques. This certification validates 
+      your ability to conduct sophisticated attacks against hardened Windows networks with 
+      Active Directory, bypass modern security controls (AV, EDR, application whitelisting), 
+      and demonstrate advanced post-exploitation techniques.
+      
+      The course emphasizes developing custom tools and exploits, advanced Active Directory 
+      attacks, lateral movement in complex networks, and evading detection by defensive 
+      security solutions. Unlike OSCP which focuses on fundamentals, OSEP assumes you're 
+      already comfortable with basic penetration testing and pushes you into real-world 
+      enterprise scenarios.
+      
+      The 48-hour exam tests your ability to compromise a complex Active Directory network 
+      while evading various security controls, demonstrating that you can operate like a 
+      real-world adversary in hardened enterprise environments.
+    
+    prerequisites:
+      required:
+        - "OSCP or equivalent practical pentesting experience"
+        - "Strong Windows and Active Directory knowledge"
+        - "Proficiency in C#, PowerShell, and C/C++"
+        - "Understanding of Windows internals"
+        - "Experience with AV/EDR evasion concepts"
+        
+      recommended:
+        - "1-2 years of penetration testing experience"
+        - "OSCP certification"
+        - "Experience with Red Team operations"
+        - "Understanding of .NET framework"
+        - "Familiarity with code development"
+        - "Active Directory attack experience"
+        
+      helpful_certifications:
+        - "OSCP"
+        - "CRTO"
+        - "eCPTXv2"
+    
+    exam:
+      duration: "47 hours 45 minutes (practical) + 24 hours (report)"
+      format: "100% Practical - Complex AD Network"
+      passing_score: "80 points out of 100"
+      
+      structure:
+        total_points: 100
+        components:
+          - name: "Secret Flag 1"
+            points: 10
+            description: "Initial access objective"
+            
+          - name: "Secret Flag 2"
+            points: 10
+            description: "Lateral movement objective"
+            
+          - name: "Secret Flag 3"
+            points: 10
+            description: "Advanced persistence objective"
+            
+          - name: "Secret Flag 4"
+            points: 10
+            description: "Domain compromise objective"
+            
+          - name: "Additional Flags"
+            points: 60
+            description: "Various objectives throughout the network"
+            
+      attempts_included: 1
+      retake_policy: "Additional exam attempts available for purchase"
+      proctoring: "Fully proctored via webcam and screen sharing"
+      allowed_breaks: "Unlimited breaks, exam timer continues"
+      
+      exam_requirements:
+        - "Must evade AV/EDR solutions"
+        - "Cannot use pre-built tools for evasion"
+        - "Must develop custom exploits/tools"
+        - "Professional penetration testing report required"
+        - "Detailed technical documentation"
+        
+      exam_tips:
+        - "Practice building custom tools before the exam"
+        - "Master .NET and C# development"
+        - "Learn multiple evasion techniques, not just one"
+        - "Understand how AV/EDR works to bypass them"
+        - "Document every command and tool you create"
+        - "Time management is crucial - 48 hours goes fast"
+        - "Don't spend too long on one evasion technique"
+        - "Keep your custom tools organized"
+        - "Test your tools thoroughly before using them"
+        - "Take strategic breaks to stay sharp"
+    
+    cost:
+      Course + Cert Bundle: 1749
+      learn_one: 2749
+      currency: "USD"
+      
+      breakdown:
+        course_materials: "Included"
+        lab_access: "90 days (Course + Cert Bundle) or 365 days (Learn One)"
+        exam_attempts: "2 attempts included (Learn One only)"
+        practice_exams: "6 (Learn one only)"
+        
+      additional_costs:
+        extra_lab_time_30_days: 469
+        single_exam_retake: 449
+        
+      financing_available: true
+      student_discount: false
+      military_discount: true
+    
+    topics:
+      - name: "Advanced Active Directory Attacks"
+        weight: 30
+        subtopics:
+          - "Advanced Kerberos attacks"
+          - "Trust relationship exploitation"
+          - "Forest/domain trust abuse"
+          - "MSSQL server exploitation"
+          - "Delegation abuse"
+          - "Advanced credential dumping"
+          - "DCSync and DCShadow"
+          - "Golden/Silver ticket creation"
+          - "Skeleton Key attacks"
+          
+      - name: "AV/EDR Evasion"
+        weight: 25
+        subtopics:
+          - "AMSI bypass techniques"
+          - "ETW patching"
+          - "API hooking detection and bypass"
+          - "In-memory execution"
+          - "Process injection techniques"
+          - "Code obfuscation"
+          - "Signature evasion"
+          - "Behavior-based detection bypass"
+          
+      - name: "C2 Development & Usage"
+        weight: 15
+        subtopics:
+          - "Custom C2 framework development"
+          - "Cobalt Strike usage"
+          - "Sliver framework"
+          - "Covenant framework"
+          - "Custom implant development"
+          - "C2 communication protocols"
+          
+      - name: "Lateral Movement & Persistence"
+        weight: 15
+        subtopics:
+          - "Advanced lateral movement techniques"
+          - "WMI and DCOM exploitation"
+          - "Advanced persistence mechanisms"
+          - "Service creation and manipulation"
+          - "Scheduled task abuse"
+          - "Registry persistence"
+          
+      - name: "Code Development & Tool Creation"
+        weight: 15
+        subtopics:
+          - "C# offensive tool development"
+          - "PowerShell script development"
+          - "C/C++ exploit development"
+          - "Shellcode development"
+          - "Custom payload creation"
+          - ".NET assembly manipulation"
+    
+    resources:
+      essential:
+        - name: "PEN-300: Evasion Techniques and Breaching Defenses (Official Course)"
+          type: "Course"
+          cost: "Included"
+          priority: "Critical"
+          url: "https://www.offsec.com/courses/pen-300/"
+          
+        - name: "OSEP Lab Environment"
+          type: "Practice Lab"
+          cost: "Included"
+          priority: "Critical"
+          
+      recommended:
+        - name: "Zero-Point Security - Red Team Ops"
+          type: "Course"
+          cost: "$499"
+          url: "https://training.zeropointsecurity.co.uk/courses/red-team-ops"
+          
+        - name: "Sektor7 Malware Development Courses"
+          type: "Training"
+          cost: "$150-300 per course"
+          url: "https://institute.sektor7.net/"
+          
+        - name: "Covenant C2 Framework"
+          type: "Tool"
+          cost: "Free"
+          url: "https://github.com/cobbr/Covenant"
+          
+        - name: "Sliver C2 Framework"
+          type: "Tool"
+          cost: "Free"
+          url: "https://github.com/BishopFox/sliver"
+    
+    study_plan:
+      total_duration: "8-12 weeks"
+      hours_per_week: "20-25"
+      
+      phases:
+        - name: "C# and PowerShell Development"
+          duration: "2 weeks"
+          focus_areas:
+            - "C# basics and .NET framework"
+            - "Advanced PowerShell scripting"
+            - "Win32 API usage"
+            - "Offensive tool development basics"
+            
+        - name: "AV/EDR Evasion Techniques"
+          duration: "3 weeks"
+          focus_areas:
+            - "AMSI bypass methods"
+            - "Process injection techniques"
+            - "Signature and behavior evasion"
+            - "In-memory execution"
+            
+        - name: "Advanced AD Attacks"
+          duration: "2 weeks"
+          focus_areas:
+            - "Kerberos protocol attacks"
+            - "Trust exploitation"
+            - "Advanced persistence"
+            - "Credential dumping techniques"
+            
+        - name: "C2 and Lateral Movement"
+          duration: "2 weeks"
+          focus_areas:
+            - "C2 framework usage"
+            - "Advanced lateral movement"
+            - "Living off the land techniques"
+            - "Covenant/Sliver mastery"
+            
+        - name: "Exam Preparation"
+          duration: "3 weeks"
+          focus_areas:
+            - "Full lab completion"
+            - "Custom tool development practice"
+            - "Report writing"
+            - "Time management drills"
+    
+    tips:
+      - "Focus heavily on C# development - you'll need it for evasion"
+      - "Practice building custom tools before the exam"
+      - "Understand how EDR works, not just how to bypass it"
+      - "Master multiple evasion techniques"
+      - "Document everything thoroughly"
+      - "The exam is about persistence and methodology"
+      - "48 hours seems long but goes fast with evasion challenges"
+    
+    career:
+      job_roles:
+        - "Senior Penetration Tester"
+        - "Red Team Operator"
+        - "Advanced Threat Simulation Specialist"
+        - "Security Researcher"
+        
+      salary_range:
+        mid_level: "$100,000 - $140,000"
+        senior_level: "$140,000 - $200,000+"
+    
+    success_rate:
+      first_attempt: "40-50%"
+      note: "Requires strong development skills and OSCP-level knowledge"
+
+  # ==========================================
+  # OSWE - Offensive Security Web Expert
+  # ==========================================
+  OSWE:
+    name: "Offensive Security Web Expert"
+    code: "OSWE"
+    provider: "Offensive Security"
+    level: "Advanced"
+    difficulty: "Advanced"
+    
+    description: |
+      OSWE is an advanced web application security certification that focuses on white-box 
+      web application penetration testing. Unlike most certifications that focus on black-box 
+      testing with automated scanners, OSWE requires candidates to perform manual source code 
+      review to discover complex vulnerabilities that automated tools typically miss.
+      
+      This certification validates your ability to analyze source code in multiple languages 
+      (JavaScript, PHP, Java, C#, Python), identify logic flaws and complex vulnerabilities, 
+      develop custom exploits, and chain multiple vulnerabilities together for maximum impact.
+      
+      The course emphasizes real-world applications rather than intentionally vulnerable CTF-style 
+      challenges. You'll work with actual open-source applications, reviewing their source code 
+      to find authentication bypasses, SQL injections, deserialization bugs, and other advanced 
+      web vulnerabilities.
+      
+      The 48-hour exam requires you to review source code, identify vulnerabilities, develop 
+      working exploits, and document everything in a professional security assessment report.
+    
+    prerequisites:
+      required:
+        - "Strong web development background"
+        - "Proficiency in at least 2 programming languages"
+        - "Understanding of web frameworks (Django, Flask, ASP.NET, Spring, etc.)"
+        - "Database knowledge (SQL)"
+        - "HTTP protocol deep understanding"
+        - "Experience with source code review"
+        
+      recommended:
+        - "OSCP or equivalent pentesting experience"
+        - "1-2 years web development or web security experience"
+        - "Familiarity with multiple web frameworks"
+        - "Understanding of DevSecOps"
+        - "Experience with debugging tools"
+        
+      helpful_certifications:
+        - "OSCP"
+        - "Burp Suite Certified Practitioner"
+        - "eWPTXv2"
+    
+    exam:
+      duration: "47 hours 45 minutes (practical) + 24 hours (report)"
+      format: "White-box source code review and exploitation"
+      passing_score: "85 points out of 100"
+      
+      structure:
+        total_points: 100
+        applications: "2-3 web applications"
+        requirements:
+          - "Source code review"
+          - "Vulnerability identification"
+          - "Custom exploit development"
+          - "Authentication bypass"
+          - "Code execution demonstration"
+          
+      exam_tips:
+        - "Review all provided source code methodically"
+        - "Set up debugging environments for each app"
+        - "Don't rely on automated scanners - they won't find these bugs"
+        - "Document your code review process"
+        - "Test exploits thoroughly before final submission"
+        - "Understanding the application logic is key"
+        - "Chain multiple bugs together if needed"
+    
+    cost:
+      Course + Cert Bundle: 1749
+      learn_one: 2749
+      currency: "USD"
+      
+      breakdown:
+        course_materials: "Included"
+        lab_access: "90 days (Course + Cert Bundle) or 365 days (Learn One)"
+        exam_attempts: "2 attempts included (Learn One only)"
+        practice_exams: "6 (Learn one only)"
+        
+      additional_costs:
+        extra_lab_time_30_days: 469
+        single_exam_retake: 449
+    
+    topics:
+      - name: "Source Code Review Methodology"
+        weight: 25
+        subtopics:
+          - "Manual code review techniques"
+          - "Identifying security anti-patterns"
+          - "Data flow analysis"
+          - "Taint analysis"
+          - "Framework-specific vulnerabilities"
+          
+      - name: "Advanced SQL Injection"
+        weight: 20
+        subtopics:
+          - "Blind SQL injection"
+          - "Time-based SQL injection"
+          - "Second-order SQL injection"
+          - "SQL injection via stored procedures"
+          - "NoSQL injection"
+          
+      - name: "Authentication & Session Attacks"
+        weight: 20
+        subtopics:
+          - "Authentication bypass techniques"
+          - "Session management flaws"
+          - "JWT vulnerabilities"
+          - "OAuth/SAML attacks"
+          - "Password reset flaws"
+          
+      - name: "Deserialization Vulnerabilities"
+        weight: 15
+        subtopics:
+          - ".NET deserialization"
+          - "Java deserialization"
+          - "PHP object injection"
+          - "Python pickle exploits"
+          - "Custom gadget chain development"
+          
+      - name: "Advanced Web Exploitation"
+        weight: 20
+        subtopics:
+          - "Server-side template injection (SSTI)"
+          - "XML external entity (XXE)"
+          - "Cross-site scripting (XSS) variants"
+          - "Cross-site request forgery (CSRF)"
+          - "Logic flaws and business logic bypasses"
+    
+    resources:
+      essential:
+        - name: "WEB-300: Advanced Web Attacks and Exploitation (Official Course)"
+          type: "Course"
+          cost: "Included"
+          priority: "Critical"
+          
+        - name: "PortSwigger Web Security Academy"
+          type: "Free Training"
+          cost: "Free"
+          priority: "Critical"
+          url: "https://portswigger.net/web-security"
+          
+      recommended:
+        - name: "HackTricks - Web Pentesting"
+          type: "Reference"
+          cost: "Free"
+          url: "https://book.hacktricks.xyz/pentesting-web"
+          
+        - name: "OWASP Web Security Testing Guide"
+          type: "Documentation"
+          cost: "Free"
+          url: "https://owasp.org/www-project-web-security-testing-guide/"
+    
+    study_plan:
+      total_duration: "10-14 weeks"
+      hours_per_week: "20-25"
+      
+      phases:
+        - name: "Programming Fundamentals Review"
+          duration: "2 weeks"
+          focus_areas:
+            - "JavaScript, PHP, Python, Java, C# review"
+            - "Web framework architecture"
+            - "Database interactions"
+            
+        - name: "Source Code Review Techniques"
+          duration: "3 weeks"
+          focus_areas:
+            - "Manual code review methodology"
+            - "Identifying vulnerabilities in code"
+            - "Framework-specific bugs"
+            
+        - name: "Advanced Exploitation"
+          duration: "4 weeks"
+          focus_areas:
+            - "Deserialization attacks"
+            - "Authentication bypasses"
+            - "Advanced SQL injection"
+            - "Custom exploit development"
+            
+        - name: "Exam Preparation"
+          duration: "3-5 weeks"
+          focus_areas:
+            - "Full application reviews"
+            - "Exploit chain development"
+            - "Report writing practice"
+    
+    career:
+      job_roles:
+        - "Web Application Security Specialist"
+        - "Application Security Engineer"
+        - "Senior Penetration Tester (Web Focus)"
+        - "Security Code Reviewer"
+        
+      salary_range:
+        mid_level: "$95,000 - $130,000"
+        senior_level: "$130,000 - $190,000+"
+    
+    success_rate:
+      first_attempt: "35-45%"
+      note: "Requires strong development and code review skills"
+
+  # ==========================================
+  # OSED - Offensive Security Exploit Developer
+  # ==========================================
+  OSED:
+    name: "Offensive Security Exploit Developer"
+    code: "OSED"
+    provider: "Offensive Security"
+    level: "Advanced"
+    difficulty: "Expert"
+    
+    description: |
+      OSED is an advanced certification focusing on Windows exploit development and reverse 
+      engineering. This certification teaches you to analyze Windows binaries, identify 
+      vulnerabilities at the assembly level, and develop reliable exploits that bypass modern 
+      security mitigations like DEP, ASLR, and CFG.
+      
+      Unlike general penetration testing certifications, OSED dives deep into x86 assembly, 
+      debugger usage, shellcode development, and advanced exploitation techniques. You'll learn 
+      to analyze closed-source Windows applications, find memory corruption vulnerabilities, 
+      and write custom exploits from scratch.
+      
+      This certification is ideal for those interested in vulnerability research, exploit 
+      development, malware analysis, or advanced red team operations. The skills learned go 
+      far beyond typical penetration testing and enter the realm of software security research.
+      
+      The 48-hour exam requires you to develop working exploits for multiple Windows 
+      applications, demonstrating code execution while bypassing various security mitigations.
+    
+    prerequisites:
+      required:
+        - "Strong understanding of x86 assembly language"
+        - "Proficiency in C/C++ programming"
+        - "Windows internals knowledge"
+        - "Experience with debuggers (WinDbg, x64dbg, Immunity)"
+        - "Understanding of memory layout and stack operations"
+        
+      recommended:
+        - "OSCP or equivalent"
+        - "Background in software development"
+        - "Reverse engineering experience"
+        - "Familiarity with IDA Pro or Ghidra"
+        - "Understanding of PE file format"
+        
+      helpful_certifications:
+        - "OSCP"
+        - "eWPTX"
+        - "GREM"
+    
+    exam:
+      duration: "47 hours 45 minutes (practical) + 24 hours (report)"
+      format: "Windows exploit development"
+      passing_score: "80 points out of 100"
+      
+      structure:
+        total_points: 100
+        requirements:
+          - "Develop multiple working exploits"
+          - "Bypass DEP, ASLR, and other mitigations"
+          - "Custom shellcode development"
+          - "Reliable exploit delivery"
+          
+      exam_tips:
+        - "Master your debugger before the exam"
+        - "Practice writing exploits from scratch, not modifying existing ones"
+        - "Understand exploit mitigations thoroughly"
+        - "Test your exploits multiple times for reliability"
+        - "Document your development process clearly"
+        - "Time management is crucial"
+        - "Keep your exploit code organized and commented"
+    
+    cost:
+      Course + Cert Bundle: 1749
+      learn_one: 2749
+      currency: "USD"
+      
+      breakdown:
+        course_materials: "Included"
+        lab_access: "90 days (Course + Cert Bundle) or 365 days (Learn One)"
+        exam_attempts: "2 attempts included (Learn One only)"
+        practice_exams: "6 (Learn one only)"
+        
+      additional_costs:
+        extra_lab_time_30_days: 469
+        single_exam_retake: 449
+    
+    topics:
+      - name: "x86 Assembly Language"
+        weight: 20
+        subtopics:
+          - "CPU registers and flags"
+          - "Assembly instructions (MOV, ADD, SUB, JMP, etc.)"
+          - "Stack operations (PUSH, POP)"
+          - "Function calls and calling conventions"
+          - "Reading and writing assembly code"
+          
+      - name: "Windows Debugging"
+        weight: 20
+        subtopics:
+          - "WinDbg usage and commands"
+          - "Immunity Debugger"
+          - "x64dbg"
+          - "Breakpoint types and usage"
+          - "Memory inspection and manipulation"
+          
+      - name: "Buffer Overflow Exploitation"
+        weight: 20
+        subtopics:
+          - "Stack-based buffer overflows"
+          - "SEH (Structured Exception Handler) overflows"
+          - "Egg hunters"
+          - "Fuzzing techniques"
+          
+      - name: "Exploit Mitigation Bypasses"
+        weight: 25
+        subtopics:
+          - "DEP (Data Execution Prevention) bypass via ROP"
+          - "ASLR (Address Space Layout Randomization) bypass"
+          - "CFG (Control Flow Guard) bypass"
+          - "Stack canaries bypass"
+          
+      - name: "Shellcode Development"
+        weight: 15
+        subtopics:
+          - "Custom shellcode writing in assembly"
+          - "Shellcode encoding and obfuscation"
+          - "Bad character avoidance"
+          - "Alphanumeric shellcode"
+    
+    resources:
+      essential:
+        - name: "EXP-301: Windows User Mode Exploit Development (Official Course)"
+          type: "Course"
+          cost: "Included"
+          priority: "Critical"
+          
+        - name: "WinDbg"
+          type: "Tool"
+          cost: "Free"
+          priority: "Critical"
+          
+      recommended:
+        - name: "Practical Malware Analysis Book"
+          type: "Book"
+          cost: "$50"
+          
+        - name: "The Shellcoder's Handbook"
+          type: "Book"
+          cost: "$60"
+    
+    study_plan:
+      total_duration: "12-16 weeks"
+      hours_per_week: "20-25"
+      
+      phases:
+        - name: "Assembly and Debugging Fundamentals"
+          duration: "4 weeks"
+          focus_areas:
+            - "x86 assembly language mastery"
+            - "Debugger proficiency"
+            - "C/C++ memory management review"
+            
+        - name: "Basic Exploitation"
+          duration: "3 weeks"
+          focus_areas:
+            - "Stack-based buffer overflows"
+            - "SEH exploitation"
+            - "Shellcode basics"
+            
+        - name: "Advanced Exploitation"
+          duration: "4 weeks"
+          focus_areas:
+            - "ROP chain development"
+            - "DEP/ASLR bypass techniques"
+            - "Advanced shellcode"
+            
+        - name: "Exam Preparation"
+          duration: "3-5 weeks"
+          focus_areas:
+            - "Full exploit development practice"
+            - "Reliability testing"
+            - "Report writing"
+    
+    career:
+      job_roles:
+        - "Exploit Developer"
+        - "Vulnerability Researcher"
+        - "Malware Analyst"
+        - "Reverse Engineer"
+        - "Advanced Red Team Operator"
+        
+      salary_range:
+        mid_level: "$110,000 - $150,000"
+        senior_level: "$150,000 - $250,000+"
+    
+    success_rate:
+      first_attempt: "30-40%"
+      note: "Highly technical, requires strong programming and assembly skills"
+
+  # ==========================================
+  # OSWP - Offensive Security Wireless Professional
+  # ==========================================
+  OSWP:
+    name: "Offensive Security Wireless Professional"
+    code: "OSWP"
+    provider: "Offensive Security"
+    level: "Intermediate"
+    difficulty: "Intermediate"
+    
+    description: |
+      OSWP focuses on wireless network security and penetration testing of 802.11 networks. 
+      This certification covers WEP, WPA/WPA2, and WPA3 attacks, wireless reconnaissance, 
+      client-side attacks, and enterprise wireless security assessment.
+      
+      You'll learn to attack wireless networks using industry-standard tools like Aircrack-ng 
+      suite, capture and crack wireless authentication handshakes, perform evil twin attacks, 
+      and assess the security of corporate wireless infrastructure.
+      
+      The hands-on nature of this certification requires you to have compatible wireless 
+      hardware (specific WiFi adapters) that support monitor mode and packet injection, as 
+      you'll be conducting real wireless attacks in a controlled lab environment.
+    
+    prerequisites:
+      required:
+        - "Basic understanding of networking (TCP/IP)"
+        - "Familiarity with Linux command line"
+        - "Understanding of WiFi basics (SSID, encryption, authentication)"
+        - "Compatible wireless adapter (specific models required)"
+        
+      recommended:
+        - "OSCP or pentesting experience helpful but not required"
+        - "Understanding of cryptography basics"
+        - "Experience with Kali Linux"
+        
+      helpful_certifications:
+        - "CompTIA Network+"
+        - "OSCP"
+    
+    exam:
+      duration: "3 hours 45 minutes (practical)"
+      format: "Hands-on wireless attacks"
+      passing_score: "70 points out of 100"
+      
+      structure:
+        total_points: 100
+        requirements:
+          - "Crack wireless passwords"
+          - "Perform various wireless attacks"
+          - "Client-side attacks"
+          
+      exam_tips:
+        - "Ensure your wireless adapter is working properly before exam"
+        - "Practice all attack types thoroughly"
+        - "Time management - 4 hours is tight"
+        - "Have backup hardware ready"
+        - "Know your Aircrack-ng commands by heart"
+    
+    cost:
+      Learn_Fundamentals: 799
+      learn_one: 2749
+      currency: "USD"
+      
+      breakdown:
+        course_materials: "Included"
+        lab_access: "365 days (Learn_Fundamentals) or 365 days (Learn One)"
+        exam_attempts: "2 attempts included (Learn One only)"
+        practice_exams: "6 (Learn one only)"
+        
+      additional_costs:
+        wireless_adapter: "~$50-100 (required)"
+        single_exam_retake: 249
+    
+    topics:
+      - name: "802.11 Protocol Fundamentals"
+        weight: 20
+        subtopics:
+          - "802.11 frame types and structure"
+          - "Authentication and association process"
+          - "Encryption protocols (WEP, WPA, WPA2, WPA3)"
+          
+      - name: "Wireless Reconnaissance"
+        weight: 20
+        subtopics:
+          - "Passive scanning"
+          - "Active scanning"
+          - "Hidden SSID discovery"
+          - "Client identification"
+          
+      - name: "WEP Attacks"
+        weight: 15
+        subtopics:
+          - "WEP cracking via ARP replay"
+          - "Fragmentation attacks"
+          - "PTW attacks"
+          
+      - name: "WPA/WPA2 Attacks"
+        weight: 25
+        subtopics:
+          - "Handshake capture"
+          - "Offline cracking"
+          - "PMKID attack"
+          - "Evil twin attacks"
+          
+      - name: "WPA3 Attacks"
+        weight: 10
+        subtopics:
+          - "Dragonblood vulnerabilities"
+          - "Downgrade attacks"
+          
+      - name: "Enterprise WiFi Attacks"
+        weight: 10
+        subtopics:
+          - "EAP attacks"
+          - "RADIUS exploitation"
+    
+    resources:
+      essential:
+        - name: "PEN-210: Offensive Security Wireless Professional (Official Course)"
+          type: "Course"
+          cost: "Included"
+          priority: "Critical"
+          
+        - name: "Compatible Wireless Adapter"
+          type: "Hardware"
+          cost: "$50-100"
+          priority: "Critical"
+          note: "Alfa AWUS036NHA or similar recommended"
+          
+      recommended:
+        - name: "Aircrack-ng Documentation"
+          type: "Documentation"
+          cost: "Free"
+          url: "https://www.aircrack-ng.org/"
+    
+    study_plan:
+      total_duration: "6-8 weeks"
+      hours_per_week: "10-15"
+      
+      phases:
+        - name: "Wireless Fundamentals"
+          duration: "2 weeks"
+          focus_areas:
+            - "802.11 protocol"
+            - "Wireless security basics"
+            - "Hardware setup"
+            
+        - name: "Attack Techniques"
+          duration: "3 weeks"
+          focus_areas:
+            - "WEP/WPA attacks"
+            - "Client attacks"
+            - "Enterprise WiFi"
+            
+        - name: "Exam Preparation"
+          duration: "1-3 weeks"
+          focus_areas:
+            - "All attack types practice"
+            - "Speed drills"
+            - "Hardware testing"
+    
+    career:
+      job_roles:
+        - "Wireless Security Specialist"
+        - "Penetration Tester (WiFi focus)"
+        - "Network Security Engineer"
+        
+      salary_range:
+        entry_level: "$60,000 - $80,000"
+        mid_level: "$80,000 - $110,000"
+    
+    success_rate:
+      first_attempt: "50-60%"
+      note: "Less difficult than OSCP, but hardware issues can cause problems"
+
+  # ==========================================
+  # OSWA - OffSec Web Assessor
+  # ==========================================
+  OSWA:
+    name: "OffSec Web Assessor"
+    code: "OSWA"
+    provider: "Offensive Security"
+    level: "Beginner to Intermediate"
+    difficulty: "Beginner to Intermediate"
+    
+    description: |
+      OSWA is a foundational web application security certification that covers essential 
+      web penetration testing skills. It's designed for those new to web security or looking 
+      to formalize their knowledge of OWASP Top 10 vulnerabilities and modern web application 
+      attack techniques.
+      
+      Unlike OSWE which focuses on white-box testing and source code review, OSWA is a 
+      black-box testing certification focused on identifying and exploiting common web 
+      vulnerabilities using both manual techniques and automated tools.
+      
+      This certification is perfect for security professionals transitioning into web 
+      application testing, developers wanting to understand security, or anyone building 
+      foundational web security skills before pursuing OSWE.
+    
+    prerequisites:
+      required:
+        - "Basic understanding of web technologies (HTML, CSS, JavaScript)"
+        - "Familiarity with HTTP protocol"
+        - "Basic Linux command line skills"
+        
+      recommended:
+        - "Web development experience helpful"
+        - "Familiarity with Burp Suite"
+        - "Understanding of databases (SQL basics)"
+        
+      helpful_certifications:
+        - "CompTIA Security+"
+    
+    exam:
+      duration: "23 hours 45 minutes (practical) + 24 hours (report)"
+      format: "Black-box web application testing"
+      passing_score: "70 points out of 100"
+      
+      structure:
+        total_points: 100
+        applications: "2-3 web applications"
+        requirements:
+          - "Find and exploit vulnerabilities"
+          - "Demonstrate impact"
+          - "Professional report"
+    
+    cost:
+      Course + Cert Bundle: 1749
+      learn_one: 2749
+      currency: "USD"
+      
+      breakdown:
+        course_materials: "Included"
+        lab_access: "90 days (Course + Cert Bundle) or 365 days (Learn One)"
+        exam_attempts: "2 attempts included (Learn One only)"
+        practice_exams: "6 (Learn one only)"
+    
+    topics:
+      - name: "Web Application Fundamentals"
+        weight: 20
+        subtopics:
+          - "HTTP/HTTPS protocol"
+          - "Client-server architecture"
+          - "Session management"
+          - "Authentication mechanisms"
+          
+      - name: "OWASP Top 10"
+        weight: 40
+        subtopics:
+          - "Injection attacks (SQL, command, etc.)"
+          - "Broken authentication"
+          - "Sensitive data exposure"
+          - "XXE (XML External Entities)"
+          - "Broken access control"
+          - "Security misconfiguration"
+          - "XSS (Cross-Site Scripting)"
+          - "Insecure deserialization"
+          - "Components with known vulnerabilities"
+          - "Insufficient logging and monitoring"
+          
+      - name: "Web Reconnaissance"
+        weight: 15
+        subtopics:
+          - "Directory enumeration"
+          - "Technology identification"
+          - "Information disclosure"
+          
+      - name: "Burp Suite Mastery"
+        weight: 15
+        subtopics:
+          - "Proxy usage"
+          - "Intruder attacks"
+          - "Repeater usage"
+          - "Extensions"
+          
+      - name: "Automated Scanning"
+        weight: 10
+        subtopics:
+          - "Tool usage (Nikto, etc.)"
+          - "Result validation"
+          - "False positive identification"
+    
+    resources:
+      essential:
+        - name: "WEB-100: OffSec Web Assessor (Official Course)"
+          type: "Course"
+          cost: "Included"
+          priority: "Critical"
+          
+        - name: "PortSwigger Web Security Academy"
+          type: "Free Training"
+          cost: "Free"
+          priority: "Critical"
+          url: "https://portswigger.net/web-security"
+          
+        - name: "Burp Suite Community Edition"
+          type: "Tool"
+          cost: "Free"
+          priority: "Critical"
+          
+      recommended:
+        - name: "OWASP Top 10 Documentation"
+          type: "Reference"
+          cost: "Free"
+          url: "https://owasp.org/www-project-top-ten/"
+          
+        - name: "Web Security Academy (PortSwigger)"
+          type: "Practice"
+          cost: "Free"
+          url: "https://portswigger.net/web-security"
+    
+    study_plan:
+      total_duration: "8-10 weeks"
+      hours_per_week: "12-15"
+      
+      phases:
+        - name: "Web Fundamentals"
+          duration: "2 weeks"
+          focus_areas:
+            - "HTML, CSS, JavaScript basics"
+            - "HTTP protocol"
+            - "Burp Suite basics"
+            
+        - name: "OWASP Top 10"
+          duration: "4 weeks"
+          focus_areas:
+            - "Each vulnerability type"
+            - "Manual exploitation"
+            - "Tool-assisted testing"
+            
+        - name: "Practice & Exam Prep"
+          duration: "2-4 weeks"
+          focus_areas:
+            - "PortSwigger labs"
+            - "Practice applications"
+            - "Report writing"
+    
+    career:
+      job_roles:
+        - "Junior Web Application Tester"
+        - "Application Security Analyst"
+        - "Security Consultant (entry-level)"
+        
+      salary_range:
+        entry_level: "$55,000 - $75,000"
+        mid_level: "$75,000 - $100,000"
+    
+    success_rate:
+      first_attempt: "55-65%"
+      note: "Good entry point into web security"
+
+  # ==========================================
+  # OSMR - OffSec macOS Researcher
+  # ==========================================
+  OSMR:
+    name: "OffSec macOS Researcher"
+    code: "OSMR"
+    provider: "Offensive Security"
+    level: "Advanced"
+    difficulty: "Advanced"
+    
+    description: |
+      OSMR is a specialized certification focusing on macOS security research and exploitation. 
+      As macOS becomes more prevalent in enterprise environments, the need for security 
+      professionals who understand macOS-specific attacks and defenses has grown significantly.
+      
+      This certification covers macOS architecture, security features (SIP, Gatekeeper, TCC), 
+      native macOS malware development, privilege escalation techniques specific to macOS, 
+      and bypassing Apple's security controls.
+      
+      You'll learn to develop custom tools in Objective-C and Swift, understand macOS internals, 
+      exploit macOS-specific vulnerabilities, and conduct security assessments of macOS 
+      environments. This is perfect for red teamers, security researchers, and penetration 
+      testers working with macOS targets.
+    
+    prerequisites:
+      required:
+        - "Access to a Mac (required for lab and exam)"
+        - "Understanding of Unix/Linux systems"
+        - "Programming experience (C, Objective-C, or Swift)"
+        - "Basic reverse engineering skills"
+        
+      recommended:
+        - "OSCP or equivalent pentesting experience"
+        - "iOS security experience helpful"
+        - "Familiarity with macOS as a user"
+        - "Understanding of ARM architecture (for M1/M2 Macs)"
+        
+      helpful_certifications:
+        - "OSCP"
+        - "GREM"
+    
+    exam:
+      duration: "47 hours 45 minutes (practical) + 24 hours (report)"
+      format: "macOS exploitation and tool development"
+      passing_score: "80 points out of 100"
+      
+      structure:
+        total_points: 100
+        requirements:
+          - "Bypass macOS security features"
+          - "Develop custom macOS tools"
+          - "Privilege escalation on macOS"
+          - "Persistence mechanisms"
+    
+    cost:
+      Course + Cert Bundle: 1749
+      learn_one: 2749
+      currency: "USD"
+      
+      breakdown:
+        course_materials: "Included"
+        lab_access: "90 days (Course + Cert Bundle) or 365 days (Learn One)"
+        exam_attempts: "2 attempts included (Learn One only)"
+        practice_exams: "6 (Learn one only)"
+        
+      additional_costs:
+        macbook_required: "~$1000+ (if don't already own)"
+        extra_lab_time_30_days: 469
+        single_exam_retake: 449
+    
+    topics:
+      - name: "macOS Architecture"
+        weight: 20
+        subtopics:
+          - "Darwin kernel (XNU)"
+          - "Mach messaging"
+          - "BSD layer"
+          - "System frameworks"
+          - "ARM64 architecture (Apple Silicon)"
+          
+      - name: "macOS Security Features"
+        weight: 25
+        subtopics:
+          - "System Integrity Protection (SIP)"
+          - "Gatekeeper"
+          - "TCC (Transparency, Consent, and Control)"
+          - "Code signing"
+          - "Notarization"
+          - "Hardened Runtime"
+          
+      - name: "macOS Exploitation"
+        weight: 25
+        subtopics:
+          - "Privilege escalation techniques"
+          - "SIP bypass methods"
+          - "TCC bypass"
+          - "Kernel exploits"
+          
+      - name: "Tool Development"
+        weight: 20
+        subtopics:
+          - "Objective-C offensive tools"
+          - "Swift tool development"
+          - "Dylib injection"
+          - "Hooking and interposing"
+          
+      - name: "Persistence & Post-Exploitation"
+        weight: 10
+        subtopics:
+          - "Launch agents/daemons"
+          - "Login items"
+          - "Credential dumping"
+          - "Keychain access"
+    
+    resources:
+      essential:
+        - name: "MACR-100: macOS Control Bypasses (Official Course)"
+          type: "Course"
+          cost: "Included"
+          priority: "Critical"
+          
+        - name: "macOS (Intel or Apple Silicon)"
+          type: "Hardware"
+          cost: "$1000+"
+          priority: "Critical"
+          note: "Required for lab and exam"
+          
+      recommended:
+        - name: "Objective-C and Swift Documentation"
+          type: "Reference"
+          cost: "Free"
+          url: "https://developer.apple.com/documentation/"
+          
+        - name: "Hopper Disassembler"
+          type: "Tool"
+          cost: "$99"
+          url: "https://www.hopperapp.com/"
+    
+    study_plan:
+      total_duration: "10-14 weeks"
+      hours_per_week: "20-25"
+      
+      phases:
+        - name: "macOS Fundamentals"
+          duration: "3 weeks"
+          focus_areas:
+            - "macOS architecture"
+            - "Security features understanding"
+            - "Objective-C/Swift basics"
+            
+        - name: "Exploitation Techniques"
+          duration: "4 weeks"
+          focus_areas:
+            - "Privilege escalation"
+            - "Security bypass techniques"
+            - "Tool development"
+            
+        - name: "Advanced Topics"
+          duration: "2 weeks"
+          focus_areas:
+            - "Kernel exploitation"
+            - "Advanced persistence"
+            - "Custom malware development"
+            
+        - name: "Exam Preparation"
+          duration: "1-5 weeks"
+          focus_areas:
+            - "Full exploitation chains"
+            - "Tool development practice"
+            - "Report writing"
+    
+    career:
+      job_roles:
+        - "macOS Security Researcher"
+        - "Mobile Security Specialist (iOS/macOS)"
+        - "Red Team Operator (macOS focus)"
+        - "Malware Analyst (macOS)"
+        
+      salary_range:
+        mid_level: "$100,000 - $140,000"
+        senior_level: "$140,000 - $200,000+"
+    
+    success_rate:
+      first_attempt: "35-45%"
+      note: "Specialized knowledge required, smaller community support"
+
+  # ==========================================
+  # OSDA - OffSec Defense Analyst
+  # ==========================================
+  OSDA:
+    name: "OffSec Defense Analyst"
+    code: "OSDA"
+    provider: "Offensive Security"
+    level: "Intermediate"
+    difficulty: "Intermediate"
+    
+    description: |
+      OSDA is OffSec's first blue team certification, focusing on defensive security operations, 
+      threat detection, incident response, and security monitoring. Unlike their traditional 
+      offensive certifications, OSDA teaches you to defend against the attacks you learned in 
+      courses like OSCP.
+      
+      This certification covers SIEM usage (Splunk, ELK), log analysis, malware analysis basics, 
+      intrusion detection, incident response procedures, and threat hunting. You'll learn to 
+      identify ongoing attacks, respond to security incidents, and strengthen defensive posture.
+      
+      OSDA is perfect for SOC analysts, incident responders, security engineers, and anyone 
+      wanting to understand the defensive side of cybersecurity. The hands-on nature maintains 
+      OffSec's practical approach but applied to defense rather than offense.
+    
+    prerequisites:
+      required:
+        - "Understanding of networking fundamentals"
+        - "Basic Linux and Windows administration"
+        - "Familiarity with security concepts"
+        - "Log analysis basics"
+        
+      recommended:
+        - "SOC or IT operations experience"
+        - "SIEM experience (Splunk or ELK)"
+        - "Understanding of common attacks"
+        - "Incident response exposure"
+        
+      helpful_certifications:
+        - "CompTIA Security+"
+        - "CompTIA CySA+"
+        - "OSCP (helpful to understand attacks)"
+    
+    exam:
+      duration: "23 hours 45 minutes (practical) + 24 hours (report)"
+      format: "Defensive analysis and incident response"
+      passing_score: "70 points out of 100"
+      
+      structure:
+        total_points: 100
+        requirements:
+          - "Analyze security events"
+          - "Identify indicators of compromise (IOCs)"
+          - "Respond to active incidents"
+          - "Create defensive recommendations"
+          
+      exam_tips:
+        - "Master your SIEM before the exam"
+        - "Practice log analysis extensively"
+        - "Know MITRE ATT&CK framework well"
+        - "Document your analysis process"
+        - "Time management for multiple incidents"
+    
+    cost:
+      Course + Cert Bundle: 1749
+      learn_one: 2749
+      currency: "USD"
+      
+      breakdown:
+        course_materials: "Included"
+        lab_access: "90 days (Course + Cert Bundle) or 365 days (Learn One)"
+        exam_attempts: "2 attempts included (Learn One only)"
+        practice_exams: "6 (Learn one only)"
+    
+    topics:
+      - name: "SIEM Usage & Log Analysis"
+        weight: 30
+        subtopics:
+          - "Splunk search queries"
+          - "ELK Stack usage"
+          - "Log correlation"
+          - "Alert creation and tuning"
+          - "Dashboard creation"
+          
+      - name: "Threat Detection"
+        weight: 25
+        subtopics:
+          - "Signature-based detection"
+          - "Anomaly detection"
+          - "Behavioral analysis"
+          - "Network traffic analysis"
+          - "Endpoint detection"
+          
+      - name: "Incident Response"
+        weight: 20
+        subtopics:
+          - "IR lifecycle"
+          - "Evidence collection"
+          - "Containment strategies"
+          - "Eradication and recovery"
+          - "Lessons learned"
+          
+      - name: "Malware Analysis Basics"
+        weight: 15
+        subtopics:
+          - "Static analysis"
+          - "Dynamic analysis"
+          - "Indicator extraction"
+          - "Malware classification"
+          
+      - name: "Threat Intelligence"
+        weight: 10
+        subtopics:
+          - "MITRE ATT&CK framework"
+          - "IOC management"
+          - "Threat actor profiling"
+          - "Intelligence sharing"
+    
+    resources:
+      essential:
+        - name: "SOC-200: OffSec Defense Analyst (Official Course)"
+          type: "Course"
+          cost: "Included"
+          priority: "Critical"
+          
+        - name: "Splunk Fundamentals"
+          type: "Free Training"
+          cost: "Free"
+          priority: "High"
+          url: "https://www.splunk.com/en_us/training.html"
+          
+      recommended:
+        - name: "MITRE ATT&CK Framework"
+          type: "Reference"
+          cost: "Free"
+          priority: "High"
+          url: "https://attack.mitre.org/"
+          
+        - name: "Blue Team Labs Online"
+          type: "Practice Platform"
+          cost: "$10/month"
+          url: "https://blueteamlabs.online/"
+    
+    study_plan:
+      total_duration: "8-10 weeks"
+      hours_per_week: "15-20"
+      
+      phases:
+        - name: "SIEM Fundamentals"
+          duration: "2 weeks"
+          focus_areas:
+            - "Splunk/ELK basics"
+            - "Query language mastery"
+            - "Dashboard creation"
+            
+        - name: "Threat Detection"
+          duration: "3 weeks"
+          focus_areas:
+            - "Log analysis techniques"
+            - "Attack pattern recognition"
+            - "Alert tuning"
+            
+        - name: "Incident Response"
+          duration: "2 weeks"
+          focus_areas:
+            - "IR procedures"
+            - "Evidence handling"
+            - "Response playbooks"
+            
+        - name: "Exam Preparation"
+          duration: "1-3 weeks"
+          focus_areas:
+            - "Mock incidents"
+            - "Speed analysis drills"
+            - "Report writing"
+    
+    career:
+      job_roles:
+        - "SOC Analyst (Tier 1/2)"
+        - "Incident Responder"
+        - "Threat Hunter"
+        - "Security Operations Engineer"
+        - "SIEM Engineer"
+        
+      salary_range:
+        entry_level: "$60,000 - $80,000"
+        mid_level: "$80,000 - $110,000"
+        senior_level: "$110,000 - $150,000"
+    
+    success_rate:
+      first_attempt: "50-60%"
+      note: "Good for those transitioning from IT to security"
+
+  # ==========================================
+  # KLCP - Kali Linux Certified Professional
+  # ==========================================
+  KLCP:
+    name: "Kali Linux Certified Professional"
+    code: "KLCP"
+    provider: "Offensive Security"
+    level: "Beginner to Intermediate"
+    difficulty: "Beginner to Intermediate"
+    
+    description: |
+      KLCP (Kali Linux Certified Professional) is an entry-level certification that validates 
+      your mastery of the Kali Linux operating system - the industry-standard platform for 
+      penetration testing and security assessments. Unlike OffSec's practical certifications 
+      (OSCP, OSEP), KLCP is a multiple-choice theory exam that tests your knowledge of Kali 
+      Linux administration, configuration, and tool usage.
+      
+      This certification is designed for those new to cybersecurity or those wanting to 
+      formalize their knowledge of Kali Linux before pursuing advanced certifications like 
+      OSCP. It covers the fundamentals of Linux system administration with a focus on Kali's 
+      unique features, package management, security hardening, and penetration testing tools.
+      
+      The exam is based on the free "Kali Linux Revealed" book and PEN-103 course, making it 
+      one of the most affordable entry points into OffSec certifications. It serves as a solid 
+      foundation for anyone planning to pursue the OSCP or other penetration testing 
+      certifications, as strong Kali Linux knowledge is essential for success in practical exams.
+
+      The 90-minute, 80-question multiple-choice exam is proctored online and tests both 
+      theoretical knowledge and practical understanding of Kali Linux concepts.
+    
+    prerequisites:
+      required:
+        - "Basic computer literacy and command-line familiarity"
+        - "Understanding of operating system concepts"
+        - "No formal Linux experience required (but recommended)"
+        
+      recommended:
+        - "3-6 months of Linux experience (any distribution)"
+        - "Basic familiarity with Kali Linux or Debian-based systems"
+        - "Understanding of basic networking concepts"
+        - "Completed the free PEN-103 course materials"
+        - "Read the Kali Linux Revealed book"
+        
+      helpful_certifications:
+        - "CompTIA Linux+"
+        - "LPIC-1 (Linux Professional Institute)"
+        - "CompTIA A+ (for IT fundamentals)"
+    
+    exam:
+      duration: "90 minutes"
+      format: "80-question multiple-choice exam (theory-based)"
+      passing_score: "80% (64 out of 80 questions)"
+      delivery: "Online proctored via ClassMarker platform"
+      
+      structure:
+        total_questions: 80
+        question_types:
+          - "Multiple choice (single answer)"
+          - "Multiple select (multiple correct answers)"
+          - "True/False"
+          - "Scenario-based questions"
+      
+      exam_style: "Closed book (no external resources allowed)"
+      
+      attempts_included: 1
+      retake_policy: "Additional exam attempts can be purchased separately"
+      proctoring: "Fully proctored via webcam (OffSec proctoring tool)"
+      allowed_resources: "None - closed book exam"
+      
+      results:
+        immediate: true
+        certificate_delivery: "Via Accredible (digital badge and certificate)"
+        score_breakdown: "Immediate results shown after completing exam"
+
+      exam_tips:
+        - "Study the Kali Linux Revealed book thoroughly - it's the primary resource"
+        - "Complete all PEN-103 course exercises and labs"
+        - "Practice common Kali commands until they're second nature"
+        - "Understand package management (apt, dpkg) in depth"
+        - "Know the Debian/Kali directory structure (/etc, /usr, /var, etc.)"
+        - "Focus on systemd service management (systemctl commands)"
+        - "Memorize common Kali tool locations and purposes"
+        - "Understand the difference between Kali metapackages"
+        - "Review network configuration (ifconfig, ip, netplan)"
+        - "Time management: ~67 seconds per question average"
+        - "Flag difficult questions and return to them later"
+        - "Read each question carefully - watch for negative phrasing"
+        - "Eliminate obviously wrong answers first"
+        - "Don't overthink - trust your preparation"
+        - "Test your proctoring setup 24 hours before exam"
+    
+    cost:
+      Training: "free"
+      Exam_cost: 249
+      currency: "USD"
+      
+      breakdown:
+        course_materials: "Included"
+        exam_attempts: "1 attempts only"
+          
+        learn_fundamentals:
+          cost: "free"
+          includes:
+            - "PEN-103 (Kali Linux Revealed) course access"
+            - "PEN-210 (OSWP - Wireless) course access"
+            - "1 KLCP exam attempt"
+            - "1 OSWP exam attempt"
+            - "All fundamental track courses"
+            - "Course completion badges"
+            - "30 days of access"
+            
+        pen_103_course: "FREE (self-paced)"
+        kali_linux_revealed_book: "FREE (online PDF version)"
+        
+      additional_costs:
+        single_exam_retake: 249
+        learn_subscription: "$2,749/year (includes all courses)"
+        
+      financing_available: false
+      student_discount: false
+      military_discount: true
+    
+    topics:
+      - name: "Introduction to Kali Linux"
+        weight: 10
+        subtopics:
+          - "History and evolution of Kali Linux"
+          - "Kali Linux vs other penetration testing distributions"
+          - "Use cases for Kali Linux"
+          - "Understanding the Kali philosophy"
+          - "Kali Linux release cycle and versioning"
+        key_concepts:
+          - "Kali is based on Debian Testing"
+          - "Rolling release model"
+          - "Maintained by Offensive Security"
+        
+      - name: "Getting Started with Kali Linux"
+        weight: 15
+        subtopics:
+          - "Downloading and verifying Kali Linux images"
+          - "Installation methods (bare metal, VM, live boot)"
+          - "Kali on Windows (WSL)"
+          - "ARM installations (Raspberry Pi, mobile devices)"
+          - "Kali NetHunter basics"
+          - "First-time setup and configuration"
+        key_commands:
+          - "sha256sum (verify ISO integrity)"
+          - "dd (create bootable USB)"
+        
+      - name: "Linux Fundamentals"
+        weight: 20
+        subtopics:
+          - "Linux file system hierarchy (/etc, /usr, /var, /home, etc.)"
+          - "File permissions and ownership (chmod, chown, chgrp)"
+          - "User and group management (useradd, usermod, groupadd)"
+          - "Process management (ps, top, htop, kill)"
+          - "Text editors (vim, nano)"
+          - "Shell basics (bash, environment variables)"
+          - "Piping and redirection"
+          - "Wildcards and globbing"
+        key_commands:
+          - "ls, cd, pwd, mkdir, rm, cp, mv"
+          - "chmod, chown, chgrp"
+          - "grep, find, locate"
+          - "cat, less, more, head, tail"
+          - "ps, top, kill, killall"
+        
+      - name: "Advanced Linux Usage"
+        weight: 15
+        subtopics:
+          - "Shell scripting basics (bash)"
+          - "Cron jobs and task scheduling"
+          - "Log file locations and analysis (/var/log/)"
+          - "System monitoring and performance"
+          - "Disk management and partitioning"
+          - "Archive and compression (tar, gzip, zip)"
+        key_commands:
+          - "crontab -e"
+          - "df, du"
+          - "tar, gzip, gunzip"
+          - "free, vmstat, iostat"
+        
+      - name: "Debian Package Management"
+        weight: 20
+        subtopics:
+          - "APT package manager (apt, apt-get, apt-cache)"
+          - "dpkg low-level package management"
+          - "Managing repositories (/etc/apt/sources.list)"
+          - "Installing, removing, and updating packages"
+          - "Searching for packages"
+          - "Resolving dependency issues"
+          - "Kali metapackages (kali-tools-top10, kali-tools-web, etc.)"
+        key_commands:
+          - "apt update && apt upgrade"
+          - "apt install, apt remove, apt purge"
+          - "apt search, apt show"
+          - "dpkg -i, dpkg -r, dpkg -l"
+          - "apt-cache search, apt-cache show"
+        
+      - name: "Securing and Monitoring Kali Linux"
+        weight: 15
+        subtopics:
+          - "Securing SSH (configuration, key-based auth)"
+          - "Firewall configuration (iptables, ufw, nftables)"
+          - "SELinux and AppArmor basics"
+          - "System hardening best practices"
+          - "Monitoring services with systemd"
+          - "Analyzing system logs"
+        key_commands:
+          - "systemctl status, start, stop, enable, disable"
+          - "iptables -L, ufw status"
+          - "journalctl"
+          - "ss, netstat"
+        
+      - name: "Kali Linux in the Enterprise"
+        weight: 5
+        subtopics:
+          - "Deploying Kali in enterprise environments"
+          - "Custom Kali builds and configurations"
+          - "Building custom ISOs"
+          - "Managing multiple Kali instances"
+          - "Kali in Docker containers"
+        
+    resources:
+      essential:
+        - name: "Kali Linux Revealed (Free Online Book)"
+          type: "Book"
+          cost: "Free"
+          priority: "Critical"
+          url: "https://kali.training/"
+          description: "Official Kali Linux book - primary study resource for KLCP"
+          
+        - name: "PEN-103: Kali Linux Revealed (Official Course)"
+          type: "Course"
+          cost: "Free (self-paced)"
+          priority: "Critical"
+          url: "https://www.offsec.com/courses/pen-103/"
+          description: "Free self-paced course based on Kali Linux Revealed book"
+          
+        - name: "KLCP Exam Guide"
+          type: "Documentation"
+          cost: "Free"
+          priority: "Critical"
+          url: "https://help.offsec.com/hc/en-us/articles/360059125211-KLCP-Exam-Guide"
+          description: "Official exam objectives and requirements"
+          
+        - name: "Kali Linux Official Documentation"
+          type: "Documentation"
+          cost: "Free"
+          priority: "Critical"
+          url: "https://www.kali.org/docs/"
+          description: "Comprehensive Kali documentation"
+          
+      recommended:
+        - name: "Kali Linux Tools Documentation"
+          type: "Reference"
+          cost: "Free"
+          priority: "High"
+          url: "https://www.kali.org/tools/"
+          description: "Documentation for all Kali tools"
+          
+        - name: "Debian Administrator's Handbook"
+          type: "Book"
+          cost: "Free"
+          priority: "Medium"
+          url: "https://debian-handbook.info/"
+          description: "Deep dive into Debian (Kali's foundation)"
+          
+        - name: "Linux Command Line Basics"
+          type: "Tutorial"
+          cost: "Free"
+          priority: "High"
+          url: "https://www.linuxcommand.org/"
+          description: "Command-line fundamentals"
+          
+        - name: "Man Pages"
+          type: "Built-in Documentation"
+          cost: "Free"
+          priority: "Critical"
+          description: "Use 'man <command>' for detailed command documentation"
+          
+      practice_resources:
+        - name: "Kali Linux Virtual Machine"
+          type: "Practice Environment"
+          cost: "Free"
+          priority: "Critical"
+          description: "Install Kali in VirtualBox or VMware for hands-on practice"
+          
+        - name: "PEN-103 Course Labs"
+          type: "Exercises"
+          cost: "Free"
+          priority: "High"
+          description: "Hands-on labs included with free PEN-103 course"
+          
+        - name: "Kali Forums"
+          type: "Community"
+          cost: "Free"
+          url: "https://forums.kali.org/"
+          description: "Community support and discussions"
+          
+      exam_preparation:
+        - name: "KLCP Practice Quiz (Archived)"
+          type: "Practice Questions"
+          cost: "Free"
+          url: "https://web.archive.org/web/20210803003815/https://kali.training/downloads/klcp-quiz.pdf"
+          description: "Archived practice quiz from earlier KLCP version"
+          
+        - name: "KLCP Cheat Sheets (Community)"
+          type: "Study Aids"
+          cost: "Free"
+          url: "https://github.com/chacka0101/Kali-Linux-Certified-Professional-KLCP-Cheat-Sheet"
+          description: "Community-created KLCP study materials"
+    
+    study_plan:
+      total_duration: "4-8 weeks"
+      hours_per_week: "10-15"
+      
+      phases:
+        - name: "Linux Basics Foundation"
+          duration: "1-2 weeks"
+          hours_per_week: 10
+          
+          goals:
+            - "Understand Linux file system structure"
+            - "Master basic command-line navigation"
+            - "Learn file permissions and ownership"
+            - "Understand user/group management"
+            
+          focus_areas:
+            - "File system hierarchy (/etc, /usr, /var, /home)"
+            - "Basic commands (ls, cd, cp, mv, rm, mkdir)"
+            - "File permissions (chmod, chown)"
+            - "Text manipulation (grep, sed, awk basics)"
+            
+          activities:
+            - "Read Kali Linux Revealed Chapters 1-4"
+            - "Complete PEN-103 Learning Units 1-4"
+            - "Practice all basic commands in Kali VM"
+            - "Create users, groups, and test permissions"
+            
+          milestones:
+            - "Comfortable navigating file system"
+            - "Can modify file permissions confidently"
+            - "Understand ownership concepts"
+            
+        - name: "Package Management & System Administration"
+          duration: "2-3 weeks"
+          hours_per_week: 12
+          
+          goals:
+            - "Master apt and dpkg package management"
+            - "Understand Kali metapackages"
+            - "Learn systemd service management"
+            - "Configure system services"
+            
+          focus_areas:
+            - "apt commands (update, upgrade, install, remove)"
+            - "dpkg usage and troubleshooting"
+            - "Repository management"
+            - "systemctl service control"
+            - "Kali metapackages"
+            
+          activities:
+            - "Read Kali Linux Revealed Chapters 5-8"
+            - "Complete PEN-103 Learning Units 5-8"
+            - "Install/remove packages repeatedly"
+            - "Practice with all Kali metapackages"
+            - "Start/stop/enable services"
+            
+          milestones:
+            - "Can troubleshoot package issues"
+            - "Understand metapackage structure"
+            - "Comfortable with systemctl"
+            
+        - name: "Security & Advanced Configuration"
+          duration: "1-2 weeks"
+          hours_per_week: 15
+          
+          goals:
+            - "Understand Kali security features"
+            - "Learn firewall configuration"
+            - "Master log analysis"
+            - "Configure secure services"
+            
+          focus_areas:
+            - "SSH configuration and hardening"
+            - "Firewall rules (iptables/ufw)"
+            - "Log locations and analysis"
+            - "System monitoring"
+            
+          activities:
+            - "Read Kali Linux Revealed Chapters 9-11"
+            - "Complete PEN-103 Learning Units 9-11"
+            - "Configure SSH with key-based auth"
+            - "Set up firewall rules"
+            - "Analyze system logs"
+            
+          milestones:
+            - "Can secure SSH properly"
+            - "Understand firewall concepts"
+            - "Comfortable with log files"
+            
+        - name: "Exam Preparation & Review"
+          duration: "1-2 weeks"
+          hours_per_week: 15
+          
+          goals:
+            - "Review all course material"
+            - "Take practice quizzes"
+            - "Identify weak areas"
+            - "Build command reference sheet"
+            
+          focus_areas:
+            - "Review all PEN-103 material"
+            - "Practice quizzes"
+            - "Command memorization"
+            - "Weak area remediation"
+            
+          activities:
+            - "Re-read Kali Linux Revealed (focus on weak areas)"
+            - "Complete archived practice quizzes"
+            - "Create personal cheat sheet"
+            - "Time yourself on practice questions"
+            - "Join KLCP study groups on Discord"
+            
+          milestones:
+            - "Scoring 85%+ on practice quizzes"
+            - "Comfortable with all major topics"
+            - "Command recall is automatic"
+    
+    tips:
+      general:
+        - "The Kali Linux Revealed book is your bible - read it cover to cover"
+        - "Don't just read - practice every command and concept hands-on"
+        - "Set up a Kali VM and use it as your daily driver if possible"
+        - "The exam tests understanding, not just memorization"
+        - "Focus on 'why' not just 'how' - understand the concepts"
+        - "This is an entry-level cert - don't underestimate preparation needed"
+        - "Join the OffSec Discord PEN-103 channel for peer support"
+        
+      study_tips:
+        - "Complete all PEN-103 course exercises - they're free and excellent"
+        - "Create flashcards for commands and their options"
+        - "Practice typing commands from memory"
+        - "Understand package dependencies and how to resolve them"
+        - "Know the difference between apt, apt-get, and dpkg"
+        - "Memorize common file locations (/etc/apt/sources.list, /var/log/, etc.)"
+        - "Practice with systemctl until service management is second nature"
+        - "Review the archived practice quiz multiple times"
+        
+      exam_day:
+        - "Test your proctoring setup 24 hours before"
+        - "Have government ID ready (required for proctoring)"
+        - "Clear your desk - only keyboard, mouse, monitor allowed"
+        - "Close all applications except browser"
+        - "Read each question carefully - watch for trick wording"
+        - "Flag difficult questions and move on - come back later"
+        - "Manage time: ~67 seconds per question"
+        - "Trust your preparation - don't overthink"
+        - "Some questions may have multiple correct answers"
+        - "Results are immediate after final question"
+        
+      common_mistakes:
+        - "Not reading the question carefully (negative phrasing tricks)"
+        - "Confusing apt vs apt-get vs dpkg usage"
+        - "Not understanding systemd service management"
+        - "Forgetting file permission syntax (rwxr-xr-x)"
+        - "Not knowing repository configuration files"
+        - "Skipping hands-on practice (reading isn't enough)"
+        - "Underestimating the exam difficulty"
+        - "Poor time management during exam"
+    
+    career:
+      job_roles:
+        - "Junior Penetration Tester"
+        - "Security Analyst (Entry-level)"
+        - "Linux System Administrator"
+        - "IT Support Specialist (Security focus)"
+        - "SOC Analyst Tier 1"
+        
+      salary_range:
+        entry_level: "$50,000 - $70,000"
+        mid_level: "$70,000 - $95,000"
+        location_note: "KLCP alone won't command high salaries - it's a stepping stone"
+        
+      certification_value:
+        - "Validates Kali Linux proficiency on resume"
+        - "Strong foundation for OSCP preparation"
+        - "Demonstrates Linux system administration skills"
+        - "Entry point into OffSec certification ecosystem"
+        - "Most affordable OffSec certification"
+        
+      next_certifications:
+        - "OSCP (Offensive Security Certified Professional) - Primary goal"
+        - "OSWP (Offensive Security Wireless Professional)"
+        - "CompTIA Security+"
+        - "Linux+ or LPIC-1 (for deeper Linux knowledge)"
+        
+      industry_recognition:
+        - "Entry-level certification - not as recognized as OSCP"
+        - "Demonstrates commitment to cybersecurity career"
+        - "Proves foundational Linux skills"
+        - "Respected within OffSec community"
+        - "Good conversation starter in interviews"
+    
+    community:
+      forums:
+        - name: "OffSec Discord - PEN-103 Channel"
+          url: "https://discord.gg/offsec"
+          description: "Official PEN-103 discussion channel"
+          
+        - name: "Kali Linux Forums"
+          url: "https://forums.kali.org/"
+          description: "Official Kali community forums"
+          
+        - name: "r/Kalilinux Subreddit"
+          url: "https://www.reddit.com/r/Kalilinux/"
+          description: "Kali Linux community on Reddit"
+          
+      study_groups:
+        - "OffSec Discord study groups"
+        - "InfoSec Prep Discord (KLCP channel)"
+        - "LinkedIn KLCP study groups"
+        
+      youtube_channels:
+        - "Kali Linux Official"
+        - "NetworkChuck"
+        - "The Cyber Mentor"
+        - "David Bombal"
+        
+      blogs_and_reviews:
+        - "Kali Linux Blog (official)"
+        - "KLCP exam reviews on Medium"
+        - "Student experience posts on Reddit"
+    
+    success_rate:
+      first_attempt: "65-75%"
+      with_retake: "85-90%"
+      
+      factors_affecting_success:
+        - "Prior Linux experience (greatly helps)"
+        - "Completion of PEN-103 course materials"
+        - "Hands-on practice time (50-100 hours typical)"
+        - "Reading comprehension (questions can be tricky)"
+        - "Understanding vs memorization approach"
+        - "Time management during exam"
+        
+      difficulty_note: |
+        While KLCP is entry-level, don't underestimate it. The 80% passing score 
+        means you can only miss 16 out of 80 questions. Many candidates fail their 
+        first attempt by rushing through study materials without hands-on practice. 
+        Treat this like a serious certification - it's more challenging than it appears.
+
+  # ==========================================
+  # OSCC - OffSec CyberCore - Security Essentials
+  # ==========================================
+  OSCC:
+    name: "OffSec CyberCore"
+    code: "OSCC"
+    provider: "Offensive Security"
+    level: "Beginner"
+    difficulty: "Foundational"
+    
+    description: |
+      OSCC (SEC-100) is the perfect starting point for those beginning their cybersecurity journey. 
+      This certification provides comprehensive foundational knowledge covering both offensive and 
+      defensive security concepts. It builds essential skills in networking, scripting, operating 
+      system security, and basic cloud security that are fundamental to all cybersecurity roles.
+      
+      Unlike other entry-level certifications, OSCC combines theoretical knowledge with hands-on labs,
+      ensuring you understand not just the "what" but also the "how" of cybersecurity fundamentals.
+      The certification prepares you for more advanced OffSec certifications like OSCP, OSDA, and OSIR.
+      
+      Perfect for career changers, students, and IT professionals looking to transition into 
+      cybersecurity with a strong, practical foundation.
+    
+    prerequisites:
+      required:
+        - "Basic computer literacy and file system navigation"
+        - "Understanding of operating system concepts (Windows/Linux)"
+        - "Basic internet and networking awareness"
+      
+      recommended:
+        - "CompTIA A+ or equivalent IT fundamentals knowledge"
+        - "Exposure to command line interfaces (CMD/PowerShell/Bash)"
+        - "Basic understanding of how websites and applications work"
+        - "Familiarity with virtualization (VirtualBox/VMware)"
+      
+      helpful_certifications:
+        - "CompTIA IT Fundamentals (ITF+)"
+        - "CompTIA A+"
+    
+    exam:
+      duration: "6 hours"
+      format: "Multiple Choice & Practical Labs"
+      passing_score: "70%"
+      attempts_included: 1
+      retake_policy: "Additional attempts can be purchased"
+      proctoring: "Online proctored exam"
+      
+      structure:
+        theoretical_component:
+          format: "Multiple Choice Questions"
+          weight: 40
+          description: "Test fundamental knowledge across all topics"
+        
+        practical_component:
+          format: "Hands-on Lab Exercises"
+          weight: 60
+          description: "Demonstrate practical skills in a lab environment"
+      
+      exam_tips:
+        - "Focus on hands-on practice - theory alone won't be enough"
+        - "Understand the OSI model thoroughly - it appears frequently"
+        - "Practice basic network troubleshooting with tools like ping, traceroute, nslookup"
+        - "Know common ports and protocols (HTTP/80, HTTPS/443, SSH/22, FTP/21)"
+        - "Be comfortable with basic Python and Bash scripting"
+        - "Understand the difference between symmetric and asymmetric encryption"
+        - "Know the CIA triad (Confidentiality, Integrity, Availability) inside out"
+        - "Practice identifying common vulnerabilities (SQL injection, XSS, weak passwords)"
+        - "Understand basic firewall rules and access control lists"
+        - "Time management: Don't spend too long on any single question"
+        - "Read questions carefully - they may test edge cases"
+        - "Use the lab time wisely to verify your understanding"
+    
+    cost:
+      Course + Cert Bundle: 1749
+      learn_one: 2749
+      currency: "USD"
+      
+      breakdown:
+        course_materials: "Included - PDF, Videos, Labs"
+        lab_access: "90 days (Course + Cert Bundle) or 365 days (Learn One)"
+        exam_attempts: "1 attempt (Course + Cert) or 2 attempts (Learn One)"
+        practice_exams: "0 (Course + Cert) or 6 (Learn One)"
+        
+      additional_costs:
+        extra_lab_time_30_days: 149
+        single_exam_retake: 99
+        
+      financing_available: true
+      student_discount: true
+      military_discount: true
+    
+    topics:
+      - name: "Cybersecurity Fundamentals"
+        weight: 15
+        subtopics:
+          - "CIA Triad (Confidentiality, Integrity, Availability)"
+          - "Security principles and best practices"
+          - "Threat landscape and attack vectors"
+          - "Security frameworks (NIST, ISO 27001 basics)"
+          - "Common vulnerabilities (OWASP Top 10 awareness)"
+          - "Security vs. usability trade-offs"
+          - "Defense in depth concept"
+        key_topics:
+          - "Understanding risk assessment basics"
+          - "Incident response fundamentals"
+          - "Security awareness and social engineering"
+        
+      - name: "Networking Fundamentals"
+        weight: 20
+        subtopics:
+          - "OSI and TCP/IP models"
+          - "IP addressing and subnetting (IPv4/IPv6 basics)"
+          - "Common protocols (HTTP/S, FTP, SSH, DNS, DHCP)"
+          - "Network devices (routers, switches, firewalls)"
+          - "Wireless networking basics"
+          - "Network troubleshooting"
+        key_tools:
+          - "ping"
+          - "traceroute/tracert"
+          - "nslookup/dig"
+          - "ipconfig/ifconfig"
+          - "netstat"
+          - "Wireshark (basic packet analysis)"
+        
+      - name: "Scripting & Programming Basics"
+        weight: 15
+        subtopics:
+          - "Python fundamentals (variables, loops, functions)"
+          - "Bash/PowerShell scripting basics"
+          - "File operations and automation"
+          - "Regular expressions basics"
+          - "Basic data structures (lists, dictionaries)"
+        key_tools:
+          - "Python 3"
+          - "Bash"
+          - "PowerShell"
+          - "Text editors (VS Code, Sublime)"
+        
+      - name: "Operating System Security"
+        weight: 20
+        subtopics:
+          - "Windows security basics (Users, Groups, Permissions)"
+          - "Linux security basics (File permissions, sudo)"
+          - "Authentication vs. Authorization"
+          - "Access control models"
+          - "Patch management importance"
+          - "Logging and monitoring basics"
+          - "System hardening fundamentals"
+        key_tools:
+          - "Windows Event Viewer"
+          - "Linux syslog"
+          - "User management tools"
+        
+      - name: "Offensive Security Basics"
+        weight: 15
+        subtopics:
+          - "Reconnaissance and information gathering"
+          - "Common attack vectors"
+          - "Password attacks (brute force, dictionary)"
+          - "Basic web vulnerabilities (SQL injection, XSS concepts)"
+          - "Social engineering awareness"
+          - "Malware types and behaviors"
+        key_tools:
+          - "nmap (basic scanning)"
+          - "Basic enumeration tools"
+          - "Browser developer tools"
+        
+      - name: "Defensive Security Basics"
+        weight: 15
+        subtopics:
+          - "Firewall concepts and basic rules"
+          - "Intrusion Detection Systems (IDS) basics"
+          - "Antivirus and endpoint protection"
+          - "Security best practices"
+          - "Backup and recovery fundamentals"
+          - "Secure password practices"
+          - "Multi-factor authentication"
+        key_tools:
+          - "Windows Firewall"
+          - "iptables basics"
+          - "Security scanning tools (awareness level)"
+    
+    study_plan:
+      total_duration: "8-10 weeks"
+      hours_per_week: "10-15"
+      
+      phases:
+        - name: "Foundation Building"
+          duration: "3 weeks"
+          hours_per_week: 12
+          
+          goals:
+            - "Understand cybersecurity fundamentals and terminology"
+            - "Grasp networking basics and the OSI model"
+            - "Setup lab environment"
+            - "Get comfortable with command line"
+            
+          focus_areas:
+            - "CIA Triad and security principles"
+            - "OSI model and TCP/IP"
+            - "Basic Linux and Windows navigation"
+            - "Introduction to networking tools"
+            
+          activities:
+            - "Study SEC-100 course modules 1-3"
+            - "Setup VirtualBox with Kali Linux"
+            - "Complete networking fundamentals labs"
+            - "Practice basic command line operations"
+            
+          milestones:
+            - "Can explain the OSI model"
+            - "Comfortable with basic Linux commands"
+            - "Understands common network protocols"
+            - "Lab environment fully functional"
+        
+        - name: "Core Skills Development"
+          duration: "3 weeks"
+          hours_per_week: 15
+          
+          goals:
+            - "Master scripting basics in Python and Bash"
+            - "Understand offensive and defensive concepts"
+            - "Practice with security tools"
+            - "Apply learning in hands-on labs"
+            
+          focus_areas:
+            - "Python and Bash scripting essentials"
+            - "Basic offensive techniques"
+            - "Defensive security controls"
+            - "System security and hardening"
+            
+          activities:
+            - "Complete SEC-100 modules 4-7"
+            - "Write simple automation scripts"
+            - "Perform basic network scans"
+            - "Configure firewall rules"
+            - "Complete all course labs"
+            
+          milestones:
+            - "Can write basic Python scripts"
+            - "Understands common attack vectors"
+            - "Comfortable with security tools"
+            - "Completed 80% of course labs"
+        
+        - name: "Exam Preparation"
+          duration: "2-4 weeks"
+          hours_per_week: 10
+          
+          goals:
+            - "Review all course material"
+            - "Practice exam-style questions"
+            - "Solidify weak areas"
+            - "Build exam confidence"
+            
+          focus_areas:
+            - "Comprehensive review of all topics"
+            - "Practice questions and quizzes"
+            - "Hands-on lab practice"
+            - "Exam strategy and time management"
+            
+          activities:
+            - "Review SEC-100 course from start to finish"
+            - "Complete practice exams"
+            - "Redo challenging labs"
+            - "Create study notes and cheat sheets"
+            
+          milestones:
+            - "Scoring 80%+ on practice exams"
+            - "All labs completed successfully"
+            - "Confident with all major topics"
+            - "Ready for certification exam"
+      
+      week_by_week:
+        week_1:
+          focus: "Cybersecurity & Networking Fundamentals"
+          tasks:
+            - "Read SEC-100 chapters 1-2"
+            - "Study the CIA Triad and security principles"
+            - "Learn the OSI model and TCP/IP"
+            - "Setup lab environment (Kali Linux VM)"
+          hours: 12
+          
+        week_2:
+          focus: "Networking Deep Dive"
+          tasks:
+            - "Study IP addressing and subnetting"
+            - "Learn common protocols (HTTP, FTP, SSH, DNS)"
+            - "Practice with basic networking tools"
+            - "Complete networking labs"
+          hours: 12
+          
+        week_3:
+          focus: "Operating Systems Basics"
+          tasks:
+            - "Learn Linux file system and permissions"
+            - "Study Windows user and group management"
+            - "Practice command line operations"
+            - "Understand authentication concepts"
+          hours: 12
+          
+        week_4:
+          focus: "Scripting Introduction"
+          tasks:
+            - "Learn Python basics (variables, loops, functions)"
+            - "Study Bash scripting fundamentals"
+            - "Write simple automation scripts"
+            - "Complete scripting exercises"
+          hours: 15
+          
+        week_5:
+          focus: "Offensive Security Basics"
+          tasks:
+            - "Learn reconnaissance techniques"
+            - "Study common attack vectors"
+            - "Practice with nmap scanning"
+            - "Understand web vulnerabilities concepts"
+          hours: 15
+          
+        week_6:
+          focus: "Defensive Security Basics"
+          tasks:
+            - "Study firewall concepts and rules"
+            - "Learn about IDS/IPS basics"
+            - "Practice security hardening"
+            - "Understand logging and monitoring"
+          hours: 15
+          
+        week_7:
+          focus: "Hands-on Practice & Review"
+          tasks:
+            - "Complete remaining course labs"
+            - "Practice with all security tools"
+            - "Review weak areas"
+            - "Take practice quizzes"
+          hours: 12
+          
+        week_8:
+          focus: "Final Exam Preparation"
+          tasks:
+            - "Complete full practice exam"
+            - "Review all course material"
+            - "Create final study notes"
+            - "Schedule and take certification exam"
+          hours: 10
+    
+    resources:
+      essential:
+        - name: "SEC-100: CyberCore - Security Essentials (Official Course)"
+          type: "Course"
+          cost: "Included"
+          priority: "Critical"
+          url: "https://www.offsec.com/courses/sec-100/"
+          description: "Official OSCC course with videos, PDFs, and hands-on labs"
+          
+        - name: "OSCC Lab Environment"
+          type: "Practice Lab"
+          cost: "Included"
+          priority: "Critical"
+          description: "Official hands-on lab environment for practicing all concepts"
+          
+        - name: "OSCC Exam Guide"
+          type: "Documentation"
+          cost: "Free"
+          priority: "Critical"
+          url: "https://help.offsec.com"
+          description: "Official exam policies and requirements"
+      
+      recommended:
+        - name: "TryHackMe - Pre-Security Path"
+          type: "Learning Path"
+          cost: "Free"
+          priority: "High"
+          url: "https://tryhackme.com/path/outline/presecurity"
+          description: "Excellent foundational path for beginners"
+          
+        - name: "Professor Messer - Network+ Videos"
+          type: "Video Course"
+          cost: "Free"
+          priority: "High"
+          url: "https://www.professormesser.com/network-plus/n10-008/n10-008-video/n10-008-training-course/"
+          description: "Free networking fundamentals videos"
+          
+        - name: "Cybrary - Cyber Security Fundamentals"
+          type: "Course"
+          cost: "Free"
+          priority: "Medium"
+          url: "https://www.cybrary.it"
+          description: "Additional cybersecurity basics training"
+          
+        - name: "Python for Beginners"
+          type: "Tutorial"
+          cost: "Free"
+          priority: "Medium"
+          url: "https://www.python.org/about/gettingstarted/"
+          description: "Official Python tutorials for beginners"
+          
+        - name: "OverTheWire: Bandit"
+          type: "Practice"
+          cost: "Free"
+          priority: "Medium"
+          url: "https://overthewire.org/wargames/bandit/"
+          description: "Learn Linux command line through challenges"
+      
+      tools:
+        networking:
+          - "ping/traceroute"
+          - "nmap"
+          - "Wireshark"
+          - "nslookup/dig"
+        
+        scripting:
+          - "Python 3"
+          - "Bash"
+          - "PowerShell"
+          - "VS Code"
+        
+        security:
+          - "Kali Linux"
+          - "Virtualization (VirtualBox/VMware)"
+    
+    tips:
+      general:
+        - "Start with the basics - don't skip foundational concepts"
+        - "Hands-on practice is more valuable than just reading"
+        - "Set up your lab environment early and use it regularly"
+        - "Join beginner-friendly communities (r/cybersecurity, OffSec Discord)"
+        - "Don't be intimidated - everyone starts somewhere"
+        - "Take notes and create your own cheat sheets"
+        - "Ask questions when stuck - the community is helpful"
+        
+      study_tips:
+        - "Study consistently - 1-2 hours daily is better than cramming"
+        - "Focus on understanding concepts, not just memorization"
+        - "Practice with hands-on labs after learning theory"
+        - "Teach concepts to others to reinforce your learning"
+        - "Use multiple resources for difficult topics"
+        - "Take breaks - your brain needs time to process information"
+        
+      exam_day:
+        - "Get good sleep the night before"
+        - "Review your notes in the morning"
+        - "Test your internet connection and workspace"
+        - "Read each question carefully"
+        - "Don't overthink - trust your preparation"
+        - "Manage your time - don't spend too long on difficult questions"
+        - "Use elimination method for multiple choice"
+        - "In labs, verify your work before submitting"
+
+  # ==========================================
+  # OSIR - OffSec Incident Responder
+  # ==========================================
+  OSIR:
+    name: "OffSec Incident Responder"
+    code: "OSIR"
+    provider: "Offensive Security"
+    level: "Intermediate"
+    difficulty: "Intermediate to Advanced"
+    
+    description: |
+      OSIR (SOC-200) is the premier certification for security operations professionals, incident 
+      responders, and threat hunters. This certification validates your ability to detect, analyze,
+      and respond to security incidents using industry-standard tools and methodologies.
+      
+      Unlike theoretical SOC certifications, OSIR focuses on practical, hands-on skills you'll use 
+      daily in a Security Operations Center. You'll demonstrate proficiency in analyzing endpoint 
+      artifacts, investigating network traffic, correlating events in SIEM platforms, hunting for 
+      threats, and conducting digital forensics investigations.
+      
+      The certification covers real-world incident response scenarios including ransomware attacks,
+      data exfiltration, lateral movement, and APT activity. You'll work with tools like Splunk,
+      ELK Stack, Wireshark, Volatility, and various forensics utilities to investigate incidents 
+      from detection to remediation.
+      
+      Perfect for SOC analysts, incident responders, forensic investigators, and security 
+      professionals looking to specialize in defensive security operations.
+    
+    prerequisites:
+      required:
+        - "Strong understanding of Windows and Linux operating systems"
+        - "Solid networking fundamentals (TCP/IP, protocols, packet analysis)"
+        - "Basic understanding of common attack vectors and TTPs"
+        - "Familiarity with command line (PowerShell, Bash)"
+        - "Understanding of log analysis concepts"
+      
+      recommended:
+        - "OSDA (OffSec Defense Analyst) or OSCC certification"
+        - "6+ months experience in a SOC or security monitoring role"
+        - "Exposure to SIEM platforms (Splunk, ELK, QRadar)"
+        - "Basic understanding of the MITRE ATT&CK framework"
+        - "Familiarity with Windows Event Logs and Sysmon"
+      
+      helpful_certifications:
+        - "OSDA - OffSec Defense Analyst"
+        - "Security+ or CySA+"
+        - "GCIA - GIAC Certified Intrusion Analyst"
+        - "BTL1 - Blue Team Level 1"
+    
+    exam:
+      duration: "24 hours (practical investigation) + 24 hours (report writing)"
+      format: "Practical Hands-on Incident Response"
+      passing_score: "70 points out of 100"
+      attempts_included: 1
+      retake_policy: "Additional attempts can be purchased"
+      proctoring: "Not required (honor system + report verification)"
+      
+      structure:
+        investigation_phase:
+          duration: "24 hours"
+          format: "Hands-on incident investigation"
+          description: "Investigate multiple security incidents in a realistic SOC environment"
+          tasks:
+            - "Analyze endpoint artifacts and forensic evidence"
+            - "Investigate network traffic and identify IOCs"
+            - "Query SIEM logs to correlate events"
+            - "Perform threat hunting activities"
+            - "Document findings and create timelines"
+        
+        report_phase:
+          duration: "24 hours"
+          format: "Professional incident report"
+          description: "Write a comprehensive incident response report"
+          requirements:
+            - "Executive summary of each incident"
+            - "Detailed technical analysis"
+            - "Timeline of attacker activity"
+            - "Indicators of Compromise (IOCs)"
+            - "Remediation recommendations"
+            - "Professional formatting and clarity"
+      
+      exam_tips:
+        - "Master Splunk Search Processing Language (SPL) - it's critical"
+        - "Create a timeline of events for EVERY investigation - it guides your analysis"
+        - "Document every artifact found with precise timestamps"
+        - "Focus on correlation ⁠- connect the dots between different log sources"
+        - "Practice writing reports - clarity and professionalism matter"
+        - "Know your MITRE ATT&CK tactics and techniques"
+        - "Time management is crucial - don't get stuck on one incident"
+        - "Screenshot everything - evidence for your report"
+        - "Use Sysmon logs effectively - they provide rich endpoint telemetry"
+        - "Understand Windows Event IDs (4624, 4625, 4688, 4720, etc.)"
+        - "Know how to carve files from network traffic"
+        - "Practice identifying lateral movement techniques"
+        - "Familiarize yourself with common ransomware IOCs"
+        - "Review your labs multiple times before the exam"
+        - "Take breaks during the 24 hours - stay fresh"
+    
+    cost:
+      Course + Cert Bundle: 1749
+      learn_one: 2749
+      currency: "USD"
+      
+      breakdown:
+        course_materials: "Included - PDFs, Videos, VMs"
+        lab_access: "90 days (Course + Cert Bundle) or 365 days (Learn One)"
+        exam_attempts: "1 included (Course + Cert) or 2 included (Learn One)"
+        practice_exams: "0 (Course + Cert) or 6 (Learn One)"
+        additional_resources: "Lab VMs, SOC-200 course content, case studies"
+        
+      additional_costs:
+        extra_lab_time_30_days: 249
+        single_exam_retake: 299
+        
+      financing_available: true
+      student_discount: true
+      military_discount: true
+      
+      value_proposition:
+        - "Hands-on SOC simulation environment"
+        - "Real-world incident response scenarios"
+        - "Industry-recognized certification"
+        - "Learn One includes 1 year of lab access + practice exams"
+    
+    topics:
+      - name: "Incident Response Lifecycle"
+        weight: 20
+        subtopics:
+          - "NIST IR framework (Preparation, Detection, Analysis, Containment, Eradication, Recovery)"
+          - "Incident categorization and prioritization"
+          - "Evidence collection and chain of custody"
+          - "IR playbooks and runbooks"
+          - "Communication during incidents"
+          - "Post-incident activities and lessons learned"
+          - "Legal and compliance considerations"
+        key_skills:
+          - "Triage and prioritize multiple incidents"
+          - "Coordinate with stakeholders"
+          - "Document investigation process"
+          - "Create actionable remediation plans"
+        
+      - name: "Digital Forensics"
+        weight: 25
+        subtopics:
+          - "Windows forensic artifacts (Registry, Prefetch, Amcache, ShimCache)"
+          - "Linux forensic artifacts (bash history, logs, cron jobs)"
+          - "File system analysis (NTFS, EXT4)"
+          - "Memory forensics with Volatility"
+          - "Browser forensics (history, cookies, downloads)"
+          - "Email forensics"
+          - "USB device forensics"
+          - "Timeline analysis"
+        key_tools:
+          - "Autopsy"
+          - "FTK Imager"
+          - "Volatility"
+          - "Eric Zimmerman Tools (Registry Explorer, Timeline Explorer)"
+          - "Plaso/log2timeline"
+          - "bulk_extractor"
+          - "strings, grep"
+        
+      - name: "SIEM & Log Analysis"
+        weight: 25
+        subtopics:
+          - "Splunk Search Processing Language (SPL)"
+          - "ELK Stack (Elasticsearch, Logstash, Kibana)"
+          - "Windows Event Log analysis"
+          - "Sysmon log correlation"
+          - "Network device logs (firewall, proxy, DNS)"
+          - "Application logs"
+          - "Log normalization and enrichment"
+          - "Creating detection rules"
+          - "Alert triage and investigation"
+        key_tools:
+          - "Splunk"
+          - "ELK Stack"
+          - "Event Viewer"
+          - "Sysmon"
+          - "Sigma rules"
+        key_skills:
+          - "Write complex SPL queries"
+          - "Correlate events across multiple log sources"
+          - "Identify suspicious patterns"
+          - "Create dashboards and alerts"
+        
+      - name: "Threat Hunting"
+        weight: 20
+        subtopics:
+          - "Threat hunting methodologies"
+          - "Hypothesis-driven hunting"
+          - "MITRE ATT&CK framework"
+          - "IOC and TTP-based hunting"
+          - "Behavioral analysis"
+          - "Lateral movement detection"
+          - "Persistence mechanism identification"
+          - "C2 communication detection"
+          - "Data exfiltration indicators"
+        key_tools:
+          - "MITRE ATT&CK Navigator"
+          - "Threat intelligence platforms"
+          - "SIEM platforms for hunting"
+          - "Endpoint Detection and Response (EDR) tools"
+        hunting_techniques:
+          - "Hunt for abnormal PowerShell activity"
+          - "Identify suspicious scheduled tasks"
+          - "Detect unauthorized service creation"
+          - "Find unusual network connections"
+          - "Locate credential dumping attempts"
+        
+      - name: "Malware Analysis Basics"
+        weight: 10
+        subtopics:
+          - "Static malware analysis"
+          - "Dynamic malware analysis (sandboxing)"
+          - "Identifying malware families"
+          - "Extracting IOCs from malware"
+          - "Reverse engineering basics"
+          - "Obfuscation techniques"
+          - "Understanding packers and crypters"
+        key_tools:
+          - "VirusTotal"
+          - "Hybrid Analysis"
+          - "PEStudio"
+          - "Process Hacker"
+          - "Procmon"
+          - "Wireshark (for malware traffic)"
+          - "YARA rules"
+    
+    study_plan:
+      total_duration: "12-16 weeks"
+      hours_per_week: "15-20"
+      
+      phases:
+        - name: "Foundations & Tool Mastery"
+          duration: "4 weeks"
+          hours_per_week: 15
+          
+          goals:
+            - "Master Splunk SPL and ELK query syntax"
+            - "Become proficient with forensic tools"
+            - "Understand IR lifecycle and methodologies"
+            - "Setup lab environment"
+            
+          focus_areas:
+            - "SIEM platforms (Splunk, ELK)"
+            - "Windows Event Logs and Sysmon"
+            - "Forensic artifact analysis"
+            - "IR frameworks (NIST, SANS)"
+            
+          activities:
+            - "Complete SOC-200 modules 1-4"
+            - "Practice 50+ Splunk SPL queries daily"
+            - "Analyze Windows forensic artifacts in labs"
+            - "Study MITRE ATT&CK framework"
+            - "Setup local SOC lab environment"
+            
+          milestones:
+            - "Can write complex SPL queries confidently"
+            - "Understands major Windows forensic artifacts"
+            - "Completed all Splunk and ELK labs"
+            - "Familiar with IR lifecycle"
+        
+        - name: "Practical Investigation Skills"
+          duration: "5 weeks"
+          hours_per_week: 20
+          
+          goals:
+            - "Conduct full incident investigations"
+            - "Correlate events across log sources"
+            - "Perform memory and disk forensics"
+            - "Hunt for threats proactively"
+            
+          focus_areas:
+            - "End-to-end incident response"
+            - "Multi-source log correlation"
+            - "Memory forensics with Volatility"
+            - "Threat hunting methodologies"
+            
+          activities:
+            - "Complete SOC-200 modules 5-10"
+            - "Investigate 10+ incident scenarios"
+            - "Practice memory forensics"
+            - "Conduct threat hunting exercises"
+            - "Write practice IR reports"
+            
+          milestones:
+            - "Successfully investigated ransomware scenario"
+            - "Can perform memory forensics independently"
+            - "Completed 10+ full investigations"
+            - "Proficient with timeline analysis"
+        
+        - name: "Advanced Scenarios & Report Writing"
+          duration: "3-7 weeks"
+          hours_per_week: 15
+          
+          goals:
+            - "Master complex incident scenarios"
+            - "Perfect report writing skills"
+            - "Prepare for exam scenarios"
+            - "Build exam stamina"
+            
+          focus_areas:
+            - "APT-style attack scenarios"
+            - "Professional report writing"
+            - "Exam preparation"
+            - "Time management"
+            
+          activities:
+            - "Complete all SOC-200 challenge labs"
+            - "Redo complex investigation scenarios"
+            - "Write 5+ professional IR reports"
+            - "Take practice exams (Learn One students)"
+            - "Review all MITRE ATT&CK techniques"
+            
+          milestones:
+            - "All course labs completed"
+            - "Can write professional IR reports"
+            - "Comfortable with 24-hour investigation time frame"
+            - "Ready for certification exam"
+      
+      week_by_week:
+        weeks_1_2:
+          focus: "Splunk Mastery & Log Analysis"
+          tasks:
+            - "Study SOC-200 Splunk modules"
+            - "Practice 100 SPL queries minimum"
+            - "Learn Windows Event Logs (4624,4625,4688,4720,4732,4648)"
+            - "Study Sysmon configuration and events"
+            - "Complete Splunk fundamentals labs"
+          hours: 30
+          
+        weeks_3_4:
+          focus: "Forensic Artifacts & IR Framework"
+          tasks:
+            - "Study Windows Registry forensics"
+            - "Learn Prefetch, Amcache, ShimCache analysis"
+            - "Practice with Eric Zimmerman tools"
+            - "Study NIST IR lifecycle"
+            - "Complete forensics labs"
+          hours: 30
+          
+        weeks_5_6:
+          focus: "First Incident Investigations"
+          tasks:
+            - "Investigate malware infection scenario"
+            - "Analyze unauthorized access incident"
+            - "Practice log correlation"
+            - "Create investigation timelines"
+            - "Write incident summaries"
+          hours: 40
+          
+        weeks_7_8:
+          focus: "Memory Forensics & Network Analysis"
+          tasks:
+            - "Learn Volatility framework"
+            - "Analyze memory dumps"
+            - "Study network traffic analysis"
+            - "Investigate C2 communications"
+            - "Complete advanced forensics labs"
+          hours: 40
+          
+        weeks_9_10:
+          focus: "Threat Hunting & MITRE ATT&CK"
+          tasks:
+            - "Study threat hunting methodologies"
+            - "Learn MITRE ATT&CK framework deeply"
+            - "Practice hypothesis-driven hunting"
+            - "Hunt for lateral movement"
+            - "Identify persistence mechanisms"
+          hours: 40
+          
+        weeks_11_12:
+          focus: "Complex Scenarios & Report Writing"
+          tasks:
+            - "Investigate APT-style scenarios"
+            - "Practice ransomware analysis"
+            - "Write professional IR reports"
+            - "Review all weak areas"
+            - "Complete challenge labs"
+          hours: 30
+          
+        weeks_13_16:
+          focus: "Exam Preparation (Optional)"
+          tasks:
+            - "Take practice exams (Learn One)"
+            - "Redo all difficult scenarios"
+            - "Perfect report writing template"
+            - "Review MITRE techniques"
+            - "Schedule and take exam"
+          hours: 60
+    
+    resources:
+      essential:
+        - name: "SOC-200: Security Operations and Defensive Analysis (Official)"
+          type: "Course"
+          cost: "Included"
+          priority: "Critical"
+          url: "https://www.offsec.com/courses/soc-200/"
+          description: "Official OSIR course with comprehensive SOC training"
+          
+        - name: "OSIR Lab Environment"
+          type: "Practice Lab"
+          cost: "Included"
+          priority: "Critical"
+          description: "Realistic SOC environment with Splunk, ELK, and forensic tools"
+          
+        - name: "MITRE ATT&CK Framework"
+          type: "Reference"
+          cost: "Free"
+          priority: "Critical"
+          url: "https://attack.mitre.org/"
+          description: "Essential knowledge base of adversary tactics and techniques"
+          
+        - name: "Splunk Fundamentals"
+          type: "Training"
+          cost: "Free"
+          priority: "Critical"
+          url: "https://www.splunk.com/en_us/training/free-courses/splunk-fundamentals-1.html"
+          description: "Free Splunk training to master SPL"
+      
+      recommended:
+        - name: "Eric Zimmerman Tools"
+          type: "Tools"
+          cost: "Free"
+          priority: "High"
+          url: "https://ericzimmerman.github.io/"
+          description: "Essential Windows forensics tools (Registry Explorer, Timeline Explorer, etc.)"
+          
+        - name: "Blue Team Labs Online"
+          type: "Practice Platform"
+          cost: "Varies"
+          priority: "High"
+          url: "https://blueteamlabs.online/"
+          description: "Hands-on defensive security challenges"
+          
+        - name: "CyberDefenders"
+          type: "Practice Platform"
+          cost: "Free"
+          priority: "High"
+          url: "https://cyberdefenders.org/"
+          description: "Real-world blue team challenges and scenarios"
+          
+        - name: "Applied Incident Response by Steve Anson"
+          type: "Book"
+          cost: "$40"
+          priority: "Medium"
+          url: "https://www.amazon.com/Applied-Incident-Response-Steve-Anson/dp/1119560268"
+          description: "Comprehensive IR methodology and techniques"
+          
+        - name: "The Art of Memory Forensics"
+          type: "Book"
+          cost: "$50"
+          priority: "Medium"
+          description: "Deep dive into memory forensics with Volatility"
+          
+        - name: "13Cubed YouTube Channel"
+          type: "Videos"
+          cost: "Free"
+          priority: "High"
+          url: "https://www.youtube.com/c/13cubed"
+          description: "Excellent digital forensics and IR tutorials"
+          
+        - name: "SANS Cyber Aces Tutorials"
+          type: "Training"
+          cost: "Free"
+          priority: "Medium"
+          url: "https://www.cyberaces.org/"
+          description: "Free cybersecurity tutorials"
+      
+      tools:
+        siem_platforms:
+          - "Splunk"
+          - "ELK Stack (Elasticsearch, Logstash, Kibana)"
+          - "Graylog"
+        
+        forensics:
+          - "Autopsy"
+          - "FTK Imager"
+          - "Volatility"
+          - "Eric Zimmerman Tools"
+          - "Plaso/log2timeline"
+          - "bulk_extractor"
+          
+        network_analysis:
+          - "Wireshark"
+          - "tcpdump"
+          - "NetworkMiner"
+          - "Zeek (Bro)"
+          
+        endpoint_tools:
+          - "Sysmon"
+          - "Process Hacker"
+          - "Procmon"
+          - "Autoruns"
+          - "PEStudio"
+      
+      practice_machines:
+        beginner:
+          - name: "Blue Team Labs - Phishing Analysis"
+            difficulty: "Easy"
+            skills: "Email analysis, IOC extraction"
+          - name: "CyberDefenders - PacketMaze"
+            difficulty: "Easy"
+            skills: "Network forensics, Wireshark"
+            
+        intermediate:
+          - name: "CyberDefenders - DeepBlueCLI"
+            difficulty: "Medium"
+            skills: "Windows Event Log analysis"
+          - name: "Blue Team Labs - Ransomware Attack"
+            difficulty: "Medium"
+            skills: "Endpoint forensics, malware analysis"
+            
+        advanced:
+          - name: "CyberDefenders - DumpMe"
+            difficulty: "Hard" 
+            skills: "Memory forensics, malware analysis"
+          - name: "Blue Team Labs - APT Simulation"
+            difficulty: "Hard"
+            skills: "Full IR lifecycle, MITRE ATT&CK"
+    
+    tips:
+      general:
+        - "Focus on hands-on practice - theory is important but practical skills win exams"
+        - "Master Splunk SPL - it's the most critical skill for the exam"
+        - "Build a methodology - approach each incident systematically"
+        - "Join the OffSec Discord - the SOC-200 community is very helpful"
+        - "Create your own cheat sheets for forensic artifacts and Event IDs"
+        - "Practice writing reports from day one"
+        - "Study MITRE ATT&CK deeply - it guides your hunting and analysis"
+        
+      study_tips:
+        - "Lab, lab, lab - redo scenarios until they're second nature"
+        - "Time yourself on investigations to build exam stamina"
+        - "Learn keyboard shortcuts for Splunk and forensic tools"
+        - "Create your own investigation templates and timelines"
+        - "Study real-world IR reports for structure and style"
+        - "Build a home lab with Splunk and Sysmon"
+        - "Practice translating MITRE techniques to detection queries"
+        
+      exam_day:
+        - "Start with a quick scan of all incidents - prioritize based on points"
+        - "Document everything as you go - don't rely on memory"
+        - "Screenshot every significant finding"
+        - "Create timelines immediately - they guide your investigation"
+        - "Use the first few hours to gather all evidence, then analyze"
+        - "Don't tunnel vision on one incident - manage your time"
+        - "For the report: clear executive summary + technical details + IOCs"
+        - "Take breaks - 24 hours is a marathon, not a sprint"
+        - "Review your report before submission - clarity and professionalism count"
+        - "If stuck, move on and come back later"
+
+  # ==========================================
+  # OSEE - Offensive Security Exploitation Expert
+  # ==========================================
+  OSEE:
+    name: "Offensive Security Exploitation Expert"
+    code: "OSEE"
+    provider: "Offensive Security"
+    level: "Expert"
+    difficulty: "Very Advanced"
+    
+    description: |
+      OSEE (EXP-401: Advanced Windows Exploitation) is the most elite certification in offensive 
+      security, validating world-class expertise in Windows exploit development, modern mitigation 
+      bypasses, kernel exploitation, and browser security.
+      
+      This certification is the pinnacle of offensive security certifications. It goes far beyond 
+      basic exploitation - you'll master advanced heap exploitation (Low Fragmentation Heap, Segment 
+      Heap), modern Windows mitigation bypasses (CFG, ACG, CIG, CET), kernel-mode exploitation, 
+      browser sandbox escapes, and more.
+      
+      The course (formerly known as AWE - Advanced Windows Exploitation) is taught exclusively 
+      through live training by industry experts and security researchers. You'll learn techniques 
+      used by APT groups and security researchers to find and exploit complex vulnerabilities in 
+      modern Windows environments.
+      
+      Topics include Type Confusion exploits, Use-After-Free exploitation, browser exploitation 
+      (Chrome/Edge), Windows kernel driver vulnerabilities, and hypervisor escapes. You'll work 
+      with WinDbg, IDA Pro/Ghidra, custom fuzzers, and write exploits from scratch.
+      
+      This certification is for experienced security researchers, exploit developers, offensive 
+      security professionals, and those conducting vulnerability research at the highest level. 
+      **OSEE is considered one of the hardest cybersecurity certifications in the world.**
+    
+    prerequisites:
+      required:
+        - "Deep mastery of x86/x64 assembly language"
+        - "Advanced understanding of Windows internals (heap, memory management, kernel)"
+        - "Experience with OSED-level concepts (DEP/ASLR bypass, ROP chains)"
+        - "Strong reverse engineering skills (IDA Pro/Ghidra proficiency)"
+        - "C/C++ programming proficiency"
+        - "Experience developing working exploits"
+        - "Python scripting for exploitation automation"
+      
+      recommended:
+        - "OSED certification (required for foundations)"
+        - "OSWE certification (helpful for web/browser context)"
+        - "3+ years exploitation experience"
+        - "Experience with vulnerability research or fuzzing"
+        - "Published CVEs or exploit development work"
+        - "Familiarity with WinDbg, IDA Pro, Ghidra"
+        - "Understanding of modern CPU architectures"
+      
+      helpful_certifications:
+        - "OSED - OffSec Exploit Developer (STRONGLY recommended)"
+        - "GXPN - GIAC Exploit Researcher and Advanced Penetration Tester"
+        - "ZeroDays Lab Advanced courses"
+      
+      reality_check:
+        - "This is NOT a beginner-friendly certification"
+        - "OSED is essentially a prerequisite - OSEE assumes that knowledge"
+        - "Expect 6-12 months of dedicated study even with OSED"
+        - "The failure rate is very high - this is intentional"
+        - "You will need to develop MULTIPLE complex exploits from scratch"
+    
+    exam:
+      duration: "72 hours (hands-on exploitation) + 24 hours (documentation)"
+      format: "Practical Exploit Development"
+      passing_score: "Variable (point-based, exact threshold confidential)"
+      attempts_included: 1
+      retake_policy: "Additional attempts available (expensive)"
+      proctoring: "Not required (honor system + proof-of-concept verification)"
+      
+      structure:
+        exploitation_phase:
+          duration: "72 hours (3 days)"
+          format: "Develop working exploits"
+          description: "Develop multiple working exploits against real-world targets"
+          challeng es_include:
+            - "Advanced heap exploitation (UAF, Type Confusion)"
+            - "Modern mitigation bypasses"
+            - "Kernel-mode exploitation"
+            - "Browser exploitation scenarios"
+            - "Custom exploit chain development"
+          
+          requirements:
+            - "Working proof-of-concept exploits"
+            - "Bypass all modern mitigations"
+            - "Demonstrate reliable exploitation"
+            - "Code execution and payload delivery"
+        
+        documentation_phase:
+          duration: "24 hours"
+          format: "Professional exploitation report"
+          description: "Document your exploits with technical detail"
+          requirements:
+            - "Detailed vulnerability analysis"
+            - "Exploit development methodology"
+            - "Mitigation bypass techniques used"
+            - "Exploit code with comprehensive comments"
+            - "Screenshots and proof of exploitation"
+            - "Root cause analysis"
+      
+      exam_tips:
+        - "Master WinDbg Preview - it's your primary tool"
+        - "Automate EVERYTHING possible with Python or JavaScript"
+        - "Understand heap layouts and allocator behavior perfectly"
+        - "Practice kernel debugging setup in virtual environments"
+        - "Build a library of ROP gadgets and common bypass patterns"
+        - "Time management - 72 hours goes FAST"
+        - "Focus on reliable exploits, not just proof-of-concepts"
+        - "Document as you go - don't leave it all for the report phase"
+        - "Understand information leaks - they're critical for ASLR bypass"
+        - "Know the differences between heap allocators (LFH vs Segment Heap)"
+        - "Practice Code Flow Guard (CFG) bypass techniques"
+        - "Study browser architecture if browser exploitation is included"
+        - "Perfect your WinDbg scripting and automation"
+        - "Take breaks - mental fatigue is real over 72 hours"
+        - "Have backup approaches - your first idea might not work"
+    
+    cost:
+      Course + Cert Bundle: 1749
+      learn_one: 2749
+      Live Training (AWE): 8500
+      currency: "USD"
+      
+      breakdown:
+        course_materials: "Included - Extensive PDFs, VMs, Research Papers"
+        lab_access: "90 days (Course + Cert Bundle) or 365 days (Learn One)"
+        exam_attempts: "1 attempt (Course + Cert) or 2 attempts (Learn One)"
+        practice_exams: "0 (Course + Cert) or 6 (Learn One)"
+        live_instruction: "Only available via AWE Live Training ($8500+)"
+        
+      additional_costs:
+        extra_lab_time_90_days: 1000
+        single_exam_retake: 500
+        
+      notes:
+        - "EXP-401 is available via self-paced (Course + Cert/Learn One) or AWE live class"
+        - "Live Training (AWE) includes expert instruction and networking opportunities"
+        - "Financing available for corporate/government"
+        - "One of the most expensive security certifications"
+        - "ROI is substantial for exploit developers"
+      
+      value_proposition:
+        - "World-class exploit development training"
+        - "Taught by industry-leading security researchers"
+        - "Access to cutting-edge research and techniques"
+        - "Elite-level certification for career advancement"
+        - "Network with other expert exploit developers"
+    
+    topics:
+      - name: "Advanced Windows Exploitation"
+        weight: 30
+        subtopics:
+          - "Low Fragmentation Heap (LFH) exploitation"
+          - "Segment Heap exploitation (Windows 10+)"
+          - "Frontend/Backend heap allocators"
+          - "Heap spraying and heap grooming techniques"
+          - "Use-After-Free (UAF) exploitation"
+          - "Type Confusion vulnerabilities"
+          - "Out-of-Bounds (OOB) read/write"
+          - "Integer overflow/underflow exploitation"
+          - "Information leak techniques"
+        key_skills:
+          - "Analyze heap allocator behavior"
+          - "Craft heap layouts for reliable exploitation"
+          - "Develop UAF exploit primitives"
+          - "Defeat heap isolation mechanisms"
+        key_tools:
+          - "WinDbg Preview"
+          - "PageHeap"
+          - "GFLAGS"
+          - "Custom heap analysis scripts"
+        
+      - name: "Modern Windows Mitigation Bypasses"
+        weight: 25
+        subtopics:
+          - "Control Flow Guard (CFG) bypasses"
+          - "Arbitrary Code Guard (ACG) bypasses"
+          - "Code Integrity Guard (CIG) bypasses"
+          - "Hardware-enforced Stack Protection (CET/Shadow Stack)"
+          - "ASLR bypass techniques (information leaks)"
+          - "DEP/NX bypass (ret2* techniques)"
+          - "SafeSEH/SEHOP bypasses"
+          - "Stack canary defeats"
+          - "SMEP/SMAP bypasses (kernel)"
+        key_skills:
+          - "Identify information leak vulnerabilities"
+          - "Chain multiple primitives for bypasses"
+          - "Craft ROP chains for modern Windows"
+          - "Understand CFG implementation and weaknesses"
+        
+      - name: "Kernel Exploitation"
+        weight: 30
+        subtopics:
+          - "Windows kernel architecture and internals"
+          - "Kernel driver vulnerability analysis"
+          - "Arbitrary kernel write primitives"
+          - "Kernel information leaks"
+          - "Token stealing and privilege escalation"
+          - "SMEP/SMAP bypass techniques"
+          - "Kernel pool exploitation"
+          - "Race condition exploitation"
+          - "Kernel debugging and analysis"
+        key_tools:
+          - "WinDbg (kernel mode debugging)"
+          - "LiveKD"
+          - "IDA Pro / Ghidra"
+          - "KernelShark"
+          - "Custom kernel pool analyzers"
+        key_skills:
+          - "Setup and use kernel debugging"
+          - "Analyze kernel drivers for vulnerabilities"
+          - "Develop kernel exploitation primitives"
+          - "Escalate from user-mode to kernel-mode"
+        
+      - name: "Browser Exploitation & Sandbox Escapes"
+        weight: 15
+        subtopics:
+          - "Chromium/Chrome internals and V8 engine"
+          - "Edge/IE exploitation"
+          - "JIT compiler vulnerabilities"
+          - "JavaScript engine exploitation"
+          - "Browser heap exploitation"
+          - "Sandbox escape techniques"
+          - "Renderer process exploitation"
+          - "Browser mitigation bypasses"
+        key_tools:
+          - "Chromium debugging tools"
+          - "V8 exploitation frameworks"
+          - "JavaScript fuzzing tools"
+          - "Windbg with browser symbols"
+        
+      - name: "Vulnerability Research & Fuzzing"
+        weight: "Supplementary"
+        subtopics:
+          - "Custom fuzzer development"
+          - "Coverage-guided fuzzing"
+          - "Mutation-based fuzzing"
+          - "Triage automation"
+          - "Root cause analysis"
+          - "Exploit development from crashes"
+        key_tools:
+          - "WinAFL"
+          - "AFL++"
+          - "Custom Python fuzzers"
+          - "Lighthouse (coverage analysis)"
+    
+    study_plan:
+      total_duration: "6-12 months (post-OSED)"
+      hours_per_week: "20-30"
+      
+      reality_check:
+        - "This is an expert-level certification - expect AT LEAST 6 months"
+        - "Many candidates study for 12+ months"
+        - "You MUST have OSE D-level knowledge before starting"
+        - "The course moves extremely fast - you need prerequisites"
+        - "Plan for setbacks - exploits will break, debugging takes time"
+      
+      phases:
+        - name: "Foundations Review & Setup"
+          duration: "2-4 weeks"
+          hours_per_week: 15
+          
+          goals:
+            - "Review OSED concepts thoroughly"
+            - "Master WinDbg Preview and kernel debugging"
+            - "Setup analysis environment"
+            - "Refresh assembly and C/C++ skills"
+            
+          focus_areas:
+            - "OSED review (ROP, DEP/ASLR bypass)"
+            - "WinDbg mastery and scripting"
+            - "IDA Pro / Ghidra proficiency"
+            - "Kernel debugging setup"
+            
+          activities:
+            - "Redo key OSED exercises"
+            - "Practice WinDbg commands and scripts"
+            - "Setup kernel debugging lab"
+            - "Review modern Windows mitigations"
+            
+          milestones:
+            - "Comfortable developing OSED-level exploits"
+            - "Proficient with WinDbg Preview"
+            - "Kernel debugging environment ready"
+            - "Can read x64 assembly fluently"
+        
+        - name: "Heap Exploitation Mastery"
+          duration: "8-12 weeks"
+          hours_per_week: 25
+          
+          goals:
+            - "Master LFH and Segment Heap"
+            - "Develop UAF and Type Confusion exploits"
+            - "Perfect heap grooming techniques"
+            - "Understand all heap internals"
+            
+          focus_areas:
+            - "Windows heap allocator internals"
+            - "Use-After-Free exploitation"
+            - "Heap spraying and grooming"
+            - "Information leak development"
+            
+          activities:
+            - "Study EXP-401 heap modules intensively"
+            - "Develop 10+ working heap exploits"
+            - "Analyze heap behavior with WinDbg"
+            - "Practice UAF exploitation scenarios"
+            - "Build custom heap analysis tools"
+            
+          milestones:
+            - "Can exploit UAF reliably"
+            - "Understands LFH vs Segment Heap"
+            - "Developed functional Type Confusion exploit"
+            - "Comfortable with heap debugging"
+        
+        - name: "Modern Mitigation Bypasses"
+          duration: "6-8 weeks"
+          hours_per_week: 25
+          
+          goals:
+            - "Bypass CFG, ACG, CIG"
+            - "Master information leak techniques"
+            - "Develop reliable ASLR bypasses"
+            - "Chain primitives effectively"
+            
+          focus_areas:
+            - "Control Flow Guard bypass"
+            - "ASLR information leaks"
+            - "ROP chain construction"
+            - "Arbitrary Code Guard defeat"
+            
+          activities:
+            - "Study CFG implementation"
+            - "Practice information leak development"
+            - "Build ROP chain generators"
+            - "Complete all mitigation bypass labs"
+            
+          milestones:
+            - "Successfully bypassed CFG"
+            - "Developed working information leaks"
+            - "Can construct complex ROP chains"
+            - "Understands all modern Windows mitigations"
+        
+        - name: "Kernel Exploitation"
+          duration: "8-12 weeks"
+          hours_per_week: 30
+          
+          goals:
+            - "Master kernel debugging"
+            - "Exploit kernel driver vulnerabilities"
+            - "Bypass SMEP/SMAP"
+            - "Achieve privilege escalation"
+            
+          focus_areas:
+            - "Kernel internals and architecture"
+            - "Driver vulnerability analysis"
+            - "Kernel exploitation primitives"
+            - "SMEP/SMAP bypass techniques"
+            
+          activities:
+            - "Practice kernel reversing"
+            - "Analyze vulnerable drivers"
+            - "Develop kernel exploits"
+            - "Study privilege escalation techniques"
+            - "Complete kernel labs"
+            
+          milestones:
+            - "Proficient with kernel debugging"
+            - "Exploited multiple kernel drivers"
+            - "Achieved SYSTEM via exploitation"
+            - "Understands SMEP/SMAP bypasses"
+        
+        - name: "Browser &  Advanced Topics"
+          duration: "4-8 weeks"
+          hours_per_week: 25
+          
+          goals:
+            - "Understand browser architecture"
+            - "Exploit JavaScript engines"
+            - "Master browser sandbox escapes"
+            - "Integrate all techniques"
+            
+          focus_areas:
+            - "Chromium/V8 internals"
+            - "JIT compilation exploitation"
+            - "Browser sandbox architecture"
+            - "Full exploit chain development"
+            
+          activities:
+            - "Study browser exploitation modules"
+            - "Analyze V8 vulnerabilities"
+            - "Practice sandbox escape techniques"
+            - "Develop browser exploits"
+            
+          milestones:
+            - "Understands browser internals"
+            - "Exploited JavaScript engine vulnerability"
+            - "Developed sandbox escape"
+            - "Ready for exam scenarios"
+        
+        - name: "Exam Preparation"
+          duration: "4-8 weeks"
+          hours_per_week: 20
+          
+          goals:
+            - "Perfect exploit reliability"
+            - "Build exploit library"
+            - "Practice under time pressure"
+            - "Prepare documentation templates"
+            
+          focus_areas:
+            - "Exam-style exploit development"
+            - "Time-boxed practice"
+            - "Automation and tooling"
+            - "Report writing"
+            
+          activities:
+            - "Redo all course labs"
+            - "Develop exploits under time constraints"
+            - "Build ROP gadget library"
+            - "Create report templates"
+            - "Review all weak areas"
+            
+          milestones:
+            - "All labs completed successfully"
+            - "Can develop exploits under pressure"
+            - "Tooling and automation ready"
+            - "Confident and exam-ready"
+    
+    resources:
+      essential:
+        - name: "EXP-401: Advanced Windows Exploitation (Official)"
+          type: "Course"
+          cost: "Included"
+          priority: "Critical"
+          url: "https://www.offsec.com/courses/exp-401/"
+          description: "The ultimate Windows exploitation course (formerly AWE)"
+          notes: "Only available via live training or Learn Advanced"
+          
+        - name: "WinDbg Preview"
+          type: "Tool"
+          cost: "Free"
+          priority: "Critical"
+          url: "https://aka.ms/windbg"
+          description: "Modern Windows debugger - ESSENTIAL for OSEE"
+          
+        - name: "IDA Pro or Ghidra"
+          type: "Tool"
+          cost: "Free (Ghidra) / $$$$ (IDA Pro)"
+          priority: "Critical"
+          description: "Disassembler and decompiler for reverse engineering"
+          
+        - name: "Windows Internals (7th Edition)"
+          type: "Book"
+          cost: "$60-$80"
+          priority: "Critical"
+          url: "https://www.microsoft.com/en-us/p/windows-internals-part-1-7th-edition/9781509304912"
+          description: "Deep dive into Windows architecture - MUST READ"
+      
+      recommended:
+        - name: "The Art of Software Security Assessment"
+          type: "Book"
+          cost: "$70"
+          priority: "High"
+          description: "Comprehensive vulnerability analysis techniques"
+          
+        - name: "Practical Malware Analysis"
+          type: "Book"
+          cost: "$40"
+          priority: "Medium"
+          description: "Reverse engineering and malware analysis"
+          
+        - name: "OffSec Discord - OSEE Channel"
+          type: "Community"
+          cost: "Free"
+          priority: "High"
+          url: "https://discord.gg/offsec"
+          description: "Connect with fellow OSEE students"
+          
+        - name: "CoreLan Security Training Materials"
+          type: "Training"
+          cost: "Free"
+          priority: "Medium"
+          url: "https://www.corelan.be/index.php/articles/"
+          description: "Excellent exploit development tutorials"
+          
+        - name: "ZeroDays CTF Challenges"
+          type: "Practice"
+          cost: "Free-Paid"
+          priority: "Medium"
+          description: "Advanced exploitation challenges"
+          
+        - name: "Project Zero Blog"
+          type: "Research"
+          cost: "Free"
+          priority: "High"
+          url: "https://googleprojectzero.blogspot.com/"
+          description: "Cutting-edge vulnerability research"
+          
+        - name: "Uninformed Journal"
+          type: "Research"
+          cost: "Free"
+          priority: "Medium"
+          url: "http://www.uninformed.org/"
+          description: "Advanced security research papers"
+      
+      tools:
+        debugging:
+          - "WinDbg Preview (Critical)"
+          - "x64dbg"
+          - "GDB (for comparison)"
+          
+        reverse_engineering:
+          - "IDA Pro or Ghidra (Critical)"
+          - "Binary Ninja"
+          - "Radare2"
+          
+        development:
+          - "Visual Studio"
+          - "Python 3"
+          - "Pwntools"
+          - "ROPgadget"
+          
+        analysis:
+          - "Process Hacker"
+          - "Process Monitor"
+          - "API Monitor"
+          - "Lighthouse (coverage visualization)"
+          
+        fuzzing:
+          - "WinAFL"
+          - "AFL++"
+          - "Honggfuzz"
+          - "Custom Python fuzzers"
+      
+      practice_machines:
+        note: "OSEE-level challenges are rare. Focus on PWN challenges and kernel exploitation:"
+        
+        beginner:
+          - name: "Exploit-Exercises Protostar/Fusion"
+            difficulty: "Medium"
+            skills: "Baseline exploitation review"
+          - name: "PWNable.kr"
+            difficulty: "Medium"
+            skills: "Exploitation fundamentals"
+            
+        intermediate:
+          - name: "Exploit-Exercises Phoenix"
+            difficulty: "Hard"
+            skills: "Advanced exploitation"
+          - name: "HackTheBox Pro Labs - APT Labs"
+            difficulty: "Hard"
+            skills: "Real-world exploitation"
+            
+        advanced:
+          - name: "Defcon CTF Quals/Finals"
+            difficulty: "Expert"
+            skills: "World-class exploitation"
+          - name: "Pwn2Own Challenges"
+            difficulty: "Expert"
+            skills: "Bleeding-edge research"
+          - name: "0CTF/TCTF"
+            difficulty: "Expert"
+            skills: "Advanced kernel and browser exploitation"
+    
+    tips:
+      general:
+        - "OSED is essentially mandatory - don't attempt OSEE without it"
+        - "This is a marathon, not a sprint - plan for 6-12 months minimum"
+        - "Join the OffSec OSEE Discord channel - the community is invaluable"
+        - "Build your own exploit library and automation tools"
+        - "Study real-world exploits and CVEs"
+        - "Read security research papers regularly"
+        - "Perfect your debugging workflow - you'll live in WinDbg"
+        - "Don't skip kernel exploitation - it's heavily weighted"
+        
+      study_tips:
+        - "Redo every single lab multiple times until it's muscle memory"
+        - "Take detailed notes - you'll need them for the exam"
+        - "Build custom WinDbg scripts for common tasks"
+        - "Study Windows Internals book alongside the course"
+        - "Practice developing exploits from scratch, not just following tutorials"
+        - "Set up a dedicated high-performance VM for analysis"
+        - "Learn Python automation - it saves massive amounts of time"
+        - "Study failed exploits - understanding why things break is critical"
+        - "Time yourself - the exam is about speed AND correctness"
+        - "Build a ROP gadget database from common Windows DLLs"
+        
+      exam_day:
+        - "Start with a full recon of all challenges - prioritize intelligently"
+        - "Document EVERYTHING as you go - don't rely on memory"
+        - "Automate heap grooming and ROP chain generation"
+        - "If an approach isn't working after 6-8 hours, pivot"
+        - "Take breaks every 4-6 hours - mental freshness is critical"
+        - "Keep backups of all working exploits and scripts"
+        - "Test exploit reliability - one success isn't enough"
+        - "For kernel: test in VM before live debugging"
+        - "Screenshot every stage of exploitation"
+        - "Prepare your report template before the exam"
+        - "Budget time for report writing - 24 hours goes fast"
+        - "Include detailed technical analysis in your report"
+        - "Comment your exploit code thoroughly"
+        - "If you're truly stuck, move to the next challenge"
+        - "Remember: partial credit matters - document everything you tried"
+
+# ==========================================
+# GENERAL RESOURCES (All Certifications)
+# ==========================================
+general_resources:
+  communities:
+    - name: "OffSec Official Discord"
+      url: "https://discord.gg/offsec"
+      description: "Official community for all OffSec certifications"
+      
+    - name: "InfoSec Prep Discord"
+      url: "https://discord.gg/infosecprep"
+      description: "Community for OSCP and other cert preparation"
+      
+    - name: "r/oscp Subreddit"
+      url: "https://reddit.com/r/oscp"
+      description: "Active subreddit for OSCP discussion"
+      
+    - name: "NetSecFocus Trophy Bot"
+      url: "https://discord.gg/netsecfocus"
+      description: "HTB-focused community with machine tracking"
+  
+  learning_platforms:
+    - name: "HackTheBox"
+      url: "https://www.hackthebox.com"
+      cost: "Free/VIP $14/month"
+      description: "Premier platform for practicing pentesting skills"
+      
+    - name: "TryHackMe"
+      url: "https://tryhackme.com"
+      cost: "Free/Premium $10.99/month"
+      description: "Beginner-friendly guided learning platform"
+      
+    - name: "Proving Grounds"
+      url: "https://www.offsec.com/labs/"
+      cost: "$19/month"
+      description: "Official OffSec practice platform"
+      
+    - name: "VulnHub"
+      url: "https://www.vulnhub.com"
+      cost: "Free"
+      description: "Downloadable vulnerable VMs"
+  
+  reference_materials:
+    - name: "HackTricks"
+      url: "https://book.hacktricks.xyz/"
+      type: "Book"
+      cost: "Free"
+      description: "Comprehensive pentesting reference"
+      
+    - name: "GTFOBins"
+      url: "https://gtfobins.github.io/"
+      type: "Reference"
+      cost: "Free"
+      description: "Unix binary exploitation reference"
+      
+    - name: "LOLBAS"
+      url: "https://lolbas-project.github.io/"
+      type: "Reference"
+      cost: "Free"
+      description: "Windows Living Off The Land reference"
+      
+    - name: "PayloadsAllTheThings"
+      url: "https://github.com/swisskyrepo/PayloadsAllTheThings"
+      type: "Repository"
+      cost: "Free"
+      description: "Payload and bypass collection"
+      
+    - name: "MITRE ATT&CK"
+      url: "https://attack.mitre.org/"
+      type: "Framework"
+      cost: "Free"
+      description: "Adversary tactics and techniques knowledge base"

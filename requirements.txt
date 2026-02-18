@@ -1,0 +1,195 @@
+# ============================================================================
+# TRY-HARDER-AI DISCORD BOT - PYTHON DEPENDENCIES
+# ============================================================================
+#
+# Installation: pip install -r requirements.txt
+# Python Version: 3.10+  (tested on 3.13)
+# AI Provider: Google Gemini (FREE tier available!)
+#
+# ============================================================================
+
+# ============================================================================
+# CORE DEPENDENCIES
+# ============================================================================
+
+# Discord Bot Framework (with slash commands support)
+discord.py>=2.3.2
+
+# Async HTTP Client (for API requests)
+aiohttp>=3.9.0
+aiofiles>=23.2.1
+
+# HTTP Requests Library
+requests>=2.31.0
+
+# ============================================================================
+# AI & GOOGLE GEMINI
+# ============================================================================
+
+# Google Generative AI SDK (for Gemini Flash/Pro)
+google-generativeai>=0.3.2
+
+# Google AI Python SDK
+google-ai-generativelanguage>=0.4.0
+
+# Google API Core (required for Gemini)
+google-api-core>=2.15.0
+
+# Google Auth (for API authentication)
+google-auth>=2.26.2
+
+# Protocol Buffers (required by Google APIs)
+protobuf>=4.25.2
+
+# ============================================================================
+# DATA HANDLING
+# ============================================================================
+
+# YAML Parser (for certifications.yaml, questions.yaml, resources.yaml)
+PyYAML>=6.0.1
+
+# JSON handling validation
+jsonschema>=4.21.1
+
+# Date/Time handling
+python-dateutil>=2.8.2
+
+# ============================================================================
+# ENVIRONMENT & CONFIGURATION
+# ============================================================================
+
+# Environment Variables Management
+python-dotenv>=1.0.1
+
+# Configuration Management
+python-decouple>=3.8
+
+# ============================================================================
+# LOGGING & MONITORING
+# ============================================================================
+
+# Advanced Logging
+loguru>=0.7.2
+
+# Colorful Console Output
+colorama>=0.4.6
+termcolor>=2.4.0
+
+# Rich Terminal Output (for beautiful logs and banners)
+rich>=13.7.0
+
+# ============================================================================
+# UTILITIES
+# ============================================================================
+
+# Emoji Support
+emoji>=2.10.0
+
+# Progress Bars
+tqdm>=4.66.1
+
+# Retry Logic for API calls
+tenacity>=8.2.3
+
+# Rate Limiting
+ratelimit>=2.2.1
+
+# Async Rate Limiting (for Gemini API rate limits)
+aiolimiter>=1.1.0
+
+# ============================================================================
+# DATA VALIDATION
+# ============================================================================
+
+# Data Validation (pydantic v2)
+pydantic>=2.10.0
+
+# Type Checking
+typing-extensions>=4.9.0
+
+# ============================================================================
+# CACHING
+# ============================================================================
+
+# In-memory caching (to reduce Gemini API calls)
+cachetools>=5.3.2
+
+# Async caching
+aiocache>=0.12.2
+
+# ============================================================================
+# TESTING
+# ============================================================================
+
+# Testing Framework
+pytest>=7.4.4
+pytest-asyncio>=0.23.3
+pytest-cov>=4.1.0
+
+# Mocking
+pytest-mock>=3.12.0
+
+# ============================================================================
+# SECURITY
+# ============================================================================
+
+# Secure Password Handling
+cryptography>=42.0.0
+
+# Security Scanning
+safety>=3.0.1
+
+# ============================================================================
+# PERFORMANCE
+# ============================================================================
+
+# Faster JSON parsing (pre-built wheels available for Python 3.13)
+orjson>=3.10.0
+
+# ============================================================================
+# DISCORD EMBEDS & FORMATTING
+# ============================================================================
+
+# Markdown parsing (for rich text formatting)
+markdown>=3.5.2
+
+# HTML/Text processing
+beautifulsoup4>=4.12.3
+
+# ============================================================================
+# FILE HANDLING
+# ============================================================================
+
+# Excel file support (for future export features)
+openpyxl>=3.1.2
+
+# ============================================================================
+# TIME & SCHEDULING
+# ============================================================================
+
+# Timezone handling
+pytz>=2023.3
+
+# Schedule tasks (for automated backups, reminders)
+schedule>=1.2.0
+
+# APScheduler (for advanced scheduling)
+APScheduler>=3.10.4
+
+# ============================================================================
+# REGEX & TEXT PROCESSING
+# ============================================================================
+
+# Regular expressions (enhanced)
+regex>=2023.12.25
+
+# Text similarity (for question matching)
+fuzzywuzzy>=0.18.0
+python-Levenshtein>=0.25.0
+
+# ============================================================================
+# API HELPERS
+# ============================================================================
+
+# Backoff for retries (important for Gemini rate limits)
+backoff>=2.2.1

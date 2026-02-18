@@ -1,0 +1,398 @@
+# ============================================================================
+# TRY-HARDER-AI DISCORD BOT - GIT IGNORE RULES
+# ============================================================================
+
+# ============================================================================
+# ENVIRONMENT & SECRETS (CRITICAL - NEVER COMMIT!)
+# ============================================================================
+
+# Environment variables (NEVER commit these!)
+.env
+.env.local
+.env.production
+.env.development
+
+# API Keys and Secrets
+*.key
+*.pem
+*.cert
+secrets/
+credentials/
+
+# Google Gemini API credentials
+gemini_credentials.json
+google_credentials.json
+
+# ============================================================================
+# PYTHON
+# ============================================================================
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+
+# Virtual Environments
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+.venv/
+virtualenv/
+
+# ============================================================================
+# DATA & LOGS
+# ============================================================================
+
+# User data (contains sensitive user information)
+data/user_data.json
+data/*.db
+data/*.sqlite
+data/*.sqlite3
+
+# Logs
+logs/
+*.log
+*.log.*
+
+# Backups
+backups/
+*.backup
+*.bak
+*.old
+
+# Temporary files
+temp/
+tmp/
+*.tmp
+
+# ============================================================================
+# IDE & EDITORS
+# ============================================================================
+
+# VSCode
+.vscode/
+*.code-workspace
+
+# PyCharm
+.idea/
+*.iml
+*.iws
+.idea_modules/
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+
+# Visual Studio
+.vs/
+*.suo
+*.user
+
+# ============================================================================
+# OPERATING SYSTEM
+# ============================================================================
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# Linux
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# ============================================================================
+# DISCORD BOT SPECIFIC
+# ============================================================================
+
+# Bot session data
+sessions/
+*.session
+
+# Cache files
+cache/
+*.cache
+
+# Downloaded files
+downloads/
+media/
+
+# Bot-specific temporary files
+bot_temp/
+processing/
+
+# AI response cache (if enabled)
+ai_cache/
+response_cache/
+
+# ============================================================================
+# DEVELOPMENT
+# ============================================================================
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb
+
+# pyenv
+.python-version
+
+# pipenv
+Pipfile.lock
+
+# poetry
+poetry.lock
+
+# Celery
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath
+*.sage.py
+
+# Spyder
+.spyderproject
+.spyproject
+
+# Rope
+.ropeproject
+
+# mkdocs
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre
+.pyre/
+
+# pytype
+.pytype/
+
+# ============================================================================
+# PROJECT SPECIFIC
+# ============================================================================
+
+# Test outputs
+test_output/
+test_results/
+
+# Documentation builds
+docs/_build/
+docs/.doctrees/
+
+# Database files
+*.db-journal
+*.db-shm
+*.db-wal
+
+# Archive files
+*.zip
+*.tar.gz
+*.rar
+*.7z
+
+# Large media files (if any)
+*.mp4
+*.avi
+*.mov
+*.wmv
+*.flv
+
+# ============================================================================
+# SECURITY & SENSITIVE DATA
+# ============================================================================
+
+# Security scans
+.security/
+security_reports/
+
+# User exports
+exports/
+user_exports/
+
+# Debug dumps
+debug/
+dumps/
+*.dump
+
+# API rate limit tracking
+rate_limits/
+usage_stats.json
+
+# ============================================================================
+# DEPLOYMENT
+# ============================================================================
+
+# Docker
+*.pid
+*.seed
+*.pid.lock
+
+# Serverless
+.serverless/
+
+# AWS
+.aws/
+
+# Terraform
+*.tfstate
+*.tfstate.*
+.terraform/
+
+# Google Cloud (if used)
+.gcloud/
+gcloud_credentials.json
+
+# ============================================================================
+# MISC
+# ============================================================================
+
+# Node.js (if using any JS tools)
+node_modules/
+package-lock.json
+yarn.lock
+
+# Sass
+.sass-cache/
+*.css.map
+*.sass.map
+*.scss.map
+
+# Editor backup files
+*.bak
+*.gho
+*.ori
+*.orig
+*.tmp
+
+# Patch files
+*.patch
+*.diff
+
+# ============================================================================
+# KEEP THESE FILES (DO NOT IGNORE)
+# ============================================================================
+
+# Always include these
+!.env.example
+!.gitignore
+!requirements.txt
+!README.md
+!LICENSE
+!CONTRIBUTING.md
+
+# Keep data structure files (but not actual user data)
+!data/.gitkeep
+!data/certifications.yaml
+!data/questions.yaml
+!data/resources.yaml
+
+# Keep empty directories with .gitkeep
+!**/.gitkeep
+
+# Keep example configuration files
+!config/*.example
+!config/*.sample
+
+# ============================================================================
+# GEMINI API SPECIFIC
+# ============================================================================
+
+# Google AI Studio exports
+*.aistudio
+gemini_history/
+
+# Model cache
+model_cache/
+.gemini_cache/
+
+# ============================================================================
+# END OF .gitignore
+# ============================================================================

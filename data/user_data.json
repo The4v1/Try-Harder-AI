@@ -1,0 +1,388 @@
+{
+  "1102932027717713960": {
+    "user_id": "1102932027717713960",
+    "username": null,
+    "created_at": "2026-02-16T00:55:14.952277",
+    "last_active": "2026-02-17T22:14:41.421898",
+    "assessment_results": {
+      "certification": "OSED",
+      "skill_level": "Intermediate",
+      "score": 50,
+      "total_questions": 10,
+      "correct_answers": 5,
+      "areas_to_focus": [
+        "General preparation"
+      ],
+      "timestamp": "2026-02-17T22:14:26.115536",
+      "saved_at": "2026-02-17T22:14:41.421876"
+    },
+    "roadmap": {
+      "content": "# 🗺️ Your Personalized OSED Study Roadmap\n\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n**📋 Certification:** OSED\n**🎯 Your Skill Level:** Intermediate\n**📈 Assessment Score:** 0%\n**⏱️ Study Duration:** 12 weeks\n**📅 Start Date:** February 17, 2026\n**🎓 Target Exam Date:** May 12, 2026\n\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n# 🚀 YOUR 12-WEEK OSED MASTERY ROADMAP\n\nWelcome to the journey, student! Preparing for the **EXP-301** and the **OSED** certification is a marathon, not a sprint. It requires deep technical dives into Windows internals and the patience of a reverse engineer. \n\nYou have a solid general knowledge base—now it's time to sharpen those skills into a professional exploit developer's toolkit.\n\n> **\"Try Harder\" isn't just a slogan; it's a methodology. When the debugger crashes and the ROP chain fails, that's where the real learning begins.** 💪\n\n═══════════════════════════════════════\n\n## 📅 PHASE 1: FOUNDATIONS & STACK MASTERY (WEEKS 1-3)\n\n> *Focus: Mastering x86 Assembly, Debuggers, and Reliable Stack Overflows*\n\n**Week 1: The Assembly Language Deep Dive** 📚\n• Master x86 registers (EAX, EBX, ECX, EDX, ESI, EDI, EBP, ESP, EIP).\n\n• Understand the stack: PUSH, POP, CALL, RET, and stack frames.\n\n• Practice reading disassembly in WinDbg and x64dbg.\n\n**Week 2: Advanced Stack Overflows** 🎯\n• Precise offset identification using `mona.py`.\n\n• Identifying and filtering bad characters manually.\n\n• Learning the \"JMP ESP\" technique and its limitations.\n\n**Week 3: Shellcode Development (The Manual Way)** 💉\n• Writing Position-Independent Code (PIC).\n\n• Null-byte avoidance techniques (XORing registers, using smaller register parts).\n\n• Creating custom encoders/decoders for restricted buffers.\n\n═══════════════════════════════════════\n\n## 📅 PHASE 2: SEH & REVERSE ENGINEERING (WEEKS 4-6)\n\n> *Focus: Bypassing SEH Protections and Finding Vulnerabilities*\n\n**Week 4: Structured Exception Handling (SEH)** 🎭\n• Understand the SEH chain and Exception Registration Records.\n\n• Master the POP-POP-RET (PPR) technique.\n\n• Bypassing SafeSEH using non-SafeSEH modules.\n\n**Week 5: Reverse Engineering for Bug Hunting** 🔍\n• Intro to static analysis with IDA Pro or Ghidra.\n\n• Identifying vulnerable functions (strcpy, memcpy, gets).\n\n• Understanding the Import Address Table (IAT) and Export Address Table (EAT).\n\n**Week 6: Fuzzing & Crash Analysis** 🐛\n• Setting up mutation-based fuzzers.\n\n• Analyzing crashes in WinDbg to determine exploitability.\n\n• Automating the triage process for unique crashes.\n\n═══════════════════════════════════════\n\n## 📅 PHASE 3: THE ROP REVOLUTION (WEEKS 7-9)\n\n> *Focus: Bypassing DEP and ASLR with Return-Oriented Programming*\n\n**Week 7: ROP Fundamentals** ⚙️\n• Finding gadgets using `ROPgadget` or `mona.py`.\n\n• Understanding stack pivoting techniques.\n\n• Building basic ROP chains to execute simple functions.\n\n**Week 8: Bypassing DEP (Data Execution Prevention)** 🛡️\n• Constructing `VirtualProtect()` ROP chains.\n\n• Using `VirtualAlloc()` to create executable memory.\n\n• Dealing with restricted character sets in ROP gadgets.\n\n**Week 9: Bypassing ASLR & Advanced ROP** 🔓\n• Identifying and exploiting memory leaks to defeat ASLR.\n\n• Using non-ASLR modules as a baseline.\n\n• Multi-stage ROP chains and complex stack pivots.\n\n═══════════════════════════════════════\n\n## 📅 PHASE 4: REFINEMENT & EXAM PREP (WEEKS 10-12)\n\n> *Focus: Reliability, Speed, and Professional Reporting*\n\n**Week 10: Exploit Reliability & Egg Hunters** ⚡\n• Writing efficient Egg Hunters for limited buffer space.\n\n• Ensuring exploits work across different Windows versions.\n\n• Handling socket reuse and complex network protocols.\n\n**Week 11: Mock Exams & Time Management** ⏱️\n• Practice on **VulnServer** (all functions).\n\n• Complete the **Corelan** tutorials (advanced modules).\n\n• Practice exploitation under a 24-hour time constraint.\n\n**Week 12: The Final Countdown** ✅\n• Review all custom shellcode templates.\n\n• Practice report writing: Clear screenshots and reproducible steps.\n\n• Organize your \"Cheat Sheets\" for WinDbg and Mona commands.\n\n═══════════════════════════════════════\n\n## 💡 SUCCESS TIPS FOR OSED\n\n1️⃣ **Document Everything:** Keep a snippet library of every ROP gadget and shellcode trick you learn.\n\n2️⃣ **Verify Early:** Never build a full ROP chain before verifying your offset and EIP control with simple 'B's.\n\n3️⃣ **The Debugger is Your Friend:** If an exploit fails, don't guess. Step through the assembly instruction by instruction to find where the stack is misaligned.\n\n4️⃣ **Take Breaks:** Exploit dev is mentally taxing. If you've been staring at a hex dump for 3 hours, walk away for 15 minutes. The answer often comes when you aren't looking at the screen.\n\n═══════════════════════════════════════\n\n## 🛠️ ESSENTIAL RESOURCES\n\n• **Official Course Material:** Your primary source of truth.\n\n• **Practice Labs:** Essential for hands-on exploitation.\n\n• **VulnServer:** The gold standard for practicing Windows exploit dev.\n\n• **Mona.py Documentation:** Master the tool that makes OSED possible.\n\n• **x86 Instruction Set Reference:** Keep this open while writing shellcode.\n\n**You've got this! Stay focused, stay curious, and most importantly... Try Harder! 💪🚀**\n\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n## 📚 Quick Reference Resources\n\n**🤝 Community Resources:**\n- OffSec Discord Server\n- r/oscp on Reddit\n- InfoSec Prep Discord\n- NetSecFocus Discord (Trophy Bot)\n\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n## 🎯 Remember\n\n✨ **Consistency** is more important than intensity\n💪 **Try Harder** - but also take breaks when stuck\n📝 **Document everything** - your notes will save you during the exam\n🔄 **Review regularly** - revisit topics you've learned\n❤️ **Join the community** - learn from others on the same journey\n\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n*🚀 Use `/progress` to track your journey*\n*💬 Use `/ask` for any questions*\n*📖 Use `/resources` for more materials*\n\n**Good luck, and Try Harder! 💪**\n",
+      "generated_at": "2026-02-17T22:14:41.417887"
+    },
+    "progress": {
+      "machines_completed": 0,
+      "hours_studied": 0,
+      "current_phase": 1,
+      "milestones_completed": []
+    },
+    "preferences": {
+      "study_hours_per_week": 15,
+      "notifications_enabled": true,
+      "preferred_model": "gemini-1.5-flash"
+    },
+    "history": {
+      "assessments": [
+        {
+          "certification": "OSCP",
+          "score": 66.7,
+          "skill_level": "Intermediate",
+          "timestamp": "2026-02-16T00:55:14.954824"
+        },
+        {
+          "certification": "OSEP",
+          "score": 92.6,
+          "skill_level": "Expert",
+          "timestamp": "2026-02-16T00:56:03.091276"
+        },
+        {
+          "certification": "OSWE",
+          "score": 92.6,
+          "skill_level": "Expert",
+          "timestamp": "2026-02-16T00:56:49.970388"
+        },
+        {
+          "certification": "OSED",
+          "score": 33.3,
+          "skill_level": "Beginner",
+          "timestamp": "2026-02-16T00:57:34.447106"
+        },
+        {
+          "certification": "OSEE",
+          "score": 66.7,
+          "skill_level": "Intermediate",
+          "timestamp": "2026-02-16T00:58:55.079581"
+        },
+        {
+          "certification": "OSCP",
+          "score": 73.3,
+          "skill_level": "Intermediate",
+          "timestamp": "2026-02-16T01:17:07.727292"
+        },
+        {
+          "certification": "OSEE",
+          "score": 69.7,
+          "skill_level": "Intermediate",
+          "timestamp": "2026-02-16T01:20:40.800079"
+        },
+        {
+          "certification": "OSCP",
+          "score": 62.2,
+          "skill_level": "Intermediate",
+          "timestamp": "2026-02-16T10:43:41.206382"
+        },
+        {
+          "certification": "OSDA",
+          "score": 74.1,
+          "skill_level": "Intermediate",
+          "timestamp": "2026-02-16T11:14:28.666463"
+        },
+        {
+          "certification": "OSCP",
+          "score": 64.4,
+          "skill_level": "Intermediate",
+          "timestamp": "2026-02-16T11:29:40.849968"
+        },
+        {
+          "certification": "OSMR",
+          "score": 63.0,
+          "skill_level": "Intermediate",
+          "timestamp": "2026-02-16T12:46:35.648488"
+        },
+        {
+          "certification": "OSWA",
+          "score": 74.1,
+          "skill_level": "Intermediate",
+          "timestamp": "2026-02-16T12:47:38.463295"
+        },
+        {
+          "certification": "OSCP",
+          "score": 66.7,
+          "skill_level": "Intermediate",
+          "timestamp": "2026-02-16T12:48:56.795519"
+        },
+        {
+          "certification": "OSED",
+          "score": 63.0,
+          "skill_level": "Intermediate",
+          "timestamp": "2026-02-16T12:49:56.618354"
+        },
+        {
+          "certification": "OSWA",
+          "score": 74.1,
+          "skill_level": "Intermediate",
+          "timestamp": "2026-02-16T16:59:06.813348"
+        },
+        {
+          "certification": "OSCP",
+          "score": null,
+          "skill_level": "Intermediate",
+          "timestamp": "2026-02-16T17:16:08.985832"
+        },
+        {
+          "certification": "OSCC",
+          "score": null,
+          "skill_level": "Intermediate",
+          "timestamp": "2026-02-16T18:58:53.270776"
+        },
+        {
+          "certification": "KLCP",
+          "score": 77.8,
+          "skill_level": "Advanced",
+          "timestamp": "2026-02-17T18:53:39.284098"
+        },
+        {
+          "certification": "OSCP",
+          "score": 64.4,
+          "skill_level": "Intermediate",
+          "timestamp": "2026-02-17T18:55:07.763794"
+        },
+        {
+          "certification": "OSCC",
+          "score": null,
+          "skill_level": "Intermediate",
+          "timestamp": "2026-02-17T21:52:03.338089"
+        },
+        {
+          "certification": "OSEP",
+          "score": null,
+          "skill_level": "Intermediate",
+          "timestamp": "2026-02-17T21:52:33.425992"
+        },
+        {
+          "certification": "OSCP",
+          "score": null,
+          "skill_level": "Intermediate",
+          "timestamp": "2026-02-17T21:53:50.427271"
+        },
+        {
+          "certification": "KLCP",
+          "score": 71.1,
+          "skill_level": "Intermediate",
+          "timestamp": "2026-02-17T22:11:14.882572"
+        },
+        {
+          "certification": "OSCP",
+          "score": null,
+          "skill_level": "Intermediate",
+          "timestamp": "2026-02-17T22:14:10.666622"
+        },
+        {
+          "certification": "OSED",
+          "score": null,
+          "skill_level": "Intermediate",
+          "timestamp": "2026-02-17T22:14:41.421876"
+        }
+      ],
+      "roadmaps_generated": [
+        {
+          "certification": "OSCP",
+          "timestamp": "2026-02-16T01:17:30.567529"
+        },
+        {
+          "certification": "OSEE",
+          "timestamp": "2026-02-16T02:15:11.795036"
+        },
+        {
+          "certification": "OSEE",
+          "timestamp": "2026-02-16T02:15:37.221458"
+        },
+        {
+          "certification": "OSEE",
+          "timestamp": "2026-02-16T02:29:17.104990"
+        },
+        {
+          "certification": "OSEE",
+          "timestamp": "2026-02-16T02:29:42.310105"
+        },
+        {
+          "certification": "OSCP",
+          "timestamp": "2026-02-16T10:45:34.120212"
+        },
+        {
+          "certification": "OSDA",
+          "timestamp": "2026-02-16T11:15:19.003084"
+        },
+        {
+          "certification": "OSCP",
+          "timestamp": "2026-02-16T11:31:35.827559"
+        },
+        {
+          "certification": "OSED",
+          "timestamp": "2026-02-16T12:50:37.061842"
+        },
+        {
+          "certification": "OSED",
+          "timestamp": "2026-02-16T12:52:39.853651"
+        },
+        {
+          "certification": "OSED",
+          "timestamp": "2026-02-16T12:54:19.940356"
+        },
+        {
+          "certification": "OSWA",
+          "timestamp": "2026-02-16T16:59:34.876300"
+        },
+        {
+          "certification": "OSWA",
+          "timestamp": "2026-02-16T17:05:47.884631"
+        },
+        {
+          "certification": "OSWA",
+          "timestamp": "2026-02-16T17:07:06.393234"
+        },
+        {
+          "certification": "OSWA",
+          "timestamp": "2026-02-16T17:16:08.981477"
+        },
+        {
+          "certification": "OSCP",
+          "timestamp": "2026-02-16T18:58:53.244833"
+        },
+        {
+          "certification": "OSCP",
+          "timestamp": "2026-02-17T21:52:03.332442"
+        },
+        {
+          "certification": "OSCC",
+          "timestamp": "2026-02-17T21:52:33.419894"
+        },
+        {
+          "certification": "OSEP",
+          "timestamp": "2026-02-17T21:53:50.421340"
+        },
+        {
+          "certification": "KLCP",
+          "timestamp": "2026-02-17T22:14:10.662136"
+        },
+        {
+          "certification": "OSCP",
+          "timestamp": "2026-02-17T22:14:41.417887"
+        }
+      ]
+    }
+  },
+  "1472473778364743681": {
+    "user_id": "1472473778364743681",
+    "username": null,
+    "created_at": "2026-02-18T13:44:11.337278",
+    "last_active": "2026-02-18T17:18:25.244115",
+    "assessment_results": {
+      "user_id": "1472473778364743681",
+      "cert": "OSCP",
+      "certification": "OSCP",
+      "score": 60.0,
+      "score_percentage": 60.0,
+      "skill_level": "Intermediate",
+      "strengths": [
+        "Practice Platforms",
+        "Enumeration Skills",
+        "Study Commitment",
+        "Exam Simulation"
+      ],
+      "weaknesses": [
+        "Active Directory",
+        "Problem Solving",
+        "Speed & Efficiency",
+        "Buffer Overflow",
+        "Documentation"
+      ],
+      "category_scores": {
+        "Practical Experience": 2.0,
+        "Practice Platforms": 3.0,
+        "Enumeration Skills": 3.0,
+        "Exploitation Proficiency": 2.0,
+        "Privilege Escalation": 2.0,
+        "Active Directory": 1.0,
+        "Report Writing": 2.0,
+        "Problem Solving": 0.0,
+        "Pivoting": 2.0,
+        "Study Commitment": 3.0,
+        "Targeted Practice": 2.0,
+        "Speed & Efficiency": 1.0,
+        "Buffer Overflow": 0.0,
+        "Documentation": 1.0,
+        "Exam Simulation": 3.0
+      },
+      "total_questions": 15,
+      "questions_answered": 15,
+      "duration_seconds": 124.032293,
+      "completed_at": "2026-02-18T17:18:24.740794",
+      "responses": {
+        "How many practice machines have you successfully rooted/owned so far?": "25-50 machines",
+        "Which practice platforms are you actively using?": "Multiple platforms (HTB, PG, THM)",
+        "Can you perform a full Nmap scan and enumerate services without looking up commands?": "Yes, including NSE scripts and custom scans",
+        "How comfortable are you with manual exploitation (without Metasploit)?": "Comfortable with basics (reverse shells, file transfers)",
+        "Have you successfully escalated privileges on both Linux and Windows machines?": "Yes, on a few machines independently",
+        "How many Active Directory machines have you compromised end-to-end?": "1-3 machines with guides",
+        "Can you write a basic penetration testing report with screenshots and proof?": "Yes, written a few for practice",
+        "How often do you get stuck and need to check walkthroughs/hints?": "Every machine, heavily rely on walkthroughs",
+        "Have you practiced pivoting/port forwarding between networks?": "Practiced a few times successfully",
+        "How many hours per week are you dedicating to OSCP preparation?": "20+ hours",
+        "Have you completed machines from TJNull's OSCP preparation list?": "Completed 10-20 machines",
+        "Can you root an 'Easy' HTB machine in under 2 hours without hints?": "Sometimes, depends on the machine",
+        "Have you practiced buffer overflow exploitation (x86)?": "No, planning to skip it",
+        "How confident are you in your note-taking and documentation during hacking?": "Take minimal notes",
+        "Have you attempted any OSCP-like practice exams (PG Practice, HTB Pro Labs)?": "Completed multiple practice exams/labs"
+      },
+      "saved_at": "2026-02-18T17:18:25.244096"
+    },
+    "roadmap": {
+      "content": "# 🗺️ Your Personalized KLCP Study Roadmap\n\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n**📋 Certification:** KLCP\n**🎯 Your Skill Level:** Intermediate\n**📈 Assessment Score:** 0%\n**⏱️ Study Duration:** 12 weeks\n**📅 Start Date:** February 18, 2026\n**🎓 Target Exam Date:** May 13, 2026\n\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n# 🐉 KLCP: THE KALI MASTER ROADMAP 🚀\n\nWelcome, student! You’ve got the intermediate foundation, but now it’s time to master the ultimate penetration testing platform. To earn the **Kali Linux Certified Professional (KLCP)**, you must go beyond just \"using\" tools—you must understand the system that powers them.\n\n> **\"It’s not about the tool; it’s about how you wield it. Try Harder!\"** 💪\n\n═══════════════════════════════════════\n\n### 📅 PHASE 1: KALI CORE & SYSTEM MASTERY (WEEKS 1-3)\n\n> **Focus: Mastering the Debian-based architecture and command-line efficiency.**\n\n**Week 1: Installation & Architecture** 🐧\n• Master the Kali rolling release model and repository management (`/etc/apt/sources.list`).\n• Practice custom installations: encrypted persistence on Live USB and WSL2 setups.\n• Learn to navigate the filesystem like a pro (know where `/usr/share/wordlists` and `/usr/share/doc` live).\n\n**Week 2: The Power of the Shell** ⚡\n• Advanced Bash: Piping, redirection, and text manipulation (`grep`, `sed`, `awk`, `cut`).\n• Environment customization: Mastering `.zshrc`, aliases, and PATH variables.\n• Process management: `systemctl`, `service`, and backgrounding tasks with `&` and `disown`.\n\n**Week 3: Package & Service Management** 📦\n• Deep dive into `apt` vs `dpkg` and fixing broken dependencies (`--fix-broken install`).\n• Learn to build tools from source and manage Kali Metapackages (`kali-linux-everything`).\n• Service hardening: Configuring and securing SSH, Apache, and PostgreSQL for Metasploit.\n\n═══════════════════════════════════════\n\n### 📅 PHASE 2: TOOLSET DEEP DIVE (WEEKS 4-7)\n\n> **Focus: Mastery of the \"Top 20\" tools and workflow automation.**\n\n**Week 4: Information Gathering & Scanning** 🔍\n• Nmap mastery: Scripting Engine (NSE), timing templates, and output formatting.\n• Vulnerability analysis: Using `nikto`, `wpscan`, and manual enumeration techniques.\n\n**Week 5: Exploitation Frameworks** 🚀\n• Metasploit Framework: Database integration (`msfdb init`), workspace management, and payload generation (`msfvenom`).\n• SearchSploit and manual exploit modification from Exploit-DB.\n\n**Week 6: Web & Wireless Mastery** 🌐\n• Burp Suite: Proxying, Repeater, and Intruder basics.\n• Wireless: `airmon-ng` workflows, monitor mode troubleshooting, and packet injection.\n\n**Week 7: Password Attacks & PrivEsc** 🔓\n• Cracking: `John the Ripper` and `Hashcat` logic.\n• Privilege Escalation: Using `LinPEAS` and understanding GTFOBins for binary exploitation.\n\n═══════════════════════════════════════\n\n### 📅 PHASE 3: ADVANCED KALI OPERATIONS (WEEKS 8-10)\n\n> **Focus: Customization, stealth, and complex networking.**\n\n**Week 8: Custom Kali Builds (ISO of Doom)** 🛠️\n• Learn `live-build` to create your own custom Kali ISO with pre-installed scripts.\n• Configure \"Undercover Mode\" and kernel tuning for specific hardware.\n\n**Week 9: Networking & Pivoting** 📡\n• Advanced networking: `ip`, `route`, and manual interface configuration.\n• Pivoting: SSH Tunneling, `Proxychains`, and `Chisel` for lateral movement.\n\n**Week 10: Scripting for Automation** 🐍\n• Write Bash and Python wrappers for multi-tool workflows.\n• Automate the \"Recon -> Scan -> Report\" pipeline.\n\n═══════════════════════════════════════\n\n### 📅 PHASE 4: THE FINAL COUNTDOWN (WEEKS 11-12)\n\n> **Focus: Mock exams, reporting, and speed.**\n\n**Week 11: Mock Exams & Speed Runs** ⏱️\n• Set up a lab with 5 random VulnHub/HTB machines and try to compromise them using a strict Kali-only methodology.\n• Practice \"Tool Chaining\": Moving data from Nmap to Metasploit to Burp seamlessly.\n\n**Week 12: Documentation & Reporting Practice** 📝\n• Practice taking professional screenshots with `Flameshot` or `Spectacle`.\n• Organize your notes using CherryTree or Obsidian.\n• Review the official reporting requirements and build a template.\n\n═══════════════════════════════════════\n\n### 💡 TOP 5 ESSENTIAL RESOURCES\n\n1️⃣ [Kali Linux Official Documentation](https://www.kali.org/docs/) - The ultimate source of truth.\n2️⃣ [Kali Linux Revealed Book](https://www.kali.org/download-kali-linux-revealed-book/) - The \"Bible\" for the KLCP exam.\n3️⃣ [OffSec Proving Grounds](https://www.offsec.com/labs/) - Best place for OSCP/KLCP style practice.\n4️⃣ [Exploit Database](https://www.exploit-db.com/) - Essential for understanding exploit modification.\n5️⃣ [GTFOBins](https://gtfobins.github.io/) - Critical for Linux privilege escalation.\n\n> **Time Investment Estimate:** 10-15 hours per week.\n\n═══════════════════════════════════════\n\n### ✅ WEEKLY MILESTONES\n\n• **Week 2:** Able to write a Bash script that automates an Nmap scan and parses the output.\n• **Week 5:** Successfully initialize and use the Metasploit database for every lab machine.\n• **Week 8:** Successfully build a custom Kali ISO with at least one non-standard tool included.\n• **Week 12:** Complete a full 24-hour mock pentest and generate a professional 20-page report.\n\n═══════════════════════════════════════\n\n### 🔥 SUCCESS TIPS\n\n• ⚠️ **Common Pitfall:** Don't just learn the tools; learn the **Linux commands** behind them. If the GUI fails, you must survive in the CLI.\n• ⚡ **Efficiency:** Master `tmux`. Being able to manage multiple windows and panes is the difference between passing and failing a 24-hour exam.\n• 🎯 **Mindset:** When a tool breaks, don't switch OS. Fix the tool. That is the essence of being a Kali Professional.\n\n**Go get 'em. Try Harder! 💪** 🐉\n\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n## 📚 Quick Reference Resources\n\n**🤝 Community Resources:**\n- OffSec Discord Server\n- r/oscp on Reddit\n- InfoSec Prep Discord\n- NetSecFocus Discord (Trophy Bot)\n\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n## 🎯 Remember\n\n✨ **Consistency** is more important than intensity\n💪 **Try Harder** - but also take breaks when stuck\n📝 **Document everything** - your notes will save you during the exam\n🔄 **Review regularly** - revisit topics you've learned\n❤️ **Join the community** - learn from others on the same journey\n\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n*🚀 Use `/progress` to track your journey*\n*💬 Use `/ask` for any questions*\n*📖 Use `/resources` for more materials*\n\n**Good luck, and Try Harder! 💪**\n",
+      "generated_at": "2026-02-18T13:49:11.970487"
+    },
+    "progress": {
+      "machines_completed": 0,
+      "hours_studied": 0,
+      "current_phase": 1,
+      "milestones_completed": []
+    },
+    "preferences": {
+      "study_hours_per_week": 15,
+      "notifications_enabled": true,
+      "preferred_model": "gemini-1.5-flash"
+    },
+    "history": {
+      "assessments": [
+        {
+          "certification": "OSCP",
+          "score": null,
+          "skill_level": "Intermediate",
+          "timestamp": "2026-02-18T13:48:09.586782"
+        },
+        {
+          "certification": "KLCP",
+          "score": null,
+          "skill_level": "Intermediate",
+          "timestamp": "2026-02-18T13:49:11.973275"
+        },
+        {
+          "certification": "OSCP",
+          "score": 60.0,
+          "skill_level": "Intermediate",
+          "timestamp": "2026-02-18T17:18:25.244096"
+        }
+      ],
+      "roadmaps_generated": [
+        {
+          "certification": null,
+          "timestamp": "2026-02-18T13:48:09.581221"
+        },
+        {
+          "certification": "OSCP",
+          "timestamp": "2026-02-18T13:49:11.970487"
+        }
+      ]
+    }
+  }
+}

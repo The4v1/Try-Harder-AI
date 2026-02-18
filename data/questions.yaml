@@ -1,0 +1,2163 @@
+# ==========================================
+# Try-Harder-AI Assessment Questions Bank
+# ==========================================
+# Progress & Readiness Assessment Questions for OffSec Certifications
+# These questions assess ACTUAL preparation, not just theoretical knowledge
+# Version: 2.0.0
+# Last Updated: 2026-02-15
+# ==========================================
+
+metadata:
+  version: "2.0.0"
+  last_updated: "2026-02-15"
+  total_questions: 135
+  certifications_covered: 12
+  question_types: ["progress_check", "practical_experience", "readiness_assessment"]
+  difficulty_levels: ["beginner", "intermediate", "advanced"]
+  note: "Questions assess real practical progress and readiness, not theoretical knowledge"
+
+# ==========================================
+# OSCP - Offensive Security Certified Professional
+# ==========================================
+OSCP:
+  beginner:
+    - id: "oscp_b_001"
+      question: "How many practice machines have you successfully rooted/owned so far?"
+      type: "progress_check"
+      options:
+        A: "0-10 machines"
+        B: "10-25 machines"
+        C: "25-50 machines"
+        D: "50-100+ machines"
+      scoring:
+        A: 0
+        B: 1
+        C: 2
+        D: 3
+      explanation: "OSCP exam requires practical experience. TJNull recommends 30+ machines before attempting the exam."
+      topic: "Practical Experience"
+      
+    - id: "oscp_b_002"
+      question: "Which practice platforms are you actively using?"
+      type: "progress_check"
+      options:
+        A: "None yet, just reading about it"
+        B: "TryHackMe only"
+        C: "HackTheBox or Proving Grounds"
+        D: "Multiple platforms (HTB, PG, THM)"
+      scoring:
+        A: 0
+        B: 1
+        C: 2
+        D: 3
+      explanation: "Diverse practice across platforms builds comprehensive skills needed for OSCP."
+      topic: "Practice Platforms"
+      
+    - id: "oscp_b_003"
+      question: "Can you perform a full Nmap scan and enumerate services without looking up commands?"
+      type: "practical_experience"
+      options:
+        A: "No, I need to look up commands every time"
+        B: "Basic scans only (-sV, -sC)"
+        C: "Yes, comfortable with most flags"
+        D: "Yes, including NSE scripts and custom scans"
+      scoring:
+        A: 0
+        B: 1
+        C: 2
+        D: 3
+      explanation: "Enumeration is fundamental. You should know Nmap by heart before attempting OSCP."
+      topic: "Enumeration Skills"
+      
+    - id: "oscp_b_004"
+      question: "How comfortable are you with manual exploitation (without Metasploit)?"
+      type: "readiness_assessment"
+      options:
+        A: "Always use Metasploit"
+        B: "Tried a few times, prefer Metasploit"
+        C: "Comfortable with basics (reverse shells, file transfers)"
+        D: "Prefer manual, only use MSF for specific tasks"
+      scoring:
+        A: 0
+        B: 1
+        C: 2
+        D: 3
+      explanation: "OSCP limits Metasploit use. Manual exploitation skills are critical."
+      topic: "Exploitation Proficiency"
+      
+    - id: "oscp_b_005"
+      question: "Have you successfully escalated privileges on both Linux and Windows machines?"
+      type: "practical_experience"
+      options:
+        A: "No, not yet"
+        B: "Yes, but with walkthroughs"
+        C: "Yes, on a few machines independently"
+        D: "Yes, on many machines using various techniques"
+      scoring:
+        A: 0
+        B: 1
+        C: 2
+        D: 3
+      explanation: "Privilege escalation is a major OSCP exam component. Both OS types appear in the exam."
+      topic: "Privilege Escalation"
+
+  intermediate:
+    - id: "oscp_i_001"
+      question: "How many Active Directory machines have you compromised end-to-end?"
+      type: "progress_check"
+      options:
+        A: "None, haven't touched AD yet"
+        B: "1-3 machines with guides"
+        C: "3-10 machines, some without guides"
+        D: "10-25+ machines, confident in AD"
+      scoring:
+        A: 0
+        B: 1
+        C: 2
+        D: 3
+      explanation: "OSCP exam includes an AD set worth 40 points. AD experience is essential."
+      topic: "Active Directory"
+      
+    - id: "oscp_i_002"
+      question: "Can you write a basic penetration testing report with screenshots and proof?"
+      type: "readiness_assessment"
+      options:
+        A: "Never written one"
+        B: "Tried once, not confident"
+        C: "Yes, written a few for practice"
+        D: "Yes, comfortable with professional reporting"
+      scoring:
+        A: 0
+        B: 1
+        C: 2
+        D: 3
+      explanation: "OSCP requires a professional report within 24 hours. Practice is essential."
+      topic: "Report Writing"
+      
+    - id: "oscp_i_003"
+      question: "How often do you get stuck and need to check walkthroughs/hints?"
+      type: "readiness_assessment"
+      options:
+        A: "Every machine, heavily rely on walkthroughs"
+        B: "Most machines, need hints for hard parts"
+        C: "Sometimes, only when completely stuck (2+ hours)"
+        D: "Rarely, usually complete machines independently"
+      scoring:
+        A: 0
+        B: 1
+        C: 2
+        D: 3
+      explanation: "OSCP exam has no walkthroughs. Independence and problem-solving are critical."
+      topic: "Problem Solving"
+      
+    - id: "oscp_i_004"
+      question: "Have you practiced pivoting/port forwarding between networks?"
+      type: "practical_experience"
+      options:
+        A: "Don't know what pivoting is"
+        B: "Understand theory, haven't practiced"
+        C: "Practiced a few times successfully"
+        D: "Comfortable with chisel, ligolo, SSH tunneling"
+      scoring:
+        A: 0
+        B: 1
+        C: 2
+        D: 3
+      explanation: "Pivoting may be required in the exam. Practice is essential."
+      topic: "Pivoting"
+      
+    - id: "oscp_i_005"
+      question: "How many hours per week are you dedicating to OSCP preparation?"
+      type: "progress_check"
+      options:
+        A: "Less than 5 hours"
+        B: "5-10 hours"
+        C: "10-20 hours"
+        D: "20+ hours"
+      scoring:
+        A: 0
+        B: 1
+        C: 2
+        D: 3
+      explanation: "OSCP requires significant time investment. Most successful candidates study 15-20+ hours/week."
+      topic: "Study Commitment"
+
+  advanced:
+    - id: "oscp_a_001"
+      question: "Have you completed machines from TJNull's OSCP preparation list?"
+      type: "progress_check"
+      options:
+        A: "Haven't heard of it"
+        B: "Started, completed less than 10"
+        C: "Completed 10-20 machines"
+        D: "Completed 20+ machines from the list"
+      scoring:
+        A: 0
+        B: 1
+        C: 2
+        D: 3
+      explanation: "TJNull's list contains OSCP-like machines. Completing many from this list indicates strong readiness."
+      topic: "Targeted Practice"
+      
+    - id: "oscp_a_002"
+      question: "Can you root an 'Easy' HTB machine in under 2 hours without hints?"
+      type: "readiness_assessment"
+      options:
+        A: "No, takes much longer or need hints"
+        B: "Sometimes, depends on the machine"
+        C: "Yes, usually within 2 hours"
+        D: "Yes, often in under 1 hour"
+      scoring:
+        A: 0
+        B: 1
+        C: 2
+        D: 3
+      explanation: "OSCP exam is time-sensitive. Speed and efficiency indicate readiness."
+      topic: "Speed & Efficiency"
+      
+    - id: "oscp_a_003"
+      question: "Have you practiced buffer overflow exploitation (x86)?"
+      type: "practical_experience"
+      options:
+        A: "No, planning to skip it"
+        B: "Read about it, haven't practiced"
+        C: "Practiced on vulnerable apps (VulnServer, etc.)"
+        D: "Confident, can replicate BOF without guides"
+      scoring:
+        A: 0
+        B: 1
+        C: 2
+        D: 3
+      explanation: "Buffer overflow may appear in OSCP. It's a straightforward 10-20 points if prepared."
+      topic: "Buffer Overflow"
+      
+    - id: "oscp_a_004"
+      question: "How confident are you in your note-taking and documentation during hacking?"
+      type: "readiness_assessment"
+      options:
+        A: "Don't take notes, rely on memory"
+        B: "Take minimal notes"
+        C: "Take detailed notes with some screenshots"
+        D: "Comprehensive notes with all commands & screenshots"
+      scoring:
+        A: 0
+        B: 1
+        C: 2
+        D: 3
+      explanation: "OSCP requires proof screenshots and detailed reporting. Documentation is critical."
+      topic: "Documentation"
+      
+    - id: "oscp_a_005"
+      question: "Have you attempted any OSCP-like practice exams (PG Practice, HTB Pro Labs)?"
+      type: "progress_check"
+      options:
+        A: "No, not yet"
+        B: "Started but didn't complete"
+        C: "Completed one practice exam/lab"
+        D: "Completed multiple practice exams/labs"
+      scoring:
+        A: 0
+        B: 1
+        C: 2
+        D: 3
+      explanation: "Practice exams simulate real exam conditions and identify weak areas."
+      topic: "Exam Simulation"
+
+# ==========================================
+# OSEP - Offensive Security Experienced Penetration Tester
+# ==========================================
+OSEP:
+  beginner:
+    - id: "osep_b_001"
+      question: "Have you already passed OSCP or equivalent certification?"
+      type: "prerequisite_check"
+      options:
+        A: "No, haven't passed OSCP yet"
+        B: "Currently preparing for OSCP"
+        C: "Yes, passed OSCP"
+        D: "Yes, OSCP + other advanced certs"
+      scoring:
+        A: 0
+        B: 1
+        C: 2
+        D: 3
+      explanation: "OSEP is advanced. OSCP or equivalent experience is highly recommended."
+      topic: "Prerequisites"
+      
+    - id: "osep_b_002"
+      question: "How comfortable are you with Active Directory attacks beyond basic enumeration?"
+      type: "readiness_assessment"
+      options:
+        A: "Only know basic AD enumeration"
+        B: "Know Kerberoasting, basic attacks"
+        C: "Comfortable with delegation attacks, NTLM relay"
+        D: "Advanced: ACL abuse, cross-forest attacks, ADCS"
+      scoring:
+        A: 0
+        B: 1
+        C: 2
+        D: 3
+      explanation: "OSEP heavily focuses on advanced AD exploitation."
+      topic: "Active Directory"
+      
+    - id: "osep_b_003"
+      question: "Have you developed custom exploits or payloads (not just using MSFVenom)?"
+      type: "practical_experience"
+      options:
+        A: "No, only used existing tools"
+        B: "Modified existing exploits slightly"
+        C: "Created basic custom payloads"
+        D: "Developed custom exploits from scratch"
+      scoring:
+        A: 0
+        B: 1
+        C: 2
+        D: 3
+      explanation: "OSEP requires custom tool development and payload modification."
+      topic: "Custom Development"
+
+  intermediate:
+    - id: "osep_i_001"
+      question: "How experienced are you with AV/EDR evasion techniques?"
+      type: "practical_experience"
+      options:
+        A: "No experience, never bypassed AV"
+        B: "Bypassed Windows Defender a few times"
+        C: "Bypassed commercial AV solutions"
+        D: "Experience bypassing modern EDR (CrowdStrike, etc.)"
+      scoring:
+        A: 0
+        B: 1
+        C: 2
+        D: 3
+      explanation: "OSEP focuses heavily on evasion. Real-world EDR bypass experience is crucial."
+      topic: "AV/EDR Evasion"
+      
+    - id: "osep_i_002"
+      question: "Can you write C# or PowerShell tools from scratch for specific attack scenarios?"
+      type: "readiness_assessment"
+      options:
+        A: "No coding experience"
+        B: "Can modify existing scripts"
+        C: "Can write basic tools"
+        D: "Proficient in C#/PowerShell tool development"
+      scoring:
+        A: 0
+        B: 1
+        C: 2
+        D: 3
+      explanation: "OSEP requires coding skills to develop custom tooling."
+      topic: "Programming Skills"
+      
+    - id: "osep_i_003"
+      question: "Have you practiced with C2 frameworks (Cobalt Strike, Covenant, Empire)?"
+      type: "practical_experience"
+      options:
+        A: "Never used a C2 framework"
+        B: "Basic usage of one framework"
+        C: "Comfortable with 1-2 frameworks"
+        D: "Experienced with multiple C2 frameworks"
+      scoring:
+        A: 0
+        B: 1
+        C: 2
+        D: 3
+      explanation: "C2 frameworks are essential for OSEP operations."
+      topic: "C2 Frameworks"
+
+  advanced:
+    - id: "osep_a_001"
+      question: "How much time can you dedicate to OSEP preparation?"
+      type: "readiness_assessment"
+      options:
+        A: "Less than 10 hours/week"
+        B: "10-15 hours/week"
+        C: "15-25 hours/week"
+        D: "25+ hours/week"
+      scoring:
+        A: 0
+        B: 1
+        C: 2
+        D: 3
+      explanation: "OSEP is intensive. Most candidates dedicate 20-30+ hours/week."
+      topic: "Time Commitment"
+      
+    - id: "osep_a_002"
+      question: "Have you successfully exploited multi-tier Active Directory environments?"
+      type: "practical_experience"
+      options:
+        A: "No, only single-machine AD"
+        B: "Yes, with extensive guides"
+        C: "Yes, 1-2 environments independently"
+        D: "Yes, multiple complex AD labs (Offshore, RastaLabs)"
+      scoring:
+        A: 0
+        B: 1
+        C: 2
+        D: 3
+      explanation: "OSEP exam includes complex multi-tier AD environments."
+      topic: "Advanced AD"
+      
+    - id: "osep_a_003"
+      question: "How confident are you with process injection and in-memory execution?"
+      type: "readiness_assessment"
+      options:
+        A: "Don't know what these are"
+        B: "Understand theory only"
+        C: "Practiced a few times successfully"
+        D: "Comfortable implementing various techniques"
+      scoring:
+        A: 0
+        B: 1
+        C: 2
+        D: 3
+      explanation: "Process injection and in-memory techniques are core OSEP skills."
+      topic: "Advanced Exploitation"
+
+# ==========================================
+# OSWE - Offensive Security Web Expert
+# ==========================================
+OSWE:
+  beginner:
+    - id: "oswe_b_001"
+      question: "How many web application vulnerabilities have you successfully exploited?"
+      type: "progress_check"
+      options:
+        A: "Less than 5"
+        B: "5-15 vulnerabilities"
+        C: "15-30 vulnerabilities"
+        D: "30+ vulnerabilities across different types"
+      scoring:
+        A: 0
+        B: 1
+        C: 2
+        D: 3
+      explanation: "OSWE requires deep web exploitation experience across various vulnerability types."
+      topic: "Practical Experience"
+      
+    - id: "oswe_b_002"
+      question: "Can you perform manual SQL injection without using SQLMap?"
+      type: "readiness_assessment"
+      options:
+        A: "Always rely on SQLMap"
+        B: "Basic manual injection only"
+        C: "Yes, comfortable with UNION & blind techniques"
+        D: "Yes, including second-order and advanced exploitation"
+      scoring:
+        A: 0
+        B: 1
+        C: 2
+        D: 3
+      explanation: "OSWE emphasizes manual exploitation. Tool reliance won't be sufficient."
+      topic: "Manual Exploitation"
+      
+    - id: "oswe_b_003"
+      question: "How comfortable are you reading and understanding source code?"
+      type: "readiness_assessment"
+      options:
+        A: "Struggle with code reading"
+        B: "Can read basic code"
+        C: "Comfortable with PHP, Python, or JavaScript"
+        D: "Proficient in multiple languages, can identify vulnerabilities"
+      scoring:
+        A: 0
+        B: 1
+        C: 2
+        D: 3
+      explanation: "OSWE is white-box testing. Source code review skills are essential."
+      topic: "Code Review"
+
+  intermediate:
+    - id: "oswe_i_001"
+      question: "Have you performed white-box code review to find vulnerabilities?"
+      type: "practical_experience"
+      options:
+        A: "No, only black-box testing"
+        B: "Tried once or twice"
+        C: "Yes, found several vulnerabilities"
+        D: "Regularly perform code review, found many vulns"
+      scoring:
+        A: 0
+        B: 1
+        C: 2
+        D: 3
+      explanation: "OSWE provides source code. White-box analysis is core to the certification."
+      topic: "White-Box Testing"
+      
+    - id: "oswe_i_002"
+      question: "How many PortSwigger Web Security Academy labs have you completed?"
+      type: "progress_check"
+      options:
+        A: "Less than 10"
+        B: "10-30 labs"
+        C: "30-60 labs"
+        D: "60+ labs across all categories"
+      scoring:
+        A: 0
+        B: 1
+        C: 2
+        D: 3
+      explanation: "PortSwigger Academy is excellent OSWE preparation. Comprehensive completion indicates readiness."
+      topic: "Practice Labs"
+      
+    - id: "oswe_i_003"
+      question: "Can you chain multiple vulnerabilities to achieve RCE or significant impact?"
+      type: "readiness_assessment"
+      options:
+        A: "No, only exploit single vulns"
+        B: "Tried once or twice"
+        C: "Yes, chained a few times successfully"
+        D: "Comfortable chaining multiple attack vectors"
+      scoring:
+        A: 0
+        B: 1
+        C: 2
+        D: 3
+      explanation: "OSWE often requires chaining vulnerabilities for maximum impact."
+      topic: "Attack Chaining"
+
+  advanced:
+    - id: "oswe_a_001"
+      question: "How experienced are you with modern web frameworks (React, Vue, Django, etc.)?"
+      type: "practical_experience"
+      options:
+        A: "No experience"
+        B: "Basic understanding"
+        C: "Comfortable with 1-2 frameworks"
+        D: "Experienced with multiple modern frameworks"
+      scoring:
+        A: 0
+        B: 1
+        C: 2
+        D: 3
+      explanation: "OSWE includes modern frameworks. Understanding their architecture helps find vulnerabilities."
+      topic: "Modern Frameworks"
+      
+    - id: "oswe_a_002"
+      question: "Have you written custom exploits for web vulnerabilities from scratch?"
+      type: "practical_experience"
+      options:
+        A: "No, only used existing tools"
+        B: "Modified existing exploits"
+        C: "Written a few basic exploits"
+        D: "Regularly write custom web exploits"
+      scoring:
+        A: 0
+        B: 1
+        C: 2
+        D: 3
+      explanation: "OSWE requires developing custom exploits based on source code analysis."
+      topic: "Exploit Development"
+      
+    - id: "oswe_a_003"
+      question: "How much time are you dedicating to OSWE preparation per week?"
+      type: "progress_check"
+      options:
+        A: "Less than 10 hours"
+        B: "10-15 hours"
+        C: "15-25 hours"
+        D: "25+ hours"
+      scoring:
+        A: 0
+        B: 1
+        C: 2
+        D: 3
+      explanation: "OSWE is intensive and requires significant time for code review and exploitation practice."
+      topic: "Time Commitment"
+
+# ==========================================
+# OSED - Offensive Security Exploit Developer
+# ==========================================
+OSED:
+  beginner:
+    - id: "osed_b_001"
+      question: "How comfortable are you with x86 assembly language?"
+      type: "readiness_assessment"
+      options:
+        A: "Never seen assembly code"
+        B: "Can read basic assembly"
+        C: "Comfortable reading and understanding assembly"
+        D: "Can write assembly and follow complex code"
+      scoring:
+        A: 0
+        B: 1
+        C: 2
+        D: 3
+      explanation: "OSED requires strong assembly skills for exploit development."
+      topic: "Assembly Knowledge"
+      
+    - id: "osed_b_002"
+      question: "Have you successfully exploited buffer overflow vulnerabilities?"
+      type: "practical_experience"
+      options:
+        A: "No, never tried"
+        B: "Yes, basic stack-based overflow"
+        C: "Yes, multiple types (stack, heap, SEH)"
+        D: "Yes, including bypassing protections (DEP, ASLR)"
+      scoring:
+        A: 0
+        B: 1
+        C: 2
+        D: 3
+      explanation: "Buffer overflow exploitation is fundamental to OSED."
+      topic: "Exploitation Experience"
+      
+    - id: "osed_b_003"
+      question: "How experienced are you with debuggers (WinDbg, Immunity, x64dbg)?"
+      type: "practical_experience"
+      options:
+        A: "Never used a debugger"
+        B: "Basic usage (set breakpoints, step through)"
+        C: "Comfortable debugging and analyzing crashes"
+        D: "Advanced usage (scripting, custom tools)"
+      scoring:
+        A: 0
+        B: 1
+        C: 2
+        D: 3
+      explanation: "Debuggers are essential tools for OSED exploit development."
+      topic: "Debugging Skills"
+
+  intermediate:
+    - id: "osed_i_001"
+      question: "Have you developed ROP chains to bypass DEP?"
+      type: "practical_experience"
+      options:
+        A: "Don't know what ROP is"
+        B: "Understand theory, haven't practiced"
+        C: "Created basic ROP chains"
+        D: "Comfortable creating complex ROP chains"
+      scoring:
+        A: 0
+        B: 1
+        C: 2
+        D: 3
+      explanation: "ROP is essential for bypassing modern exploit protections in OSED."
+      topic: "Advanced Exploitation"
+      
+    - id: "osed_i_002"
+      question: "How comfortable are you with Windows internals and PE file format?"
+      type: "readiness_assessment"
+      options:
+        A: "No knowledge"
+        B: "Basic understanding"
+        C: "Good understanding of structures and APIs"
+        D: "Deep knowledge, can navigate internals"
+      scoring:
+        A: 0
+        B: 1
+        C: 2
+        D: 3
+      explanation: "OSED requires understanding Windows internals for exploit development."
+      topic: "Windows Internals"
+      
+    - id: "osed_i_003"
+      question: "Can you write shellcode from scratch?"
+      type: "readiness_assessment"
+      options:
+        A: "No, only use msfvenom"
+        B: "Can modify existing shellcode"
+        C: "Can write basic shellcode"
+        D: "Proficient, can write custom shellcode for different scenarios"
+      scoring:
+        A: 0
+        B: 1
+        C: 2
+        D: 3
+      explanation: "Custom shellcode development is a key OSED skill."
+      topic: "Shellcode Development"
+
+  advanced:
+    - id: "osed_a_001"
+      question: "Have you exploited real-world vulnerabilities (0-days or CVEs)?"
+      type: "practical_experience"
+      options:
+        A: "No, only CTF-style challenges"
+        B: "Researched but not exploited"
+        C: "Exploited known CVEs"
+        D: "Found and exploited real vulnerabilities"
+      scoring:
+        A: 0
+        B: 1
+        C: 2
+        D: 3
+      explanation: "Real-world exploitation experience demonstrates deep understanding."
+      topic: "Real-World Experience"
+      
+    - id: "osed_a_002"
+      question: "How much time can you dedicate to OSED preparation?"
+      type: "progress_check"
+      options:
+        A: "Less than 10 hours/week"
+        B: "10-15 hours/week"
+        C: "15-25 hours/week"
+        D: "25+ hours/week"
+      scoring:
+        A: 0
+        B: 1
+        C: 2
+        D: 3
+      explanation: "OSED is very technical and requires significant dedicated study time."
+      topic: "Time Commitment"
+      
+    - id: "osed_a_003"
+      question: "Do you have prior programming experience in C/C++ or low-level languages?"
+      type: "prerequisite_check"
+      options:
+        A: "No programming experience"
+        B: "Basic scripting only (Python)"
+        C: "Some C/C++ experience"
+        D: "Strong C/C++ and low-level programming"
+      scoring:
+        A: 0
+        B: 1
+        C: 2
+        D: 3
+      explanation: "Programming skills significantly help with understanding exploits and debugging."
+      topic: "Programming Background"
+
+# ==========================================
+# OSWP - Offensive Security Wireless Professional
+# ==========================================
+OSWP:
+  beginner:
+    - id: "oswp_b_001"
+      question: "Do you have a wireless adapter capable of monitor mode and packet injection?"
+      type: "prerequisite_check"
+      options:
+        A: "No, don't have one yet"
+        B: "Have one but not tested"
+        C: "Yes, tested and working"
+        D: "Yes, have multiple adapters tested"
+      scoring:
+        A: 0
+        B: 1
+        C: 2
+        D: 3
+      explanation: "A compatible wireless adapter is essential for OSWP practice and exam."
+      topic: "Equipment"
+      
+    - id: "oswp_b_002"
+      question: "How many wireless networks have you successfully attacked?"
+      type: "progress_check"
+      options:
+        A: "None, only theory"
+        B: "1-3 networks (own/authorized)"
+        C: "5-10 networks with various security"
+        D: "10+ networks, different encryption types"
+      scoring:
+        A: 0
+        B: 1
+        C: 2
+        D: 3
+      explanation: "Practical wireless attack experience is crucial for OSWP."
+      topic: "Practical Experience"
+      
+    - id: "oswp_b_003"
+      question: "Can you capture and crack a WPA2 handshake independently?"
+      type: "readiness_assessment"
+      options:
+        A: "No, haven't tried"
+        B: "Yes, with detailed guides"
+        C: "Yes, without guides but slow"
+        D: "Yes, efficiently without guides"
+      scoring:
+        A: 0
+        B: 1
+        C: 2
+        D: 3
+      explanation: "WPA2 cracking is fundamental to OSWP."
+      topic: "Core Skills"
+
+  intermediate:
+    - id: "oswp_i_001"
+      question: "Have you successfully performed WPS attacks (Reaver, Pixie Dust)?"
+      type: "practical_experience"
+      options:
+        A: "No, not yet"
+        B: "Tried, not successful"
+        C: "Yes, successful a few times"
+        D: "Yes, comfortable with various WPS attacks"
+      scoring:
+        A: 0
+        B: 1
+        C: 2
+        D: 3
+      explanation: "WPS exploitation is covered in OSWP."
+      topic: "WPS Attacks"
+      
+    - id: "oswp_i_002"
+      question: "How comfortable are you with the Aircrack-ng suite?"
+      type: "readiness_assessment"
+      options:
+        A: "Never used it"
+        B: "Used basic commands only"
+        C: "Comfortable with most tools"
+        D: "Expert, know advanced usage and troubleshooting"
+      scoring:
+        A: 0
+        B: 1
+        C: 2
+        D: 3
+      explanation: "Aircrack-ng is the primary toolset for OSWP."
+      topic: "Tool Proficiency"
+      
+    - id: "oswp_i_003"
+      question: "Have you set up and attacked rogue access points (Evil Twin)?"
+      type: "practical_experience"
+      options:
+        A: "No, only theory"
+        B: "Set up once, didn't complete attack"
+        C: "Yes, successful Evil Twin attack"
+        D: "Yes, multiple successful MITM attacks"
+      scoring:
+        A: 0
+        B: 1
+        C: 2
+        D: 3
+      explanation: "Evil Twin and MITM attacks are part of OSWP curriculum."
+      topic: "Advanced Attacks"
+
+  advanced:
+    - id: "oswp_a_001"
+      question: "How much time are you spending on OSWP practice per week?"
+      type: "progress_check"
+      options:
+        A: "Less than 5 hours"
+        B: "5-10 hours"
+        C: "10-20 hours"
+        D: "20+ hours"
+      scoring:
+        A: 0
+        B: 1
+        C: 2
+        D: 3
+      explanation: "Regular practice is essential for maintaining wireless hacking skills."
+      topic: "Study Commitment"
+      
+    - id: "oswp_a_002"
+      question: "Have you practiced with WPA3 networks?"
+      type: "practical_experience"
+      options:
+        A: "No, not yet"
+        B: "Read about WPA3"
+        C: "Tested on a WPA3 network"
+        D: "Experienced with WPA3 attacks (Dragonblood)"
+      scoring:
+        A: 0
+        B: 1
+        C: 2
+        D: 3
+      explanation: "WPA3 is the latest standard and may appear in updated OSWP content."
+      topic: "Modern Standards"
+      
+    - id: "oswp_a_003"
+      question: "Can you troubleshoot wireless adapter driver issues independently?"
+      type: "readiness_assessment"
+      options:
+        A: "No, get stuck easily"
+        B: "With online help"
+        C: "Yes, familiar with common issues"
+        D: "Yes, expert at driver/adapter troubleshooting"
+      scoring:
+        A: 0
+        B: 1
+        C: 2
+        D: 3
+      explanation: "Adapter issues are common. Self-sufficiency is important for exam success."
+      topic: "Troubleshooting"
+
+# ==========================================
+# OSWA - OffSec Web Assessor
+# ==========================================
+OSWA:
+  beginner:
+    - id: "oswa_b_001"
+      question: "How many modern web applications have you tested?"
+      type: "progress_check"
+      options:
+        A: "Less than 5"
+        B: "5-15 applications"
+        C: "15-30 applications"
+        D: "30+ applications"
+      scoring:
+        A: 0
+        B: 1
+        C: 2
+        D: 3
+      explanation: "OSWA focuses on modern web apps. Extensive testing experience is crucial."
+      topic: "Practical Experience"
+      
+    - id: "oswa_b_002"
+      question: "How comfortable are you with Burp Suite Professional features?"
+      type: "readiness_assessment"
+      options:
+        A: "Basic usage only"
+        B: "Intermediate (scanner, repeater, intruder)"
+        C: "Advanced (extensions, custom scripts)"
+        D: "Expert (macros, automation, custom tools)"
+      scoring:
+        A: 0
+        B: 1
+        C: 2
+        D: 3
+      explanation: "Burp Suite Professional is heavily used in OSWA."
+      topic: "Tool Proficiency"
+      
+    - id: "oswa_b_003"
+      question: "Have you exploited API vulnerabilities?"
+      type: "practical_experience"
+      options:
+        A: "No, only traditional web apps"
+        B: "Basic API testing"
+        C: "Yes, found several API vulnerabilities"
+        D: "Extensive API security testing experience"
+      scoring:
+        A: 0
+        B: 1
+        C: 2
+        D: 3
+      explanation: "Modern web apps rely heavily on APIs. OSWA covers API security."
+      topic: "API Security"
+
+  intermediate:
+    - id: "oswa_i_001"
+      question: "How experienced are you with single-page applications (SPAs)?"
+      type: "practical_experience"
+      options:
+        A: "Never tested SPAs"
+        B: "Basic testing"
+        C: "Comfortable with React/Vue/Angular apps"
+        D: "Expert in modern SPA security testing"
+      scoring:
+        A: 0
+        B: 1
+        C: 2
+        D: 3
+      explanation: "SPAs are common in modern web apps. OSWA emphasizes this."
+      topic: "Modern Applications"
+      
+    - id: "oswa_i_002"
+      question: "Have you performed GraphQL API security testing?"
+      type: "practical_experience"
+      options:
+        A: "Don't know what GraphQL is"
+        B: "Understand basics, haven't tested"
+        C: "Yes, tested a few GraphQL APIs"
+        D: "Experienced with GraphQL vulnerabilities"
+      scoring:
+        A: 0
+        B: 1
+        C: 2
+        D: 3
+      explanation: "GraphQL is increasingly common. OSWA may cover this."
+      topic: "Modern Technologies"
+      
+    - id: "oswa_i_003"
+      question: "How many different web vulnerability types have you successfully exploited?"
+      type: "progress_check"
+      options:
+        A: "Less than 5 types"
+        B: "5-10 types (XSS, SQLi, CSRF, etc.)"
+        C: "10-15 types including SSRF, XXE, etc."
+        D: "15+ types including advanced vulnerabilities"
+      scoring:
+        A: 0
+        B: 1
+        C: 2
+        D: 3
+      explanation: "OSWA requires comprehensive knowledge of various vulnerability types."
+      topic: "Vulnerability Breadth"
+
+  advanced:
+    - id: "oswa_a_001"
+      question: "Have you found vulnerabilities in modern framework-specific security features?"
+      type: "practical_experience"
+      options:
+        A: "No"
+        B: "Found basic misconfigurations"
+        C: "Yes, bypassed framework protections"
+        D: "Yes, found framework-specific vulnerabilities"
+      scoring:
+        A: 0
+        B: 1
+        C: 2
+        D: 3
+      explanation: "OSWA focuses on modern frameworks and their security mechanisms."
+      topic: "Advanced Testing"
+      
+    - id: "oswa_a_002"
+      question: "How much time are you dedicating to OSWA preparation?"
+      type: "progress_check"
+      options:
+        A: "Less than 10 hours/week"
+        B: "10-15 hours/week"
+        C: "15-25 hours/week"
+        D: "25+ hours/week"
+      scoring:
+        A: 0
+        B: 1
+        C: 2
+        D: 3
+      explanation: "OSWA requires substantial practice with modern web technologies."
+      topic: "Time Commitment"
+      
+    - id: "oswa_a_003"
+      question: "Have you completed advanced web security training (beyond OWASP Top 10)?"
+      type: "practical_experience"
+      options:
+        A: "Only OWASP Top 10 basics"
+        B: "Some advanced topics"
+        C: "Completed PortSwigger Academy or similar"
+        D: "Multiple advanced courses/labs completed"
+      scoring:
+        A: 0
+        B: 1
+        C: 2
+        D: 3
+      explanation: "OSWA goes beyond basics. Advanced training prepares you well."
+      topic: "Advanced Training"
+
+# ==========================================
+# OSMR - OffSec macOS Researcher
+# ==========================================
+OSMR:
+  beginner:
+    - id: "osmr_b_001"
+      question: "How familiar are you with macOS operating system internals?"
+      type: "readiness_assessment"
+      options:
+        A: "Basic user experience only"
+        B: "Know basic administration"
+        C: "Comfortable with system internals"
+        D: "Expert in macOS architecture and security"
+      scoring:
+        A: 0
+        B: 1
+        C: 2
+        D: 3
+      explanation: "OSMR requires deep macOS knowledge."
+      topic: "macOS Knowledge"
+      
+    - id: "osmr_b_002"
+      question: "Do you have a macOS machine for practice and research?"
+      type: "prerequisite_check"
+      options:
+        A: "No, don't have access"
+        B: "Have access but limited"
+        C: "Yes, own macOS device"
+        D: "Yes, multiple macOS versions for testing"
+      scoring:
+        A: 0
+        B: 1
+        C: 2
+        D: 3
+      explanation: "macOS access is essential for OSMR preparation and exam."
+      topic: "Equipment"
+      
+    - id: "osmr_b_003"
+      question: "Have you bypassed macOS security features (SIP, Gatekeeper, TCC)?"
+      type: "practical_experience"
+      options:
+        A: "No experience"
+        B: "Understand theory only"
+        C: "Yes, bypassed in test environment"
+        D: "Yes, experienced with multiple bypass techniques"
+      scoring:
+        A: 0
+        B: 1
+        C: 2
+        D: 3
+      explanation: "OSMR focuses heavily on bypassing macOS security mechanisms."
+      topic: "Security Bypass"
+
+  intermediate:
+    - id: "osmr_i_001"
+      question: "How comfortable are you with Objective-C and Swift?"
+      type: "readiness_assessment"
+      options:
+        A: "No experience"
+        B: "Can read basic code"
+        C: "Can modify existing code"
+        D: "Proficient, can write tools"
+      scoring:
+        A: 0
+        B: 1
+        C: 2
+        D: 3
+      explanation: "macOS apps use Objective-C/Swift. Understanding these helps with exploitation."
+      topic: "Programming Skills"
+      
+    - id: "osmr_i_002"
+      question: "Have you analyzed macOS malware samples?"
+      type: "practical_experience"
+      options:
+        A: "No"
+        B: "Analyzed a few samples with guides"
+        C: "Yes, analyzed several samples independently"
+        D: "Experienced in macOS malware analysis"
+      scoring:
+        A: 0
+        B: 1
+        C: 2
+        D: 3
+      explanation: "Understanding malware techniques helps with offensive research."
+      topic: "Malware Analysis"
+      
+    - id: "osmr_i_003"
+      question: "How familiar are you with macOS exploitation techniques?"
+      type: "practical_experience"
+      options:
+        A: "No experience"
+        B: "Read about techniques"
+        C: "Practiced a few exploits"
+        D: "Developed custom macOS exploits"
+      scoring:
+        A: 0
+        B: 1
+        C: 2
+        D: 3
+      explanation: "OSMR requires hands-on exploitation experience."
+      topic: "Exploitation"
+
+  advanced:
+    - id: "osmr_a_001"
+      question: "How much time can you dedicate to OSMR preparation?"
+      type: "progress_check"
+      options:
+        A: "Less than 10 hours/week"
+        B: "10-15 hours/week"
+        C: "15-25 hours/week"
+        D: "25+ hours/week"
+      scoring:
+        A: 0
+        B: 1
+        C: 2
+        D: 3
+      explanation: "OSMR is highly specialized and requires significant research time."
+      topic: "Time Commitment"
+      
+    - id: "osmr_a_002"
+      question: "Have you contributed to macOS security research or discovered vulnerabilities?"
+      type: "practical_experience"
+      options:
+        A: "No"
+        B: "Participated in research discussions"
+        C: "Found misconfigurations/issues"
+        D: "Discovered and reported actual vulnerabilities"
+      scoring:
+        A: 0
+        B: 1
+        C: 2
+        D: 3
+      explanation: "Research experience demonstrates deep understanding."
+      topic: "Research Experience"
+      
+    - id: "osmr_a_003"
+      question: "How experienced are you with debugging and reverse engineering on macOS?"
+      type: "readiness_assessment"
+      options:
+        A: "No experience"
+        B: "Basic debugging"
+        C: "Comfortable with lldb and reverse engineering"
+        D: "Expert in macOS debugging and RE"
+      scoring:
+        A: 0
+        B: 1
+        C: 2
+        D: 3
+      explanation: "Debugging and RE skills are essential for OSMR."
+      topic: "Technical Skills"
+
+# ==========================================
+# OSDA - OffSec Defense Analyst
+# ==========================================
+OSDA:
+  beginner:
+    - id: "osda_b_001"
+      question: "How much experience do you have in a SOC or security monitoring role?"
+      type: "practical_experience"
+      options:
+        A: "No SOC experience"
+        B: "Less than 6 months"
+        C: "6-12 months"
+        D: "1+ years in SOC/security monitoring"
+      scoring:
+        A: 0
+        B: 1
+        C: 2
+        D: 3
+      explanation: "OSDA focuses on defensive operations. SOC experience is valuable."
+      topic: "Professional Experience"
+      
+    - id: "osda_b_002"
+      question: "How comfortable are you with SIEM platforms (Splunk, ELK, etc.)?"
+      type: "readiness_assessment"
+      options:
+        A: "Never used SIEM"
+        B: "Basic usage only"
+        C: "Comfortable with queries and alerts"
+        D: "Expert in SIEM configuration and analysis"
+      scoring:
+        A: 0
+        B: 1
+        C: 2
+        D: 3
+      explanation: "SIEM platforms are central to OSDA."
+      topic: "Tool Proficiency"
+      
+    - id: "osda_b_003"
+      question: "Have you performed incident response on real security incidents?"
+      type: "practical_experience"
+      options:
+        A: "No real incident experience"
+        B: "Observed incidents, didn't lead"
+        C: "Yes, handled a few incidents"
+        D: "Yes, led multiple incident investigations"
+      scoring:
+        A: 0
+        B: 1
+        C: 2
+        D: 3
+      explanation: "OSDA requires practical incident response skills."
+      topic: "Incident Response"
+
+  intermediate:
+    - id: "osda_i_001"
+      question: "How experienced are you with threat hunting?"
+      type: "practical_experience"
+      options:
+        A: "No threat hunting experience"
+        B: "Understand theory"
+        C: "Yes, performed threat hunting exercises"
+        D: "Regular threat hunter, found real threats"
+      scoring:
+        A: 0
+        B: 1
+        C: 2
+        D: 3
+      explanation: "Proactive threat hunting is a key OSDA skill."
+      topic: "Threat Hunting"
+      
+    - id: "osda_i_002"
+      question: "How familiar are you with MITRE ATT&CK framework?"
+      type: "readiness_assessment"
+      options:
+        A: "Never heard of it"
+        B: "Know what it is"
+        C: "Use it for detection mapping"
+        D: "Expert, regularly use for threat analysis"
+      scoring:
+        A: 0
+        B: 1
+        C: 2
+        D: 3
+      explanation: "ATT&CK framework is heavily used in OSDA."
+      topic: "Threat Intelligence"
+      
+    - id: "osda_i_003"
+      question: "Have you analyzed malware samples and IoCs?"
+      type: "practical_experience"
+      options:
+        A: "No malware analysis experience"
+        B: "Basic static analysis"
+        C: "Yes, both static and dynamic analysis"
+        D: "Advanced analysis including behavioral analysis"
+      scoring:
+        A: 0
+        B: 1
+        C: 2
+        D: 3
+      explanation: "Malware analysis skills help with threat detection and response."
+      topic: "Malware Analysis"
+
+  advanced:
+    - id: "osda_a_001"
+      question: "How much time can you dedicate to OSDA preparation?"
+      type: "progress_check"
+      options:
+        A: "Less than 10 hours/week"
+        B: "10-15 hours/week"
+        C: "15-25 hours/week"
+        D: "25+ hours/week"
+      scoring:
+        A: 0
+        B: 1
+        C: 2
+        D: 3
+      explanation: "OSDA requires practice with various defensive tools and techniques."
+      topic: "Time Commitment"
+      
+    - id: "osda_a_002"
+      question: "Have you built custom detection rules or signatures?"
+      type: "practical_experience"
+      options:
+        A: "No"
+        B: "Modified existing rules"
+        C: "Yes, created basic custom rules"
+        D: "Yes, developed comprehensive detection logic"
+      scoring:
+        A: 0
+        B: 1
+        C: 2
+        D: 3
+      explanation: "Custom detection development is covered in OSDA."
+      topic: "Detection Engineering"
+      
+    - id: "osda_a_003"
+      question: "How experienced are you with security automation and SOAR platforms?"
+      type: "practical_experience"
+      options:
+        A: "No automation experience"
+        B: "Basic scripting for security tasks"
+        C: "Yes, some automation experience"
+        D: "Experienced with SOAR platforms"
+      scoring:
+        A: 0
+        B: 1
+        C: 2
+        D: 3
+      explanation: "Automation is increasingly important in modern SOC operations."
+      topic: "Security Automation"
+
+# ==========================================
+# KLCP - Kali Linux Certified Professional
+# ==========================================
+KLCP:
+  beginner:
+    - id: "klcp_b_001"
+      question: "How comfortable are you using Kali Linux as your primary OS?"
+      type: "readiness_assessment"
+      options:
+        A: "Never used Kali Linux"
+        B: "Used a few times, not comfortable"
+        C: "Use regularly, know basics"
+        D: "Daily driver, very comfortable"
+      scoring:
+        A: 0
+        B: 1
+        C: 2
+        D: 3
+      explanation: "KLCP tests deep Kali Linux knowledge. Regular usage builds familiarity."
+      topic: "Kali Linux Usage"
+      
+    - id: "klcp_b_002"
+      question: "Can you update Kali Linux and manage packages without looking up commands?"
+      type: "readiness_assessment"
+      options:
+        A: "No, always need to look up"
+        B: "Know basic apt commands"
+        C: "Yes, comfortable with apt/dpkg"
+        D: "Expert, know advanced package management"
+      scoring:
+        A: 0
+        B: 1
+        C: 2
+        D: 3
+      explanation: "Package management is fundamental to Kali Linux administration."
+      topic: "Package Management"
+      
+    - id: "klcp_b_003"
+      question: "How many Kali Linux tools have you used hands-on?"
+      type: "progress_check"
+      options:
+        A: "Less than 5 tools"
+        B: "5-10 tools"
+        C: "10-20 tools"
+        D: "20+ tools across different categories"
+      scoring:
+        A: 0
+        B: 1
+        C: 2
+        D: 3
+      explanation: "KLCP tests knowledge of various Kali tools and their usage."
+      topic: "Tool Experience"
+      
+    - id: "klcp_b_004"
+      question: "Can you configure and troubleshoot wireless adapters in Kali?"
+      type: "practical_experience"
+      options:
+        A: "No experience"
+        B: "Tried once, had issues"
+        C: "Yes, can set up monitor mode"
+        D: "Expert, handle driver issues easily"
+      scoring:
+        A: 0
+        B: 1
+        C: 2
+        D: 3
+      explanation: "Wireless adapter management is crucial for wireless testing in Kali."
+      topic: "Wireless Configuration"
+      
+    - id: "klcp_b_005"
+      question: "How comfortable are you with the Kali Linux directory structure?"
+      type: "readiness_assessment"
+      options:
+        A: "Don't know where tools are located"
+        B: "Know basic locations (/usr/bin)"
+        C: "Know tool locations (/usr/share/)"
+        D: "Know all key locations (wordlists, scripts, configs)"
+      scoring:
+        A: 0
+        B: 1
+        C: 2
+        D: 3
+      explanation: "KLCP tests knowledge of where Kali stores tools, wordlists, and configurations."
+      topic: "File System Knowledge"
+
+  intermediate:
+    - id: "klcp_i_001"
+      question: "Have you installed Kali Linux metapackages for specific categories?"
+      type: "practical_experience"
+      options:
+        A: "Don't know what metapackages are"
+        B: "Know about them, haven't used"
+        C: "Yes, installed a few metapackages"
+        D: "Regularly use metapackages for tool management"
+      scoring:
+        A: 0
+        B: 1
+        C: 2
+        D: 3
+      explanation: "Metapackages are efficient ways to install tool categories in Kali."
+      topic: "Advanced Package Management"
+      
+    - id: "klcp_i_002"
+      question: "Can you start/stop/enable services in Kali (postgresql, apache, ssh)?"
+      type: "readiness_assessment"
+      options:
+        A: "No, don't know how"
+        B: "Can start services"
+        C: "Yes, comfortable with systemctl"
+        D: "Expert, including troubleshooting services"
+      scoring:
+        A: 0
+        B: 1
+        C: 2
+        D: 3
+      explanation: "Service management is essential for setting up attack infrastructure."
+      topic: "Service Management"
+      
+    - id: "klcp_i_003"
+      question: "Have you customized your Kali Linux installation (themes, scripts, aliases)?"
+      type: "progress_check"
+      options:
+        A: "No customization"
+        B: "Minor changes (wallpaper)"
+        C: "Yes, custom scripts and aliases"
+        D: "Heavily customized for efficiency"
+      scoring:
+        A: 0
+        B: 1
+        C: 2
+        D: 3
+      explanation: "Customization shows deep familiarity with Kali Linux."
+      topic: "System Customization"
+      
+    - id: "klcp_i_004"
+      question: "How experienced are you with Kali Linux in different installation modes?"
+      type: "practical_experience"
+      options:
+        A: "Only used in VM"
+        B: "VM and live boot"
+        C: "VM, live, and persistent USB"
+        D: "All modes including bare metal, WSL, ARM"
+      scoring:
+        A: 0
+        B: 1
+        C: 2
+        D: 3
+      explanation: "KLCP may test knowledge of various Kali installation methods."
+      topic: "Installation Methods"
+      
+    - id: "klcp_i_005"
+      question: "Can you troubleshoot broken packages and dependency issues?"
+      type: "readiness_assessment"
+      options:
+        A: "No, get stuck easily"
+        B: "Can fix with online help"
+        C: "Yes, know common fixes"
+        D: "Expert at resolving package issues"
+      scoring:
+        A: 0
+        B: 1
+        C: 2
+        D: 3
+      explanation: "Package troubleshooting is common in Kali Linux usage."
+      topic: "Troubleshooting"
+
+  advanced:
+    - id: "klcp_a_001"
+      question: "Have you set up a penetration testing lab using Kali?"
+      type: "practical_experience"
+      options:
+        A: "No lab setup"
+        B: "Basic setup (Kali + target VM)"
+        C: "Yes, multi-machine lab"
+        D: "Advanced lab with networking, AD, etc."
+      scoring:
+        A: 0
+        B: 1
+        C: 2
+        D: 3
+      explanation: "Lab setup demonstrates comprehensive Kali Linux knowledge."
+      topic: "Lab Environment"
+      
+    - id: "klcp_a_002"
+      question: "How comfortable are you with Bash scripting for automation in Kali?"
+      type: "readiness_assessment"
+      options:
+        A: "No scripting experience"
+        B: "Basic scripts only"
+        C: "Comfortable writing automation scripts"
+        D: "Advanced scripting for complex tasks"
+      scoring:
+        A: 0
+        B: 1
+        C: 2
+        D: 3
+      explanation: "Bash scripting enhances efficiency in penetration testing."
+      topic: "Automation Skills"
+      
+    - id: "klcp_a_003"
+      question: "Do you know where Kali stores wordlists and how to use them effectively?"
+      type: "readiness_assessment"
+      options:
+        A: "Don't know about wordlists"
+        B: "Know rockyou.txt location"
+        C: "Know multiple wordlist locations"
+        D: "Expert, including SecLists and custom lists"
+      scoring:
+        A: 0
+        B: 1
+        C: 2
+        D: 3
+      explanation: "Wordlist knowledge is essential for password attacks."
+      topic: "Wordlists"
+      
+    - id: "klcp_a_004"
+      question: "Have you used Kali NetHunter on mobile devices?"
+      type: "practical_experience"
+      options:
+        A: "Never heard of it"
+        B: "Know what it is"
+        C: "Installed and tested"
+        D: "Regular NetHunter user"
+      scoring:
+        A: 0
+        B: 1
+        C: 2
+        D: 3
+      explanation: "NetHunter extends Kali to mobile platforms."
+      topic: "Advanced Features"
+      
+    - id: "klcp_a_005"
+      question: "How much time are you dedicating to KLCP preparation?"
+      type: "progress_check"
+      options:
+        A: "Less than 5 hours/week"
+        B: "5-10 hours/week"
+        C: "10-15 hours/week"
+        D: "15+ hours/week"
+      scoring:
+        A: 0
+        B: 1
+        C: 2
+        D: 3
+      explanation: "Regular hands-on practice with Kali builds the proficiency needed for KLCP."
+      topic: "Time Commitment"
+
+# ==========================================
+# Assessment Configuration
+# ==========================================
+assessment_config:
+  default_questions_per_level: 5
+  passing_score_percentage: 70
+  time_per_question_seconds: 60
+  
+  difficulty_progression:
+    beginner: "33%"
+    intermediate: "33%"
+    advanced: "34%"
+  
+  scoring:
+    beginner_points: 1
+    intermediate_points: 2
+    advanced_points: 3
+  
+  skill_level_thresholds:
+    beginner: "0-40%"
+    intermediate: "41-70%"
+    advanced: "71-85%"
+    expert: "86-100%"
+  
+  recommendations:
+    beginner:
+      - "Start with foundational practice (TryHackMe, basic HTB machines)"
+      - "Focus on learning essential tools for your certification"
+      - "Build hands-on lab experience before attempting certification"
+      - "Study 10-15 hours per week minimum"
+    
+    intermediate:
+      - "Increase practice intensity (15-20 machines for OSCP)"
+      - "Practice without walkthroughs to build independence"
+      - "Join OffSec course/platform for your certification"
+      - "Study 15-25 hours per week"
+    
+    advanced:
+      - "You're on track! Continue focused practice"
+      - "Complete remaining machines on your target list"
+      - "Practice exam simulation and report writing"
+      - "Schedule your exam when you feel ready"
+      - "Study 20+ hours per week for final push"
+    
+    expert:
+      - "Excellent preparation! You're exam-ready"
+      - "Do a final review of weak areas"
+      - "Schedule your exam with confidence"
+      - "Maintain practice leading up to exam date"
+ 
+# ==========================================
+# OSCC - OffSec CyberCore
+# ==========================================
+OSCC:
+  beginner:
+    - id: "oscc_b_001"
+      question: "How comfortable are you with basic networking concepts (TCP/IP, subnetting, DNS)?"
+      type: "readiness_assessment"
+      options:
+        A: "Never studied networking"
+        B: "Know the basics from tutorials"
+        C: "Comfortable explaining core concepts"
+        D: "Can troubleshoot network issues and design networks"
+      scoring:
+        A: 0
+        B: 1
+        C: 2
+        D: 3
+      explanation: "OSCC requires solid networking fundamentals as a foundation for security."
+      topic: "Networking Knowledge"
+
+    - id: "oscc_b_002"
+      question: "Can you write basic Python or Bash scripts without looking up syntax?"
+      type: "practical_experience"
+      options:
+        A: "No scripting experience"
+        B: "Can modify existing scripts"
+        C: "Can write basic scripts from scratch"
+        D: "Write automation scripts regularly"
+      scoring:
+        A: 0
+        B: 1
+        C: 2
+        D: 3
+      explanation: "Scripting is essential for automation and solving security challenges."
+      topic: "Scripting Skills"
+
+    - id: "oscc_b_003"
+      question: "How familiar are you with both Windows and Linux command line interfaces?"
+      type: "readiness_assessment"
+      options:
+        A: "Only used GUI, minimal CLI experience"
+        B: "Basic commands in one OS"
+        C: "Comfortable with both Windows CMD/PowerShell and Linux Bash"
+        D: "Advanced user of both, prefer CLI over GUI"
+      scoring:
+        A: 0
+        B: 1
+        C: 2
+        D: 3
+      explanation: "OSCC covers both operating systems. CLI proficiency is fundamental."
+      topic: "Operating System Skills"
+
+    - id: "oscc_b_004"
+      question: "Have you practiced identifying common web vulnerabilities (SQLi, XSS, etc.)?"
+      type: "practical_experience"
+      options:
+        A: "Haven't tried yet"
+        B: "Completed a few tutorials"
+        C: "Practiced on vulnerable apps (DVWA, WebGoat)"
+        D: "Regularly practice on CTF platforms"
+      scoring:
+        A: 0
+        B: 1
+        C: 2
+        D: 3
+      explanation: "Understanding common attack vectors is key to both offensive and defensive security."
+      topic: "Web Security"
+
+    - id: "oscc_b_005"
+      question: "How much hands-on security practice are you getting weekly?"
+      type: "progress_check"
+      options:
+        A: "Just reading/watching videos"
+        B: "1-5 hours hands-on"
+        C: "5-10 hours hands-on"
+        D: "10+ hours hands-on practice"
+      scoring:
+        A: 0
+        B: 1
+        C: 2
+        D: 3
+      explanation: "OSCC requires practical application. Hands-on practice is essential for building skills."
+      topic: "Time Commitment"
+
+  intermediate:
+    - id: "oscc_i_001"
+      question: "Can you explain the CIA triad and apply it to real-world scenarios?"
+      type: "readiness_assessment"
+      options:
+        A: "Don't know what CIA triad is"
+        B: "Know the definition"
+        C: "Can explain with examples"
+        D: "Regularly apply these principles in security decisions"
+      scoring:
+        A: 0
+        B: 1
+        C: 2
+        D: 3
+      explanation: "CIA triad is fundamental to all security work. You should understand how to apply it."
+      topic: "Security Fundamentals"
+
+    - id: "oscc_i_002"
+      question: "Have you set up and configured firewalls or IDS/IPS systems?"
+      type: "practical_experience"
+      options:
+        A: "No hands-on experience"
+        B: "Followed a tutorial once"
+        C: "Set up basic firewall rules"
+        D: "Configured multiple security devices"
+      scoring:
+        A: 0
+        B: 1
+        C: 2
+        D: 3
+      explanation: "OSCC covers defensive techniques. Hands-on experience with security tools is valuable."
+      topic: "Defensive Tools"
+
+    - id: "oscc_i_003"
+      question: "How comfortable are you reading and analyzing system logs?"
+      type: "readiness_assessment"
+      options:
+        A: "Never looked at logs"
+        B: "Can find basic information"
+        C: "Comfortable identifying anomalies"
+        D: "Regularly perform log analysis and correlation"
+      scoring:
+        A: 0
+        B: 1
+        C: 2
+        D: 3
+      explanation: "Log analysis is crucial for security monitoring and incident response."
+      topic: "Security Monitoring"
+
+  advanced:
+    - id: "oscc_a_001"
+      question: "Have you completed any security learning platforms (TryHackMe, HackTheBox beginner paths)?"
+      type: "progress_check"
+      options:
+        A: "Not started yet"
+        B: "Started but not completed"
+        C: "Completed beginner-level content"
+        D: "Completed multiple learning paths"
+      scoring:
+        A: 0
+        B: 1
+        C: 2
+        D: 3
+      explanation: "Structured learning platforms provide comprehensive coverage of security topics."
+      topic: "Structured Learning"
+
+    - id: "oscc_a_002"
+      question: "Can you explain common attack techniques and their mitigations?"
+      type: "readiness_assessment"
+      options:
+        A: "Limited knowledge"
+        B: "Know a few attack types"
+        C: "Understand multiple attack vectors and defenses"
+        D: "Can demonstrate both attacks and defenses"
+      scoring:
+        A: 0
+        B: 1
+        C: 2
+        D: 3
+      explanation: "OSCC requires understanding both offensive and defensive perspectives."
+      topic: "Attack & Defense"
+
+# ==========================================
+# OSIR - OffSec Incident Responder
+# ==========================================
+OSIR:
+  beginner:
+    - id: "osir_b_001"
+      question: "How familiar are you with the Incident Response lifecycle phases?"
+      type: "readiness_assessment"
+      options:
+        A: "Never studied IR"
+        B: "Read about it but no hands-on"
+        C: "Understand the phases and their goals"
+        D: "Have practiced or participated in IR activities"
+      scoring:
+        A: 0
+        B: 1
+        C: 2
+        D: 3
+      explanation: "The IR lifecycle is the foundation of OSIR. You must understand each phase."
+      topic: "IR Fundamentals"
+
+    - id: "osir_b_002"
+      question: "Can you collect and preserve digital evidence without contamination?"
+      type: "practical_experience"
+      options:
+        A: "Never tried"
+        B: "Know the theory"
+        C: "Practiced basic evidence collection"
+        D: "Experienced with proper chain of custody procedures"
+      scoring:
+        A: 0
+        B: 1
+        C: 2
+        D: 3
+      explanation: "Evidence preservation is critical in IR. Improper handling can make evidence inadmissible."
+      topic: "Evidence Handling"
+
+    - id: "osir_b_003"
+      question: "How comfortable are you analyzing Windows Event Logs?"
+      type: "practical_experience"
+      options:
+        A: "Never looked at event logs"
+        B: "Can open Event Viewer and browse"
+        C: "Can identify common security events"
+        D: "Regularly hunt for IOCs in event logs"
+      scoring:
+        A: 0
+        B: 1
+        C: 2
+        D: 3
+      explanation: "Windows Event Logs are crucial forensic artifacts for IR investigations."
+      topic: "Windows Forensics"
+
+    - id: "osir_b_004"
+      question: "Have you used SIEM tools (Splunk, ELK, etc.) for log analysis?"
+      type: "practical_experience"
+      options:
+        A: "Never used a SIEM"
+        B: "Completed basic tutorials"
+        C: "Used SIEM for simple searches"
+        D: "Comfortable writing SPL queries and creating dashboards"
+      scoring:
+        A: 0
+        B: 1
+        C: 2
+        D: 3
+      explanation: "OSIR heavily focuses on Splunk and SIEM technologies for log correlation."
+      topic: "SIEM Skills"
+
+    - id: "osir_b_005"
+      question: "How much time do you spend practicing forensics and IR weekly?"
+      type: "progress_check"
+      options:
+        A: "None, just learning theory"
+        B: "1-5 hours hands-on"
+        C: "5-15 hours hands-on"
+        D: "15+ hours hands-on practice"
+      scoring:
+        A: 0
+        B: 1
+        C: 2
+        D: 3
+      explanation: "OSIR is hands-on intensive. Regular practice with forensics tools is essential."
+      topic: "Time Commitment"
+
+  intermediate:
+    - id: "osir_i_001"
+      question: "Can you create timelines from multiple forensic artifacts?"
+      type: "readiness_assessment"
+      options:
+        A: "Don't know how to create timelines"
+        B: "Understand the concept"
+        C: "Created basic timelines from single sources"
+        D: "Skilled at correlating multiple artifact sources"
+      scoring:
+        A: 0
+        B: 1
+        C: 2
+        D: 3
+      explanation: "Timeline analysis is crucial for understanding attack progression in IR."
+      topic: "Timeline Analysis"
+
+    - id: "osir_i_002"
+      question: "Have you investigated malware in a sandbox environment?"
+      type: "practical_experience"
+      options:
+        A: "Never done malware analysis"
+        B: "Watched demonstrations"
+        C: "Analyzed a few samples with guidance"
+        D: "Regularly perform basic dynamic/static analysis"
+      scoring:
+        A: 0
+        B: 1
+        C: 2
+        D: 3
+      explanation: "Basic malware analysis skills help IR teams understand threat behavior."
+      topic: "Malware Analysis"
+
+    - id: "osir_i_003"
+      question: "How experienced are you with memory forensics tools (Volatility, etc.)?"
+      type: "practical_experience"
+      options:
+        A: "Never used memory forensics tools"
+        B: "Know they exist"
+        C: "Used basic Volatility plugins"
+        D: "Comfortable extracting artifacts from memory dumps"
+      scoring:
+        A: 0
+        B: 1
+        C: 2
+        D: 3
+      explanation: "Memory analysis can reveal running malware and attacker activities."
+      topic: "Memory Forensics"
+
+  advanced:
+    - id: "osir_a_001"
+      question: "Have you participated in blue team exercises or CTFs?"
+      type: "progress_check"
+      options:
+        A: "No defensive CTF experience"
+        B: "Tried 1-2 blue team challenges"
+        C: "Participated in several blue team events"
+        D: "Regular participant in defensive competitions"
+      scoring:
+        A: 0
+        B: 1
+        C: 2
+        D: 3
+      explanation: "Blue team CTFs simulate real IR scenarios and build practical skills."
+      topic: "Practical Experience"
+
+    - id: "osir_a_002"
+      question: "Can you write custom Splunk queries for threat hunting?"
+      type: "practical_experience"
+      options:
+        A: "Can't write SPL queries"
+        B: "Basic searches only"
+        C: "Can write queries with stats and eval"
+        D: "Advanced SPL with subsearches and complex logic"
+      scoring:
+        A: 0
+        B: 1
+        C: 2
+        D: 3
+      explanation: "Advanced SPL is essential for effective threat hunting in OSIR."
+      topic: "Advanced SIEM"
+
+    - id: "osir_a_003"
+      question: "How comfortable are you analyzing network packet captures (PCAP)?"
+      type: "readiness_assessment"
+      options:
+        A: "Never analyzed PCAPs"
+        B: "Can use Wireshark filters"
+        C: "Comfortable identifying malicious traffic"
+        D: "Regularly perform deep packet analysis"
+      scoring:
+        A: 0
+        B: 1
+        C: 2
+        D: 3
+      explanation: "Network analysis helps identify C2 communication and data exfiltration."
+      topic: "Network Forensics"
+
+# ==========================================
+# OSEE - Offensive Security Exploitation Expert
+# ==========================================
+OSEE:
+  beginner:
+    - id: "osee_b_001"
+      question: "How proficient are you with x86/x64 assembly language?"
+      type: "readiness_assessment"
+      options:
+        A: "Never studied assembly"
+        B: "Can read basic assembly"
+        C: "Comfortable reading and understanding complex code"
+        D: "Can write assembly and follow exploit code"
+      scoring:
+        A: 0
+        B: 1
+        C: 2
+        D: 3
+      explanation: "OSEE requires deep assembly knowledge. This is a prerequisite skill."
+      topic: "Assembly Skills"
+
+    - id: "osee_b_002"
+      question: "Have you successfully bypassed DEP and ASLR in exploit development?"
+      type: "practical_experience"
+      options:
+        A: "Never attempted exploitation"
+        B: "Basic buffer overflows only"
+        C: "Bypassed DEP using ROP"
+        D: "Experienced with both DEP and ASLR bypasses"
+      scoring:
+        A: 0
+        B: 1
+        C: 2
+        D: 3
+      explanation: "OSEE builds on OSED concepts. You need experience with modern mitigations."
+      topic: "Mitigation Bypasses"
+
+    - id: "osee_b_003"
+      question: "How comfortable are you using WinDbg or advanced debuggers?"
+      type: "practical_experience"
+      options:
+        A: "Never used a debugger"
+        B: "Basic debugging with gdb or x64dbg"
+        C: "Comfortable with WinDbg commands"
+        D: "Advanced WinDbg usage including kernel debugging"
+      scoring:
+        A: 0
+        B: 1
+        C: 2
+        D: 3
+      explanation: "WinDbg is the primary tool for OSEE. Mastery is essential."
+      topic: "Debugging Skills"
+
+    - id: "osee_b_004"
+      question: "Have you studied Windows internals (heap, kernel, drivers)?"
+      type: "readiness_assessment"
+      options:
+        A: "No Windows internals knowledge"
+        B: "Read introductory materials"
+        C: "Studied heap structures and kernel basics"
+        D: "Deep understanding from books/research"
+      scoring:
+        A: 0
+        B: 1
+        C: 2
+        D: 3
+      explanation: "OSEE exploits advanced Windows internals. Strong foundation is required."
+      topic: "Windows Internals"
+
+    - id: "osee_b_005"
+      question: "How much time can you dedicate to OSEE preparation weekly?"
+      type: "progress_check"
+      options:
+        A: "Less than 10 hours"
+        B: "10-20 hours"
+        C: "20-30 hours"
+        D: "30+ hours"
+      scoring:
+        A: 0
+        B: 1
+        C: 2
+        D: 3
+      explanation: "OSEE is extremely demanding. It requires significant time investment."
+      topic: "Time Commitment"
+
+  intermediate:
+    - id: "osee_i_001"
+      question: "Have you developed exploits for heap-based vulnerabilities?"
+      type: "practical_experience"
+      options:
+        A: "No heap exploitation experience"
+        B: "Studied heap theory"
+        C: "Exploited basic heap overflows"
+        D: "Developed exploits for modern heap structures"
+      scoring:
+        A: 0
+        B: 1
+        C: 2
+        D: 3
+      explanation: "Heap exploitation is a major OSEE topic requiring hands-on practice."
+      topic: "Heap Exploitation"
+
+    - id: "osee_i_002"
+      question: "Can you bypass modern exploit mitigations (CFG, ACG, CIG)?"
+      type: "readiness_assessment"
+      options:
+        A: "Don't know these mitigations"
+        B: "Understand them theoretically"
+        C: "Attempted bypassing with guidance"
+        D: "Successfully bypassed in practice"
+      scoring:
+        A: 0
+        B: 1
+        C: 2
+        D: 3
+      explanation: "OSEE focuses on defeating the latest Windows security features."
+      topic: "Modern Mitigations"
+
+    - id: "osee_i_003"
+      question: "Have you performed any vulnerability research or fuzzing?"
+      type: "practical_experience"
+      options:
+        A: "Never done vuln research"
+        B: "Basic fuzzing with existing tools"
+        C: "Found crashes through fuzzing"
+        D: "Developed custom fuzzers and found vulnerabilities"
+      scoring:
+        A: 0
+        B: 1
+        C: 2
+        D: 3
+      explanation: "Vuln research skills complement exploit development in OSEE."
+      topic: "Vulnerability Research"
+
+  advanced:
+    - id: "osee_a_001"
+      question: "Have you attempted kernel exploitation or studied kernel internals?"
+      type: "practical_experience"
+      options:
+        A: "No kernel experience"
+        B: "Read about kernel exploitation"
+        C: "Studied kernel debugging basics"
+        D: "Developed kernel exploits"
+      scoring:
+        A: 0
+        B: 1
+        C: 2
+        D: 3
+      explanation: "Kernel exploitation is advanced OSEE content requiring deep expertise."
+      topic: "Kernel Exploitation"
+
+    - id: "osee_a_002"
+      question: "How comfortable are you with browser exploitation techniques?"
+      type: "readiness_assessment"
+      options:
+        A: "No browser exploitation knowledge"
+        B: "Understand basic concepts"
+        C: "Studied browser internals and sandbox"
+        D: "Attempted browser exploit development"
+      scoring:
+        A: 0
+        B: 1
+        C: 2
+        D: 3
+      explanation: "Browser exploitation is covered in OSEE at an advanced level."
+      topic: "Browser Exploitation"
+
+    - id: "osee_a_003"
+      question: "Do you have OSED or equivalent advanced exploitation experience?"
+      type: "progress_check"
+      options:
+        A: "No advanced exploitation background"
+        B: "Some exploitation knowledge"
+        C: "Completed OSED or similar training"
+        D: "OSED certified with additional research experience"
+      scoring:
+        A: 0
+        B: 1
+        C: 2
+        D: 3
+      explanation: "OSEE assumes OSED-level knowledge. It's recommended as a prerequisite."
+      topic: "Prerequisites"
+
+
+# ==========================================
+# Notes for Bot Implementation
+# ==========================================
+implementation_notes:
+  - "Questions assess ACTUAL readiness based on practical experience"
+  - "Scoring reflects real preparation level, not theoretical knowledge"
+  - "Users who score low should practice more before attempting certification"
+  - "Users who score high are likely ready for the certification exam"
+  - "Questions help identify specific weak areas for focused study"
+  - "Progress tracking shows improvement over time with repeated assessments"

@@ -1,0 +1,2170 @@
+# ==========================================
+# Try-Harder-AI Resources Database
+# ==========================================
+# Comprehensive learning resources for all OffSec certifications
+# Version: 2.0.0
+# Last Updated: 2025
+# Includes: Official resources, practice platforms, tools, courses, and community links
+# ==========================================
+
+metadata:
+  version: "2.0.0"
+  last_updated: "2025-01-15"
+  total_certifications: 12
+  resource_categories: ["official", "courses", "practice_platforms", "tools", "books", "videos", "communities", "cheatsheets"]
+  maintained_by: "Try-Harder-AI Team"
+
+# ==========================================
+# OSCP - Offensive Security Certified Professional
+# ==========================================
+OSCP:
+  official:
+    - name: "PEN-200: Penetration Testing with Kali Linux"
+      url: "https://www.offsec.com/courses/pen-200/"
+      type: "Official Course"
+      description: "The official OSCP course with PDF, videos, and lab access"
+      cost: "Paid"
+      
+    - name: "OSCP Exam Guide"
+      url: "https://help.offsec.com/hc/en-us/articles/360040165632-OSCP-Exam-Guide"
+      type: "Exam Information"
+      description: "Official exam structure, rules, and requirements"
+      cost: "Free"
+      
+    - name: "OffSec Proving Grounds"
+      url: "https://www.offsec.com/labs/individual/"
+      type: "Practice Labs"
+      description: "Official practice environment with OSCP-like machines"
+      cost: "Paid"
+
+  practice_platforms:
+    - name: "HackTheBox"
+      url: "https://www.hackthebox.com"
+      type: "Practice Platform"
+      description: "Popular penetration testing lab platform with retired machines"
+      difficulty: "Beginner to Advanced"
+      cost: "Free + VIP Subscription"
+      recommended_machines:
+        - "Lame"
+        - "Legacy"
+        - "Devel"
+        - "Optimum"
+        - "Jerry"
+        - "Blue"
+        - "Nibbles"
+        - "Shocker"
+        - "Sense"
+        - "Beep"
+      
+    - name: "TryHackMe - OSCP Prep"
+      url: "https://tryhackme.com/paths"
+      type: "Practice Platform"
+      description: "Guided learning platform with OSCP preparation paths"
+      difficulty: "Beginner Friendly"
+      cost: "Free + Premium"
+      recommended_paths:
+        - "Offensive Pentesting Path"
+        - "Complete Beginner Path"
+        - "Linux Privilege Escalation"
+        - "Windows Privilege Escalation"
+      
+    - name: "OffSec Proving Grounds (Practice)"
+      url: "https://portal.offsec.com/labs/practice"
+      type: "Practice Platform"
+      description: "Official OffSec machines - highly recommended for exam simulation"
+      difficulty: "Intermediate to Hard"
+      cost: "Paid (Subscription)"
+      practice_by_os:
+        linux:
+          easy:
+            - "Blogger"
+            - "Waddle"
+            - "FunboxEasy"
+          medium:
+            - "Hutch"
+            - "Vault"
+            - "RubyRing"
+            - "ClamAV"
+            - "Meathead"
+            - "OpenKeyS"
+          hard:
+            - "Snookums"
+            - "Wah"
+            - "Gaara"
+            - "Algernon"
+        windows:
+          easy:
+            - "Internal"
+            - "Authby"
+          medium:
+            - "Hunit"
+            - "Medje"
+            - "WinCorp"
+            - "Sybaris"
+            - "Helpdesk"
+          hard:
+            - "Kevin"
+            - "Squid"
+            - "Heist"
+
+    - name: "TJNull's OSCP Practice List"
+      url: "https://docs.google.com/spreadsheets/u/1/d/1dwSMIAPIam0PuRBkCiDI88pU3yzrqqHkDtBngUHNCw8/htmlview"
+      type: "Curated Machine List"
+      description: "Community-curated list of HackTheBox and Proving Grounds machines for OSCP prep"
+      cost: "Free (list) - Machines require HTB VIP or PG subscription"
+      
+      practice_by_os:
+        linux:
+          easy:
+            - "Lame"
+            - "Legacy"
+            - "Shocker"
+            - "Nibbles"
+            - "Bashed"
+            - "Networked"
+            - "Postman"
+            - "Traceback"
+            - "Tabby"
+            - "Doctor"
+          medium:
+            - "Beep"
+            - "Cronos"
+            - "Solidstate"
+            - "Node"
+            - "Poison"
+            - "Lightweight"
+            - "Mango"
+            - "OpenAdmin"
+            - "Magic"
+            - "Blunder"
+          hard:
+            - "Brainfuck"
+            - "Kotarak"
+            - "Falafel"
+            - "Haystack"
+        
+        windows:
+          easy:
+            - "Devel"
+            - "Optimum"
+            - "Jerry"
+            - "Blue"
+            - "Arctic"
+            - "Grandpa"
+            - "Granny"
+            - "Bounty"
+            - "Netmon"
+            - "Buff"
+          medium:
+            - "Bastard"
+            - "Chatterbox"
+            - "Conceal"
+            - "Silo"
+            - "Querier"
+            - "Heist"
+            - "Nest"
+            - "Sauna"
+            - "Cascade"
+            - "Remote"
+          hard:
+            - "Mantis"
+            - "Bart"
+            - "Tally"
+        
+        active_directory:
+          medium:
+            - "Forest"
+            - "Sauna"
+            - "Cascade"
+          hard:
+            - "Blackfield"
+            - "Fuse"
+
+  courses:
+    - name: "HackTheBox CPTS - Certified Penetration Testing Specialist"
+      url: "https://academy.hackthebox.com/preview/certifications/htb-certified-penetration-testing-specialist"
+      type: "Certification Path"
+      description: "Comprehensive penetration testing certification path covering similar topics to OSCP. Student pricing available at $8/month"
+      cost: "Paid ($8/month for students, regular pricing otherwise)"
+      note: "Many practitioners report that completing CPTS provides excellent OSCP preparation"
+      
+    - name: "TCM Security - Practical Ethical Hacking"
+      url: "https://academy.tcm-sec.com/p/practical-ethical-hacking-the-complete-course"
+      instructor: "Heath Adams (TheCyberMentor)"
+      type: "Video Course"
+      description: "Comprehensive beginner-friendly pentesting course"
+      cost: "Paid"
+      
+    - name: "TCM Security - Linux Privilege Escalation"
+      url: "https://academy.tcm-sec.com/p/linux-privilege-escalation"
+      instructor: "Tib3rius"
+      type: "Video Course"
+      description: "Deep dive into Linux privilege escalation techniques"
+      cost: "Paid"
+      
+    - name: "TCM Security - Windows Privilege Escalation"
+      url: "https://academy.tcm-sec.com/p/windows-privilege-escalation-for-beginners"
+      instructor: "Tib3rius"
+      type: "Video Course"
+      description: "Comprehensive Windows privilege escalation"
+      cost: "Paid"
+      
+    - name: "INE - eJPT (Junior Penetration Tester)"
+      url: "https://ine.com/learning/certifications/internal/elearnsecurity-junior-penetration-tester-cert"
+      type: "Certification Course"
+      description: "Great foundational course before OSCP"
+      cost: "Paid"
+
+  tools:
+    - name: "Kali Linux"
+      url: "https://www.kali.org/get-kali/"
+      type: "Operating System"
+      description: "Primary penetration testing OS with pre-installed tools"
+      
+    - name: "Nmap"
+      url: "https://nmap.org"
+      type: "Network Scanner"
+      description: "Network discovery and security auditing"
+      
+    - name: "Metasploit Framework"
+      url: "https://www.metasploit.com"
+      type: "Exploitation Framework"
+      description: "Penetration testing framework"
+      
+    - name: "Burp Suite"
+      url: "https://portswigger.net/burp"
+      type: "Web Application Testing"
+      description: "Web vulnerability scanner and proxy"
+      
+    - name: "LinPEAS / WinPEAS"
+      url: "https://github.com/carlospolop/PEASS-ng"
+      type: "Privilege Escalation"
+      description: "Automated privilege escalation enumeration scripts"
+      
+    - name: "Impacket"
+      url: "https://github.com/SecureAuthCorp/impacket"
+      type: "Network Protocols"
+      description: "Python library for working with network protocols"
+      
+    - name: "Evil-WinRM"
+      url: "https://github.com/Hackplayers/evil-winrm"
+      type: "Windows Remote Access"
+      description: "WinRM shell for Windows pentesting"
+      
+    - name: "Ligolo-ng"
+      url: "https://github.com/nicocha30/ligolo-ng"
+      type: "Tunneling/Pivoting"
+      description: "Advanced tunneling tool for pivoting through networks"
+      
+    - name: "NetExec (nxc)"
+      url: "https://github.com/Pennyw0rth/NetExec"
+      type: "Network Exploitation"
+      description: "Network exploitation and assessment tool (successor to CrackMapExec)"
+      
+    - name: "John the Ripper"
+      url: "https://www.openwall.com/john/"
+      type: "Password Cracking"
+      description: "Fast password cracker for various hash types"
+      
+    - name: "Hashcat"
+      url: "https://hashcat.net/hashcat/"
+      type: "Password Cracking"
+      description: "Advanced GPU-accelerated password recovery tool"
+      
+    - name: "Gobuster"
+      url: "https://github.com/OJ/gobuster"
+      type: "Web Directory Bruteforcing"
+      description: "Fast directory/file & DNS busting tool written in Go"
+      
+    - name: "Dirbuster"
+      url: "https://www.kali.org/tools/dirbuster/"
+      type: "Web Directory Bruteforcing"
+      description: "Multi-threaded java application for brute forcing directories"
+      
+    - name: "SQLMap"
+      url: "https://sqlmap.org/"
+      type: "SQL Injection"
+      description: "Automatic SQL injection and database takeover tool"
+      
+    - name: "Hydra"
+      url: "https://github.com/vanhauser-thc/thc-hydra"
+      type: "Password Attacks"
+      description: "Parallelized login cracker supporting numerous protocols"
+      
+    - name: "Feroxbuster"
+      url: "https://github.com/epi052/feroxbuster"
+      type: "Web Directory Bruteforcing"
+      description: "Fast, simple, recursive content discovery tool written in Rust"
+      
+    - name: "Responder"
+      url: "https://github.com/lgandx/Responder"
+      type: "Network Poisoning"
+      description: "LLMNR, NBT-NS and MDNS poisoner for credential theft"
+
+  books:
+    - name: "The Hacker Playbook 3"
+      author: "Peter Kim"
+      url: "https://www.amazon.com/dp/1980901759"
+      description: "Practical guide to penetration testing"
+      
+    - name: "Penetration Testing: A Hands-On Introduction"
+      author: "Georgia Weidman"
+      url: "https://www.amazon.com/dp/1593275641"
+      description: "Comprehensive introduction to pentesting"
+      
+    - name: "RTFM: Red Team Field Manual"
+      author: "Ben Clark"
+      url: "https://www.amazon.com/dp/1494295504"
+      description: "Quick reference for penetration testing commands"
+
+  videos:
+    - name: "IppSec YouTube Channel"
+      url: "https://www.youtube.com/channel/UCa6eh7gCkpPo5XXUDfygQQA"
+      type: "YouTube Channel"
+      description: "HackTheBox machine walkthroughs and techniques"
+      
+    - name: "John Hammond"
+      url: "https://www.youtube.com/c/JohnHammond010"
+      type: "YouTube Channel"
+      description: "CTF walkthroughs and cybersecurity content"
+      
+    - name: "The Cyber Mentor"
+      url: "https://www.youtube.com/c/TheCyberMentor"
+      type: "YouTube Channel"
+      description: "Ethical hacking tutorials and career advice"
+
+  communities:
+    - name: "OffSec Discord"
+      url: "https://discord.gg/offsec"
+      type: "Community"
+      description: "Official OffSec Discord server"
+      
+    - name: "NetSecFocus OSCP Study Group"
+      url: "https://discord.gg/netsecfocus"
+      type: "Community"
+      description: "OSCP-focused study community"
+      
+    - name: "r/oscp Subreddit"
+      url: "https://www.reddit.com/r/oscp"
+      type: "Community"
+      description: "OSCP discussion and resources"
+
+  cheatsheets:
+    - name: "HackTricks"
+      url: "https://book.hacktricks.xyz"
+      description: "Comprehensive pentesting methodology and techniques"
+      
+    - name: "PayloadsAllTheThings"
+      url: "https://github.com/swisskyrepo/PayloadsAllTheThings"
+      description: "Collection of useful payloads and bypasses"
+      
+    - name: "GTFOBins"
+      url: "https://gtfobins.github.io"
+      description: "Unix binaries for privilege escalation"
+
+  github_resources:
+    - name: "SecLists"
+      url: "https://github.com/danielmiessler/SecLists"
+      description: "The ultimate security tester's companion - wordlists for everything"
+      stars: "50k+"
+      tags: ["wordlists", "fuzzing", "passwords"]
+      
+    - name: "PEASS-ng (LinPEAS/WinPEAS)"
+      url: "https://github.com/carlospolop/PEASS-ng"
+      description: "Privilege Escalation Awesome Scripts Suite - automated enumeration"
+      stars: "14k+"
+      tags: ["privesc", "enumeration", "automation"]
+      
+    - name: "Impacket"
+      url: "https://github.com/fortra/impacket"
+      description: "Python library for network protocols - essential for AD attacks"
+      stars: "12k+"
+      tags: ["active-directory", "smb", "kerberos"]
+      
+    - name: "AutoRecon"
+      url: "https://github.com/Tib3rius/AutoRecon"
+      description: "Multi-threaded network reconnaissance tool - automate enumeration"
+      stars: "4k+"
+      tags: ["enumeration", "automation", "reconnaissance"]
+      
+    - name: "Evil-WinRM"
+      url: "https://github.com/Hackplayers/evil-winrm"
+      description: "Ultimate WinRM shell for Windows pentesting"
+      stars: "4k+"
+      tags: ["windows", "remote-access", "post-exploitation"]
+      
+    - name: "pwncat"
+      url: "https://github.com/calebstewart/pwncat"
+      description: "Fancy reverse and bind shell handler with automation"
+      stars: "2.5k+"
+      tags: ["reverse-shell", "post-exploitation", "automation"]
+      
+    - name: "Kerbrute"
+      url: "https://github.com/ropnop/kerbrute"
+      description: "Tool to perform Kerberos pre-auth bruteforcing"
+      stars: "2k+"
+      tags: ["active-directory", "kerberos", "enumeration"]
+      
+    - name: "BloodHound"
+      url: "https://github.com/BloodHoundAD/BloodHound"
+      description: "Active Directory attack path analysis - visualize AD environments"
+      stars: "9k+"
+      tags: ["active-directory", "visualization", "attack-paths"]
+      
+    - name: "CrackMapExec"
+      url: "https://github.com/byt3bl33d3r/CrackMapExec"
+      description: "Swiss army knife for pentesting Windows/AD networks"
+      stars: "7k+"
+      tags: ["active-directory", "windows", "automation"]
+      
+    - name: "enum4linux-ng"
+      url: "https://github.com/cddmp/enum4linux-ng"
+      description: "Next generation of enum4linux - SMB enumeration tool"
+      stars: "1k+"
+      tags: ["enumeration", "smb", "windows"]
+      
+    - name: "ShellPop"
+      url: "https://github.com/0x00-0x00/ShellPop"
+      description: "Generate reverse/bind shell commands quickly"
+      stars: "1k+"
+      tags: ["reverse-shell", "payloads", "automation"]
+      
+    - name: "Chisel"
+      url: "https://github.com/jpillora/chisel"
+      description: "Fast TCP/UDP tunnel over HTTP for pivoting"
+      stars: "11k+"
+      tags: ["pivoting", "tunneling", "post-exploitation"]
+
+  free_platforms:
+    - name: "TryHackMe Free Rooms"
+      url: "https://tryhackme.com/hacktivities"
+      cost: "Free (many rooms)"
+      description: "350+ free rooms including OSCP-prep content"
+      recommended_rooms:
+        - "OSCP Preparation"
+        - "Linux PrivEsc"
+        - "Windows PrivEsc"
+        - "Active Directory Basics"
+        - "Buffer Overflow Prep"
+      
+    - name: "Root-Me"
+      url: "https://www.root-me.org"
+      cost: "Free"
+      description: "500+ challenges across web, network, crypto, forensics"
+      difficulty: "Easy to Expert"
+      
+    - name: "OverTheWire: Bandit"
+      url: "https://overthewire.org/wargames/bandit/"
+      cost: "Free"
+      description: "Linux fundamentals - perfect for beginners"
+      difficulty: "Beginner"
+      
+    - name: "PicoCTF"
+      url: "https://picoctf.org"
+      cost: "Free"
+      description: "Beginner-friendly CTF with permanent challenges"
+      difficulty: "Beginner to Intermediate"
+      
+    - name: "Exploit Education"
+      url: "https://exploit.education"
+      cost: "Free"
+      description: "Learn exploit development with downloadable VMs"
+      difficulty: "Intermediate to Advanced"
+      
+    - name: "OWASP WebGoat"
+      url: "https://github.com/WebGoat/WebGoat"
+      cost: "Free"
+      description: "Deliberately insecure web app for learning"
+      difficulty: "Beginner"
+      
+    - name: "RingZer0 CTF"
+      url: "https://ringzer0ctf.com"
+      cost: "Free"
+      description: "300+ challenges across multiple categories"
+      difficulty: "Easy to Hard"
+      
+    - name: "PortSwigger Web Security Academy"
+      url: "https://portswigger.net/web-security"
+      cost: "Free"
+      description: "Interactive web security training - excellent for learning web exploitation"
+      difficulty: "Beginner to Advanced"
+      recommended_topics:
+        - "SQL Injection"
+        - "XSS (Cross-Site Scripting)"
+        - "CSRF"
+        - "Authentication Vulnerabilities"
+        - "File Upload Vulnerabilities"
+
+# ==========================================
+# OSEP - Offensive Security Experienced Penetration Tester
+# ==========================================
+OSEP:
+  official:
+    - name: "PEN-300: Evasion Techniques and Breaching Defenses"
+      url: "https://www.offsec.com/courses/pen-300/"
+      type: "Official Course"
+      description: "Advanced penetration testing with evasion techniques"
+      cost: "Paid"
+      
+    - name: "OSEP Exam Guide"
+      url: "https://help.offsec.com/hc/en-us/articles/360050293792-OSEP-Exam-Guide"
+      type: "Exam Information"
+      description: "Official OSEP exam requirements and structure"
+      cost: "Free"
+
+  practice_platforms:
+    - name: "HackTheBox Pro Labs"
+      url: "https://www.hackthebox.com/hacker/pro-labs"
+      type: "Advanced Labs"
+      description: "Enterprise environment simulations"
+      recommended_labs:
+        - "RastaLabs"
+        - "Offshore"
+        - "Cybernetics"
+      cost: "Paid"
+      
+    - name: "OffSec Proving Grounds"
+      url: "https://www.offsec.com/labs/individual/"
+      type: "Practice Labs"
+      description: "Advanced machines for OSEP preparation"
+      cost: "Paid"
+
+    - name: "OSEP Practice Machines"
+      url: "https://www.hackthebox.com"
+      type: "Curated List"
+      description: "Recommended machines for OSEP preparation"
+      cost: "Requires HTB VIP/PG Subscription"
+      practice_by_os:
+        redteam:
+          medium:
+            - "Reel"
+            - "Splash"
+            - "Heist"
+            - "Vault"
+            - "Resourced"
+          hard:
+            - "APT"
+            - "Blackfield"
+            - "Multimaster"
+            - "Zino"
+            - "Peppo"
+
+  tools:
+    - name: "Cobalt Strike"
+      url: "https://www.cobaltstrike.com"
+      type: "C2 Framework"
+      description: "Commercial adversary simulation platform (expensive)"
+      note: "For learning, use alternatives like Sliver or Havoc"
+      
+    - name: "Sliver C2"
+      url: "https://github.com/BishopFox/sliver"
+      type: "C2 Framework"
+      description: "Open-source C2 framework alternative to Cobalt Strike"
+      
+    - name: "Havoc C2"
+      url: "https://github.com/HavocFramework/Havoc"
+      type: "C2 Framework"
+      description: "Modern C2 framework with modular design"
+      
+    - name: "SharpCollection"
+      url: "https://github.com/Flangvik/SharpCollection"
+      type: "Offensive Tools"
+      description: "Pre-compiled .NET offensive tools"
+      
+    - name: "Covenant"
+      url: "https://github.com/cobbr/Covenant"
+      type: "C2 Framework"
+      description: ".NET C2 framework for red team operations"
+
+  courses:
+    - name: "RastaMouse - Red Team Ops"
+      url: "https://training.zeropointsecurity.co.uk/courses/red-team-ops"
+      type: "Video Course"
+      description: "Comprehensive red team operations training"
+      cost: "Paid"
+      
+    - name: "Sektor7 Malware Development Courses"
+      url: "https://institute.sektor7.net"
+      type: "Video Courses"
+      description: "In-depth malware development and evasion techniques"
+      cost: "Paid"
+
+  cheatsheets:
+    - name: "LOLBAS (Living Off The Land Binaries and Scripts)"
+      url: "https://lolbas-project.github.io"
+      description: "Windows binaries for living off the land"
+      
+    - name: "WADComs"
+      url: "https://wadcoms.github.io"
+      description: "Active Directory attack cheatsheet"
+      
+    - name: "ADSecurity.org"
+      url: "https://adsecurity.org"
+      description: "Active Directory security research and techniques"
+
+  github_resources:
+    - name: "Sliver C2"
+      url: "https://github.com/BishopFox/sliver"
+      description: "Open-source C2 framework - free Cobalt Strike alternative"
+      stars: "7k+"
+      tags: ["c2", "red-team", "post-exploitation"]
+      
+    - name: "Havoc C2"
+      url: "https://github.com/HavocFramework/Havoc"
+      description: "Modern post-exploitation C2 framework"
+      stars: "6k+"
+      tags: ["c2", "red-team", "modern"]
+      
+    - name: "SharpCollection"
+      url: "https://github.com/Flangvik/SharpCollection"
+      description: "Pre-compiled offensive C# tools repository"
+      stars: "2k+"
+      tags: ["csharp", "offensive-tools", ".net"]
+      
+    - name: "Covenant"
+      url: "https://github.com/cobbr/Covenant"
+      description: ".NET command and control framework"
+      stars: "4k+"
+      tags: ["c2", ".net", "red-team"]
+      
+    - name: "Invoke-Obfuscation"
+      url: "https://github.com/danielbohannon/Invoke-Obfuscation"
+      description: "PowerShell obfuscation framework for AV evasion"
+      stars: "3.5k+"
+      tags: ["evasion", "powershell", "obfuscation"]
+      
+    - name: "Donut"
+      url: "https://github.com/TheWover/donut"
+      description: "Generate shellcode from .NET assemblies"
+      stars: "2.5k+"
+      tags: [".net", "shellcode", "injection"]
+      
+    - name: "SilentTrinity"
+      url: "https://github.com/byt3bl33d3r/SILENTTRINITY"
+      description: "Post-exploitation agent using Iron Python"
+      stars: "2k+"
+      tags: ["post-exploitation", "python", "agent"]
+      
+    - name: "Rubeus"
+      url: "https://github.com/GhostPack/Rubeus"
+      description: "Toolset for raw Kerberos interaction and abuses"
+      stars: "3k+"
+      tags: ["kerberos", "active-directory", "exploitation"]
+      
+    - name: "Seatbelt"
+      url: "https://github.com/GhostPack/Seatbelt"
+      description: "C# project for host security enumeration"
+      stars: "4k+"
+      tags: ["enumeration", "csharp", "security-checks"]
+      
+    - name: "SharpHound"
+      url: "https://github.com/BloodHoundAD/SharpHound"
+      description: "BloodHound C# data collector for AD"
+      stars: "1.5k+"
+      tags: ["active-directory", "bloodhound", "enumeration"]
+      
+    - name: "Pypykatz"
+      url: "https://github.com/skelsec/pypykatz"
+      description: "Pure Python implementation of Mimikatz"
+      stars: "2.5k+"
+      tags: ["credential-dumping", "python", "mimikatz"]
+      
+    - name: "Nim-Lang Offensive Arsenal"
+      url: "https://github.com/S3cur3Th1sSh1t/Nim-Lang-Offensive-Arsenal"
+      description: "Collection of Nim offensive tools"
+      stars: "800+"
+      tags: ["nim", "offensive", "evasion"]
+
+  communities:
+    - name: "BloodHound Slack"
+      url: "https://bloodhoundgang.herokuapp.com"
+      type: "Community"
+      description: "Active Directory attack path analysis community"
+
+# ==========================================
+# OSED - Offensive Security Exploit Developer
+# ==========================================
+OSED:
+  official:
+    - name: "EXP-301: Windows User Mode Exploit Development"
+      url: "https://www.offsec.com/courses/exp-301/"
+      type: "Official Course"
+      description: "Advanced Windows exploitation (bypassing DEP, ASLR, EGGHUNTERS)"
+      cost: "Paid"
+      
+    - name: "OSED Exam Guide"
+      url: "https://help.offsec.com/hc/en-us/possible-url-placeholder"
+      type: "Exam Information"
+      description: "Official OSED exam structure"
+      cost: "Free"
+
+  practice_platforms:
+    - name: "ROP Emporium"
+      url: "https://ropemporium.com/"
+      type: "Exploitation Challenges"
+      description: "Learn Return-Oriented Programming (ROP) step-by-step"
+      cost: "Free"
+      
+    - name: "Exploit.education (Phoenix)"
+      url: "https://exploit.education/phoenix/"
+      type: "VM Practice"
+      description: "Linux exploitation challenges (Stack, Format Strings, Heap)"
+      cost: "Free"
+      
+    - name: "Dark Army (Exploit Dev)"
+      url: "https://darkarmy.xyz/"
+      type: "Community"
+      description: "Exploit development resources"
+      cost: "Free"
+
+  practice_by_os:
+    binary:
+      medium:
+        - "HTB: Brainpan, Safe, October"
+        - "THM: Buffer Overflow Prep"
+      hard:
+        - "HTB: Ellingson, Rope, RopeTwo"
+        - "ROP Emporium: ret2csu, pivot"
+
+  tools:
+    - name: "Immunity Debugger"
+      url: "https://www.immunityinc.com/products/debugger/"
+      type: "Debugger"
+      description: "Standard debugger for Windows exploit dev"
+      
+    - name: "mona.py"
+      url: "https://github.com/corelan/mona"
+      type: "Debugger Plugin"
+      description: "Essential plugin for Immunity Debugger (ROP chains, offset finding)"
+      
+    - name: "x64dbg"
+      url: "https://x64dbg.com/"
+      type: "Debugger"
+      description: "Modern open-source x64/x32 debugger"
+      
+    - name: "Pwntools"
+      url: "https://github.com/Gallopsled/pwntools"
+      type: "Exploitation Framework"
+      description: "CTF framework and exploit development library"
+
+  github_resources:
+    - name: "mona.py"
+      url: "https://github.com/corelan/mona"
+      description: "The ultimate exploit development assistant"
+      stars: "3k+"
+      tags: ["exploit", "windows", "automation"]
+      
+    - name: "Pwntools"
+      url: "https://github.com/Gallopsled/pwntools"
+      description: "CTF framework and exploit development library"
+      stars: "10k+"
+      tags: ["python", "exploit", "ctf"]
+      
+    - name: "Ropper"
+      url: "https://github.com/sashs/Ropper"
+      description: "ROP gadget finder and binary information tool"
+      stars: "2k+"
+      tags: ["rop", "exploitation", "gadgets"]
+
+# ==========================================
+# OSWE - Offensive Security Web Expert
+# ==========================================
+OSWE:
+  official:
+    - name: "WEB-300: Advanced Web Attacks and Exploitation"
+      url: "https://www.offsec.com/courses/web-300/"
+      type: "Official Course"
+      description: "Advanced web application security testing"
+      cost: "Paid"
+      
+    - name: "OSWE Exam Guide"
+      url: "https://help.offsec.com/hc/en-us/articles/360046904731-OSWE-Exam-Guide"
+      type: "Exam Information"
+      description: "Official OSWE exam structure and requirements"
+      cost: "Free"
+
+  practice_platforms:
+    - name: "PortSwigger Web Security Academy"
+      url: "https://portswigger.net/web-security"
+      type: "Learning Platform"
+      description: "Free interactive web security training"
+      difficulty: "Beginner to Advanced"
+      cost: "Free"
+      
+    - name: "PentesterLab"
+      url: "https://pentesterlab.com"
+      type: "Practice Platform"
+      description: "Web penetration testing exercises"
+      cost: "Free + Pro"
+      
+    - name: "HackTheBox - Web Challenges"
+      url: "https://www.hackthebox.com/challenges"
+      type: "CTF Challenges"
+      description: "Web-focused CTF challenges"
+      cost: "Free + VIP"
+
+  practice_by_os:
+    web:
+      easy:
+        - "HTB: Poison, Help, Networked"
+        - "PG Practice: Sirol, Glasglow"
+        - "THM: OWASP Top 10, OWASP Juice Shop"
+      medium:
+        - "HTB: Canape, JSON, TartarSauce"
+        - "PG Practice: Clyde, Hawat"
+        - "PortSwigger Academy: SQL Injection Labs, XSS Labs"
+      hard:
+        - "HTB: Falafel, Ethereal, Mango"
+        - "PG Practice: ZenPhoto, Wombo"
+
+  tools:
+    - name: "Burp Suite Professional"
+      url: "https://portswigger.net/burp/pro"
+      type: "Web Testing Suite"
+      description: "Industry-standard web application testing tool"
+      
+    - name: "OWASP ZAP"
+      url: "https://www.zaproxy.org"
+      type: "Web Testing Suite"
+      description: "Free alternative to Burp Suite"
+      
+    - name: "SQLMap"
+      url: "https://sqlmap.org"
+      type: "SQL Injection"
+      description: "Automated SQL injection and database takeover"
+      
+    - name: "Commix"
+      url: "https://github.com/commixproject/commix"
+      type: "Command Injection"
+      description: "Automated command injection exploitation"
+      
+    - name: "wfuzz"
+      url: "https://github.com/xmendez/wfuzz"
+      type: "Web Fuzzer"
+      description: "Web application fuzzer"
+
+  books:
+    - name: "The Web Application Hacker's Handbook"
+      author: "Dafydd Stuttard, Marcus Pinto"
+      url: "https://www.amazon.com/dp/1118026470"
+      description: "Comprehensive guide to web application security"
+      
+    - name: "Real-World Bug Hunting"
+      author: "Peter Yaworski"
+      url: "https://www.amazon.com/dp/1593278616"
+      description: "Bug bounty hunting techniques and case studies"
+
+  videos:
+    - name: "PwnFunction"
+      url: "https://www.youtube.com/c/PwnFunction"
+      type: "YouTube Channel"
+      description: "Animated web security concepts"
+      
+    - name: "LiveOverflow"
+      url: "https://www.youtube.com/c/LiveOverflow"
+      type: "YouTube Channel"
+      description: "Web exploitation and CTF walkthroughs"
+
+  cheatsheets:
+    - name: "OWASP Cheat Sheet Series"
+      url: "https://cheatsheetseries.owasp.org"
+      description: "Comprehensive web security cheat sheets"
+      
+    - name: "PortSwigger SQL Injection Cheat Sheet"
+      url: "https://portswigger.net/web-security/sql-injection/cheat-sheet"
+      description: "SQL injection syntax for different databases"
+      
+    - name: "XSS Filter Evasion Cheat Sheet"
+      url: "https://owasp.org/www-community/xss-filter-evasion-cheatsheet"
+      description: "XSS payload variations and bypasses"
+
+  github_resources:
+    - name: "PayloadsAllTheThings - Web"
+      url: "https://github.com/swisskyrepo/PayloadsAllTheThings"
+      description: "Comprehensive web exploitation payload collection"
+      stars: "57k+"
+      tags: ["web", "payloads", "xss", "sqli", "uploads"]
+      
+    - name: "XSS Hunter"
+      url: "https://github.com/mandatoryprogrammer/xsshunter-express"
+      description: "Self-hosted blind XSS discovery platform"
+      stars: "1k+"
+      tags: ["xss", "blind-xss", "automation"]
+      
+    - name: "SSRF Sheriff"
+      url: "https://github.com/teknogeek/ssrf-sheriff"
+      description: "SSRF testing and exploitation toolkit"
+      stars: "500+"
+      tags: ["ssrf", "exploitation", "web"]
+      
+    - name: "XXE Injector"
+      url: "https://github.com/enjoiz/XXEinjector"
+      description: "Automated XXE injection toolkit"
+      stars: "900+"
+      tags: ["xxe", "xml", "exploitation"]
+      
+    - name: "NoSQLMap"
+      url: "https://github.com/codingo/NoSQLMap"
+      description: "Automated NoSQL database enumeration and exploitation"
+      stars: "2.5k+"
+      tags: ["nosql", "mongodb", "injection"]
+      
+    - name: "Nuclei"
+      url: "https://github.com/projectdiscovery/nuclei"
+      description: "Fast vulnerability scanner with templates"
+      stars: "17k+"
+      tags: ["scanning", "automation", "vulnerabilities"]
+      
+    - name: "ffuf"
+      url: "https://github.com/ffuf/ffuf"
+      description: "Fast web fuzzer written in Go - better than wfuzz"
+      stars: "11k+"
+      tags: ["fuzzing", "web", "enumeration"]
+      
+    - name: "Arjun"
+      url: "https://github.com/s0md3v/Arjun"
+      description: "HTTP parameter discovery suite"
+      stars: "4k+"
+      tags: ["enumeration", "parameters", "web"]
+      
+    - name: "dalfox"
+      url: "https://github.com/hahwul/dalfox"
+      description: "Powerful XSS scanner and parameter analyzer"
+      stars: "3k+"
+      tags: ["xss", "scanning", "automation"]
+      
+    - name: "Corsy"
+      url: "https://github.com/s0md3v/Corsy"
+      description: "CORS misconfiguration scanner"
+      stars: "2k+"
+      tags: ["cors", "misconfiguration", "web"]
+      
+    - name: "GraphQL Voyager"
+      url: "https://github.com/graphql-kit/graphql-voyager"
+      description: "Visualize GraphQL API as interactive graph"
+      stars: "7k+"
+      tags: ["graphql", "api", "visualization"]
+      
+    - name: "JWT_Tool"
+      url: "https://github.com/ticarpi/jwt_tool"
+      description: "Toolkit for validating, forging, and cracking JWTs"
+      stars: "5k+"
+      tags: ["jwt", "authentication", "exploitation"]
+
+# ==========================================
+# OSED - Offensive Security Exploit Developer
+# ==========================================
+OSED:
+  official:
+    - name: "EXP-301: Windows User Mode Exploit Development"
+      url: "https://www.offsec.com/courses/exp-301/"
+      type: "Official Course"
+      description: "Advanced Windows exploit development"
+      cost: "Paid"
+      
+    - name: "OSED Exam Guide"
+      url: "https://help.offsec.com/hc/en-us/articles/360052977212-OSED-Exam-Guide"
+      type: "Exam Information"
+      description: "Official OSED exam requirements"
+      cost: "Free"
+
+  practice_platforms:
+    - name: "Exploit Education"
+      url: "https://exploit.education"
+      type: "Learning Platform"
+      description: "Free exploit development challenges"
+      cost: "Free"
+      
+    - name: "pwnable.kr"
+      url: "http://pwnable.kr"
+      type: "Practice Platform"
+      description: "Binary exploitation challenges"
+      cost: "Free"
+      
+    - name: "ROP Emporium"
+      url: "https://ropemporium.com"
+      type: "Practice Platform"
+      description: "ROP (Return-Oriented Programming) challenges"
+      cost: "Free"
+
+  tools:
+    - name: "IDA Pro"
+      url: "https://hex-rays.com/ida-pro/"
+      type: "Disassembler"
+      description: "Industry-standard reverse engineering tool (expensive)"
+      
+    - name: "Ghidra"
+      url: "https://ghidra-sre.org"
+      type: "Disassembler"
+      description: "Free NSA reverse engineering tool"
+      
+    - name: "x64dbg"
+      url: "https://x64dbg.com"
+      type: "Debugger"
+      description: "Open-source Windows debugger"
+      
+    - name: "WinDbg"
+      url: "https://docs.microsoft.com/en-us/windows-hardware/drivers/debugger/debugger-download-tools"
+      type: "Debugger"
+      description: "Microsoft's Windows debugger"
+      
+    - name: "mona.py"
+      url: "https://github.com/corelan/mona"
+      type: "Exploit Development"
+      description: "Immunity Debugger plugin for exploit development"
+      
+    - name: "ROPgadget"
+      url: "https://github.com/JonathanSalwan/ROPgadget"
+      type: "ROP Tool"
+      description: "Find ROP gadgets in binaries"
+      
+    - name: "pwntools"
+      url: "https://github.com/Gallopsled/pwntools"
+      type: "Exploit Framework"
+      description: "CTF and exploit development framework"
+
+  books:
+    - name: "The Shellcoder's Handbook"
+      author: "Chris Anley, et al."
+      url: "https://www.amazon.com/dp/047008023X"
+      description: "Classic exploit development reference"
+      
+    - name: "Practical Binary Analysis"
+      author: "Dennis Andriesse"
+      url: "https://www.amazon.com/dp/1593279124"
+      description: "Binary analysis and reverse engineering"
+      
+    - name: "Gray Hat Hacking"
+      author: "Daniel Regalado, et al."
+      url: "https://www.amazon.com/dp/1260108414"
+      description: "Ethical hacker's handbook with exploit development"
+
+  courses:
+    - name: "Corelan Exploit Development"
+      url: "https://www.corelan.be/index.php/2009/07/19/exploit-writing-tutorial-part-1-stack-based-overflows/"
+      type: "Tutorial Series"
+      description: "Free comprehensive exploit development tutorials"
+      cost: "Free"
+
+  cheatsheets:
+    - name: "Corelan ROPdb"
+      url: "https://www.corelan.be/index.php/security/ropdb/"
+      description: "ROP gadget database"
+      
+    - name: "Exploit Development Reference"
+      url: "https://github.com/offensive-security/exploitdb-papers"
+      description: "Collection of exploit development papers"
+
+# ==========================================
+# OSWP - Offensive Security Wireless Professional
+# ==========================================
+OSWP:
+  official:
+    - name: "PEN-210: Offensive Security Wireless Attacks"
+      url: "https://www.offsec.com/courses/pen-210/"
+      type: "Official Course"
+      description: "Wireless network penetration testing"
+      cost: "Paid"
+      
+    - name: "OSWP Exam Guide"
+      url: "https://help.offsec.com/hc/en-us/articles/360046458732-OSWP-Exam-Guide"
+      type: "Exam Information"
+      description: "Official OSWP exam requirements"
+      cost: "Free"
+
+  tools:
+    - name: "Aircrack-ng Suite"
+      url: "https://www.aircrack-ng.org"
+      type: "Wireless Testing"
+      description: "Complete wireless network security toolkit"
+      
+    - name: "Wireshark"
+      url: "https://www.wireshark.org"
+      type: "Packet Analyzer"
+      description: "Network protocol analyzer"
+      
+    - name: "Reaver"
+      url: "https://github.com/t6x/reaver-wps-fork-t6x"
+      type: "WPS Attack"
+      description: "WPS brute force attack tool"
+      
+    - name: "Wifite2"
+      url: "https://github.com/derv82/wifite2"
+      type: "Automated Testing"
+      description: "Automated wireless attack tool"
+      
+    - name: "Bettercap"
+      url: "https://www.bettercap.org"
+      type: "Network Attack"
+      description: "Swiss army knife for WiFi, Bluetooth, and network attacks"
+
+  hardware:
+    - name: "Alfa AWUS036ACH"
+      type: "WiFi Adapter"
+      description: "Dual-band wireless adapter with monitor mode"
+      url: "https://www.alfa.com.tw"
+      
+    - name: "Alfa AWUS036NHA"
+      type: "WiFi Adapter"
+      description: "High-power wireless adapter for pentesting"
+      url: "https://www.alfa.com.tw"
+      
+    - name: "TP-Link TL-WN722N v1"
+      type: "WiFi Adapter"
+      description: "Budget-friendly adapter (ensure version 1.x)"
+      url: "https://www.tp-link.com"
+
+  books:
+    - name: "The Hacker Playbook 3"
+      author: "Peter Kim"
+      url: "https://www.amazon.com/dp/1980901759"
+      description: "Includes wireless penetration testing sections"
+
+  cheatsheets:
+    - name: "Aircrack-ng Tutorial"
+      url: "https://www.aircrack-ng.org/doku.php?id=tutorial"
+      description: "Official aircrack-ng usage documentation"
+      
+    - name: "WiFi Hacking Cheat Sheet"
+      url: "https://github.com/koenbuyens/Vulnerable-WiFi-Cheatsheet"
+      description: "Wireless penetration testing reference"
+
+# ==========================================
+# OSWA - OffSec Web Assessor
+# ==========================================
+OSWA:
+  official:
+    - name: "WEB-200: OffSec Web Assessor"
+      url: "https://www.offsec.com/courses/web-200/"
+      type: "Official Course"
+      description: "Web application security testing fundamentals"
+      cost: "Paid"
+      
+    - name: "OSWA Exam Guide"
+      url: "https://help.offsec.com/hc/en-us/sections/21008652688276-OSWA"
+      type: "Exam Information"
+      description: "Official OSWA exam requirements"
+      cost: "Free"
+
+  practice_platforms:
+    - name: "PortSwigger Web Security Academy"
+      url: "https://portswigger.net/web-security"
+      type: "Learning Platform"
+      description: "Free interactive web security training"
+      cost: "Free"
+      
+    - name: "OWASP WebGoat"
+      url: "https://owasp.org/www-project-webgoat/"
+      type: "Practice Application"
+      description: "Deliberately insecure web application for learning"
+      cost: "Free"
+      
+    - name: "DVWA (Damn Vulnerable Web Application)"
+      url: "https://github.com/digininja/DVWA"
+      type: "Practice Application"
+      description: "Intentionally vulnerable web app for testing"
+      cost: "Free"
+      
+    - name: "bWAPP"
+      url: "http://www.itsecgames.com"
+      type: "Practice Application"
+      description: "Buggy web application for security training"
+      cost: "Free"
+
+  tools:
+    - name: "Burp Suite Community"
+      url: "https://portswigger.net/burp/communitydownload"
+      type: "Web Proxy"
+      description: "Essential web application testing tool"
+      
+    - name: "OWASP ZAP"
+      url: "https://www.zaproxy.org"
+      type: "Web Scanner"
+      description: "Free web application security scanner"
+      
+    - name: "Nikto"
+      url: "https://github.com/sullo/nikto"
+      type: "Web Scanner"
+      description: "Web server scanner"
+      
+    - name: "dirb / dirbuster / gobuster"
+      url: "https://github.com/OJ/gobuster"
+      type: "Directory Bruster"
+      description: "Directory and file brute-forcing tools"
+
+  resources:
+    - name: "OWASP Top 10"
+      url: "https://owasp.org/www-project-top-ten/"
+      description: "Top 10 web application security risks"
+      
+    - name: "OWASP Testing Guide"
+      url: "https://owasp.org/www-project-web-security-testing-guide/"
+      description: "Comprehensive web application testing methodology"
+
+  communities:
+    - name: "Bug Bounty Forum"
+      url: "https://bugbountyforum.com"
+      type: "Community"
+      description: "Bug bounty hunter community"
+      
+    - name: "OWASP Slack"
+      url: "https://owasp.org/slack/invite"
+      type: "Community"
+      description: "Official OWASP community Slack"
+
+# ==========================================
+# OSMR - OffSec macOS Researcher
+# ==========================================
+OSMR:
+  official:
+    - name: "macOS-200: macOS Security and Privilege Escalation"
+      url: "https://www.offsec.com/courses/macos-200/"
+      type: "Official Course"
+      description: "macOS security research and exploitation"
+      cost: "Paid"
+      
+    - name: "OSMR Exam Guide"
+      url: "https://help.offsec.com/hc/en-us/sections/21008652726292-OSMR"
+      type: "Exam Information"
+      description: "Official OSMR exam requirements"
+      cost: "Free"
+
+  tools:
+    - name: "Hopper Disassembler"
+      url: "https://www.hopperapp.com"
+      type: "Reverse Engineering"
+      description: "macOS/iOS reverse engineering tool"
+      
+    - name: "LLDB"
+      url: "https://lldb.llvm.org"
+      type: "Debugger"
+      description: "Apple's debugger for macOS/iOS"
+      
+    - name: "Frida"
+      url: "https://frida.re"
+      type: "Dynamic Instrumentation"
+      description: "Dynamic instrumentation toolkit"
+      
+    - name: "Objective-See Tools"
+      url: "https://objective-see.org/products.html"
+      type: "Security Tools"
+      description: "Free macOS security tools suite"
+      
+    - name: "SwiftBelt"
+      url: "https://github.com/cedowens/SwiftBelt"
+      type: "Enumeration"
+      description: "macOS security enumeration tool"
+
+  resources:
+    - name: "Objective-See Blog"
+      url: "https://objective-see.org/blog.html"
+      description: "macOS security research and malware analysis"
+      
+    - name: "The Mac Hacker's Handbook"
+      author: "Charlie Miller, Dino Dai Zovi"
+      url: "https://www.amazon.com/dp/0470395362"
+      description: "macOS security and exploitation"
+
+  communities:
+    - name: "Mac Admins Slack"
+      url: "https://www.macadmins.org"
+      type: "Community"
+      description: "macOS administration and security community"
+
+# ==========================================
+# OSDA - OffSec Defense Analyst
+# ==========================================
+OSDA:
+  official:
+    - name: "SOC-200: Security Operations and Defensive Analysis"
+      url: "https://www.offsec.com/courses/soc-200/"
+      type: "Official Course"
+      description: "Security operations and threat detection"
+      cost: "Paid"
+      
+    - name: "OSDA Exam Guide"
+      url: "https://help.offsec.com/hc/en-us/sections/21008652739732-OSDA"
+      type: "Exam Information"
+      description: "Official OSDA exam requirements"
+      cost: "Free"
+
+  practice_platforms:
+    - name: "CyberDefenders"
+      url: "https://cyberdefenders.org"
+      type: "Blue Team Labs"
+      description: "Defensive security challenges and scenarios"
+      cost: "Free"
+      
+    - name: "Blue Team Labs Online"
+      url: "https://blueteamlabs.online"
+      type: "Practice Platform"
+      description: "Hands-on defensive security training"
+      cost: "Free + Premium"
+      
+    - name: "LetsDefend"
+      url: "https://letsdefend.io"
+      type: "SOC Training"
+      description: "SOC analyst training platform"
+      cost: "Free + Premium"
+
+  tools:
+    - name: "Splunk"
+      url: "https://www.splunk.com"
+      type: "SIEM"
+      description: "Security information and event management"
+      
+    - name: "ELK Stack (Elasticsearch, Logstash, Kibana)"
+      url: "https://www.elastic.co/elastic-stack"
+      type: "SIEM"
+      description: "Open-source log management and SIEM"
+      
+    - name: "Wireshark"
+      url: "https://www.wireshark.org"
+      type: "Network Analysis"
+      description: "Network traffic analyzer"
+      
+    - name: "Zeek (formerly Bro)"
+      url: "https://zeek.org"
+      type: "Network Monitor"
+      description: "Network security monitoring framework"
+      
+    - name: "Suricata"
+      url: "https://suricata.io"
+      type: "IDS/IPS"
+      description: "Open-source intrusion detection system"
+      
+    - name: "YARA"
+      url: "https://virustotal.github.io/yara/"
+      type: "Malware Identification"
+      description: "Pattern matching for malware research"
+      
+    - name: "TheHive"
+      url: "https://thehive-project.org"
+      type: "Incident Response"
+      description: "Security incident response platform"
+
+  resources:
+    - name: "MITRE ATT&CK"
+      url: "https://attack.mitre.org"
+      description: "Adversary tactics and techniques knowledge base"
+      
+    - name: "Cyber Kill Chain"
+      url: "https://www.lockheedmartin.com/en-us/capabilities/cyber/cyber-kill-chain.html"
+      description: "Framework for understanding cyber attacks"
+      
+    - name: "SANS Blue Team Wiki"
+      url: "https://wiki.sans.blue"
+      description: "Defensive security operations resource"
+
+  courses:
+    - name: "SANS FOR500: Windows Forensics"
+      url: "https://www.sans.org/cyber-security-courses/windows-forensic-analysis/"
+      type: "Certification Course"
+      description: "Digital forensics and incident response"
+      cost: "Paid"
+
+  books:
+    - name: "Blue Team Handbook: Incident Response"
+      author: "Don Murdoch"
+      url: "https://www.amazon.com/dp/1500734756"
+      description: "SOC analyst's field manual"
+      
+    - name: "The Practice of Network Security Monitoring"
+      author: "Richard Bejtlich"
+      url: "https://www.amazon.com/dp/1593275099"
+      description: "Network security monitoring methodology"
+
+  communities:
+    - name: "SANS Blue Team Community"
+      url: "https://www.sans.org/blue-team"
+      type: "Community"
+      description: "Defensive security community"
+
+# ==========================================
+# KLCP - Kali Linux Certified Professional
+# ==========================================
+KLCP:
+  official:
+    - name: "PEN-103: Kali Linux Revealed"
+      url: "https://www.offsec.com/courses/pen-103/"
+      type: "Official Course"
+      description: "Official FREE self-paced course - primary study material for KLCP"
+      cost: "FREE"
+      
+    - name: "KLCP Exam Guide"
+      url: "https://help.offsec.com/hc/en-us/sections/21008653027732-KLCP"
+      type: "Exam Information"
+      description: "Official exam requirements, structure, and guidelines"
+      cost: "Free"
+
+  practice_platforms:
+    - name: "Kali Linux Download"
+      url: "https://www.kali.org/get-kali/"
+      type: "Operating System"
+      description: "Download Kali Linux for practice (VirtualBox, VMware, or bare metal)"
+      difficulty: "All Levels"
+      cost: "Free"
+      
+    - name: "OverTheWire: Bandit"
+      url: "https://overthewire.org/wargames/bandit/"
+      type: "Linux Command Line Practice"
+      description: "Interactive terminal-based challenges for Linux fundamentals - Levels 0-20 recommended for KLCP"
+      difficulty: "Beginner to Intermediate"
+      cost: "Free"
+      
+    - name: "TryHackMe: Linux Fundamentals Module"
+      url: "https://tryhackme.com/module/linux-fundamentals"
+      type: "Interactive Learning Path"
+      description: "Three-part guided module covering Linux basics, file permissions, and shell scripting"
+      difficulty: "Beginner"
+      cost: "Free"
+      
+    - name: "OverTheWire: Natas"
+      url: "https://overthewire.org/wargames/natas/"
+      type: "Web Security Practice"
+      description: "Web application security challenges with server-side code focus"
+      difficulty: "Intermediate"
+      cost: "Free"
+      
+    - name: "TryHackMe: Linux Strength Training"
+      url: "https://tryhackme.com/room/linuxstrengthtraining"
+      type: "Linux Skills Practice"
+      description: "Advanced Linux command-line skills and scripting challenges"
+      difficulty: "Intermediate"
+      cost: "Free"
+
+  courses:
+    - name: "PEN-103: Kali Linux Revealed (OffSec)"
+      url: "https://www.offsec.com/courses/pen-103/"
+      instructor: "OffSec"
+      type: "Official Course"
+      description: "The official and primary study material for KLCP certification - covers all exam topics"
+      cost: "FREE"
+      
+    - name: "Linux Command Line Basics (Udacity)"
+      url: "https://www.udacity.com/course/linux-command-line-basics--ud595"
+      type: "Video Course"
+      description: "Free introduction to Linux command line fundamentals"
+      cost: "Free"
+      
+    - name: "Introduction to Linux (edX)"
+      url: "https://www.edx.org/course/introduction-to-linux"
+      type: "Course"
+      description: "Comprehensive Linux fundamentals from The Linux Foundation"
+      cost: "Free"
+
+  tools:
+    - name: "Kali Linux"
+      url: "https://www.kali.org"
+      type: "Operating System"
+      description: "Debian-based Linux distribution for penetration testing and security"
+      
+    - name: "apt / dpkg"
+      url: "https://www.debian.org/doc/manuals/debian-reference/ch02.en.html"
+      type: "Package Management"
+      description: "Debian package management tools (essential for KLCP exam)"
+      
+    - name: "systemctl / systemd"
+      url: "https://systemd.io/"
+      type: "Service Management"
+      description: "Linux service and system initialization management"
+      
+    - name: "bash / shell scripting"
+      url: "https://www.gnu.org/software/bash/manual/"
+      type: "Shell & Scripting"
+      description: "Command-line automation, scripting, and system administration"
+      
+    - name: "vim / nano"
+      type: "Text Editors"
+      description: "Terminal-based text editors for configuration and scripting"
+      
+    - name: "grep / sed / awk"
+      type: "Text Processing"
+      description: "Command-line text processing and manipulation tools"
+
+  books:
+    - name: "Kali Linux Revealed"
+      author: "Raphaël Hertzog, Jim O'Gorman"
+      url: "https://kali.training/"
+      description: "Official Kali Linux book - the primary study resource for KLCP"
+      cost: "Free (online) / Paid (physical copy)"
+      
+    - name: "The Debian Administrator's Handbook"
+      author: "Raphaël Hertzog, Roland Mas"
+      url: "https://debian-handbook.info/"
+      description: "Comprehensive Debian administration guide (Kali is Debian-based)"
+      cost: "Free (online)"
+      
+    - name: "The Linux Command Line"
+      author: "William Shotts"
+      url: "http://linuxcommand.org/tlcl.php"
+      description: "In-depth guide to the Linux command line"
+      cost: "Free (online) / Paid (print)"
+
+  videos:
+    - name: "HackerSploit - Kali Linux Tutorial Series"
+      url: "https://www.youtube.com/playlist?list=PLBf0hzazHTGOEuhPQSnq-Ej8jRyXxfYvl"
+      type: "YouTube Playlist"
+      description: "Comprehensive Kali Linux tutorial covering installation, configuration, and tools"
+      
+    - name: "NetworkChuck - Linux for Hackers"
+      url: "https://www.youtube.com/watch?v=U1w4T03B30I"
+      type: "YouTube Video"
+      description: "Engaging introduction to Linux for cybersecurity professionals"
+      
+    - name: "The Cyber Mentor - Linux Basics"
+      url: "https://www.youtube.com/c/TheCyberMentor"
+      type: "YouTube Channel"
+      description: "Beginner-friendly Linux and security tutorials"
+
+  cheatsheets:
+    - name: "Linux Command Line Cheat Sheet"
+      url: "https://www.linuxtrainingacademy.com/linux-commands-cheat-sheet/"
+      description: "Essential Linux commands reference"
+      
+    - name: "Kali Linux Tools Cheat Sheet"
+      url: "https://www.comparitech.com/net-admin/kali-linux-cheat-sheet/"
+      description: "Quick reference for Kali Linux tools and commands"
+      
+    - name: "Bash Scripting Cheat Sheet"
+      url: "https://devhints.io/bash"
+      description: "Quick bash scripting syntax reference"
+
+  communities:
+    - name: "Kali Linux Forums"
+      url: "https://forums.kali.org"
+      type: "Official Forum"
+      description: "Official Kali Linux community forums for support and discussions"
+      
+    - name: "OffSec Discord - KLCP Channel"
+      url: "https://discord.gg/offsec"
+      type: "Discord Community"
+      description: "Connect with KLCP students and get real-time help"
+      
+    - name: "r/Kalilinux"
+      url: "https://www.reddit.com/r/Kalilinux/"
+      type: "Reddit Community"
+      description: "Kali Linux subreddit for tips, troubleshooting, and discussions"
+
+  exam_info:
+    duration: "90 minutes"
+    format: "Online proctored practical exam"
+    passing_score: "70/100"
+    topics:
+      - "Kali Linux installation and configuration"
+      - "Package management (apt, dpkg)"
+      - "System administration (systemd, users, permissions)"
+      - "Bash scripting and automation"
+      - "Network configuration"
+      - "Troubleshooting and problem-solving"
+
+# ==========================================
+# OSCC - OffSec CyberCore
+# ==========================================
+OSCC:
+  official:
+    - name: "SEC-100: CyberCore - Security Essentials"
+      url: "https://www.offsec.com/courses/sec-100/"
+      type: "Official Course"
+      description: "Official OSCC course with comprehensive foundational cybersecurity training"
+      cost: "Paid"
+      
+  practice_platforms:
+    - name: "TryHackMe - Complete Beginner Path"
+      url: "https://tryhackme.com/path/outline/beginner"
+      type: "Practice Platform"
+      description: "Perfect for OSCC students - guided, beginner-friendly cybersecurity learning"
+      difficulty: "Beginner"
+      cost: "Free + Premium"
+      recommended_rooms:
+        - "Linux Fundamentals 1, 2, 3"
+        - "Windows Fundamentals 1, 2, 3"
+        - "Introductory Networking"
+        - "Nmap"
+        - "Basic Pentesting"
+        - "OHsint"
+        - "Python Basics"
+      
+    - name: "OverTheWire: Bandit"
+      url: "https://overthewire.org/wargames/bandit/"
+      type: "War Game"
+      description: "Learn Linux command line through challenges - ESSENTIAL for OSCC"
+      difficulty: "Beginner"
+      cost: "Free"
+      
+    - name: "PicoCTF"
+      url: "https://picoctf.org/"
+      type: "CTF Platform"
+      description: "Beginner-friendly CTF challenges covering various security topics"
+      difficulty: "Beginner"
+      cost: "Free"
+      
+    - name: "HackTheBox Academy - Fundamentals"
+      url: "https://academy.hackthebox.com/"
+      type: "Learning Platform"
+      description: "Structured learning paths for fundamentals"
+      difficulty: "Beginner to Intermediate"
+      cost: "Free + Paid Tiers"
+  
+  courses:
+    - name: "Professor Messer CompTIA Network+"
+      url: "https://www.professormesser.com/network-plus/n10-008/n10-008-training-course/"
+      type: "Video Course"
+      description: "Free comprehensive networking training - perfect complement to OSCC"
+      cost: "Free"
+      
+    - name: "Codecademy Python"
+      url: "https://www.codecademy.com/learn/learn-python-3"
+      type: "Interactive Course"
+      description: "Interactive Python programming for beginners"
+      cost: "Free  + Pro"
+      
+    - name: "Cybrary - CompTIA Security+ Prep"
+      url: "https://www.cybrary.it/course/comptia-security-plus/"
+      type: "Video Course"
+      description: "Security fundamentals aligned with OSCC topics"
+      cost: "Free + Insider Pro"
+      
+    - name: "FreeCodeCamp - Information Security"
+      url: "https://www.freecodecamp.org/learn/information-security/"
+      type: "Course"
+      description: "Free hands-on information security training"
+      cost: "Free"
+  
+  books:
+    - name: "CompTIA Security+ Get Certified Get Ahead"
+      description: "Foundational security concepts for beginners"
+      cost: "$40-$50"
+      
+    - name: "The Basics of Hacking and Penetration Testing"
+      description: "Gentle introduction to pentesting concepts"
+      cost: "$35-$45"
+      
+    - name: "Python Crash Course"
+      description: "Beginner-friendly Python programming book"
+      cost: "$30-$40"
+  
+  videos:
+    - name: "NetworkChuck YouTube"
+      url: "https://www.youtube.com/c/NetworkChuck"
+      description: "Engaging cybersecurity and networking tutorials for beginners"
+      cost: "Free"
+      
+    - name: "Cyber Mentor - Practical Ethical Hacking"
+      url: "https://www.youtube.com/c/TheCyberMentor"
+      description: "Complete beginner pentesting course on YouTube"
+      cost: "Free"
+      
+    - name: "John Hammond"
+      url: "https://www.youtube.com/c/JohnHammond010"
+      description: "CTF challenges and security tutorials"
+      cost: "Free"
+  
+  tools:
+    networking:
+      - "ping, traceroute, nslookup"
+      - "Wireshark (basic packet analysis)"
+      - "nmap (basic scanning)"
+      
+    programming:
+      - "Python 3"
+      - "VS Code"
+      - "Bash/PowerShell"
+      
+    security:
+      - "Kali Linux"
+      - "VirtualBox/VMware"
+  
+  communities:
+    - name: "OffSec Discord - OSCC Channel"
+      url: "https://discord.gg/offsec"
+      description: "Connect with fellow OSCC students and get help"
+      
+    - name: "TryHackMe Discord"
+      url: "https://discord.gg/tryhackme"
+      description: "Beginner-friendly community for learning"
+      
+    - name: "r/learnprogramming"
+      url: "https://reddit.com/r/learnprogramming"
+      description: "Get help with scripting and programming"
+
+
+# ==========================================
+# OSIR - OffSec Incident Responder
+# ==========================================
+OSIR:
+  official:
+    - name: "SOC-200: Security Operations and Defensive Analysis"
+      url: "https://www.offsec.com/courses/soc-200/"
+      type: "Official Course"
+      description: "Official OSIR course with comprehensive SOC and IR training"
+      cost: "Paid"
+      
+  practice_platforms:
+    - name: "Blue Team Labs Online"
+      url: "https://blueteamlabs.online/"
+      type: "Practice Platform"
+      description: "Hands-on defensive security challenges and IR scenarios"
+      difficulty: "Beginner to Advanced"
+      cost: "Free + Premium"
+      recommended_challenges:
+        - "Phishing Analysis"
+        - "Ransomware Attack Investigation"
+        - "Memory Forensics"
+        - "Log Analysis"
+        - "Malware Traffic Analysis"
+      
+    - name: "CyberDefenders"
+      url: "https://cyberdefenders.org/"
+      type: "Practice Platform"
+      description: "Real-world blue team challenges and incident response scenarios"
+      difficulty: "Intermediate to Advanced"
+      cost: "Free"
+      recommended_challenges:
+        - "PacketMaze - Network Forensics"
+        - "DeepBlueCLI - Windows Event Logs"
+        - "DumpMe - Memory Forensics"
+        - "Insider - Threat Hunting"
+      
+    - name: "LetsDefend"
+      url: "https://letsdefend.io/"
+      type: "SOC Simulation"
+      description: "Realistic SOC analyst training with alert investigation"
+      difficulty: "Intermediate"
+      cost: "Free + Premium"
+      
+    - name: "Boss of the SOC (BOTS)"
+      url: "https://www.splunk.com/en_us/blog/conf-splunklive/boss-of-the-soc-scoring-server-questions-and-answers-and-dataset-open-sourced-and-ready-for-download.html"
+      type: "Splunk Challenge"
+      description: "Splunk-based SOC investigation challenges"
+      difficulty: "Intermediate to Advanced"
+      cost: "Free"
+  
+  courses:
+    - name: "Splunk Fundamentals 1 & 2"
+      url: "https://www.splunk.com/en_us/training/free-courses/splunk-fundamentals-1.html"
+      type: "SIEM Training"
+      description: "Free official Splunk training - CRITICAL for OSIR"
+      cost: "Free"
+      
+    - name: "SANS Cyber Aces Tutorials"
+      url: "https://www.cyberaces.org/"
+      type: "Video Course"
+      description: "Free cybersecurity tutorials covering forensics and defensive skills"
+      cost: "Free"
+      
+    - name: "13Cubed YouTube Channel"
+      url: "https://www.youtube.com/c/13cubed"
+      type: "Video Training"
+      description: "Excellent digital forensics and IR tutorials"
+      cost: "Free"
+  
+  books:
+    - name: "Applied Incident Response by Steve Anson"
+      description: "Comprehensive IR methodology and techniques"
+      cost: "$40"
+      url: "https://www.amazon.com/Applied-Incident-Response-Steve-Anson/dp/1119560268"
+      
+    - name: "The Art of Memory Forensics"
+      description: "Deep dive into memory forensics with Volatility"
+      cost: "$50"
+      
+    - name: "Practical Malware Analysis"
+      description: "Malware analysis and reverse engineering"
+      cost: "$40"
+  
+  tools:
+    siem:
+      - "Splunk Enterprise/Free"
+      - "ELK Stack (Elasticsearch, Logstash, Kibana)"
+      - "Graylog"
+      
+    forensics:
+      - "Autopsy"
+      - "FTK Imager"
+      - "Eric Zimmerman Tools Suite"
+      - "Plaso/log2timeline"
+      - "Volatility Framework"
+      - "bulk_extractor"
+      
+    network_analysis:
+      - "Wireshark"
+      - "NetworkMiner"
+      - "Zeek (Bro)"
+      - "tcpdump"
+      
+    endpoint:
+      - "Sysmon"
+      - "Process Hacker"
+      - "Procmon"
+      - "Autoruns"
+      
+    threat_intel:
+      - "MITRE ATT&CK Navigator"
+      - "VirusTotal"
+      - "Hybrid Analysis"
+  
+  communities:
+    - name: "OffSec Discord - OSIR Channel"
+      url: "https://discord.gg/offsec"
+      description: "Connect with SOC-200 students and get IR help"
+      
+    - name: "Blue Team Village Discord"
+      url: "https://discord.gg/blueteamvillage"
+      description: "Defensive security community"
+      
+    - name: "r/BlueTeamSec"
+      url: "https://reddit.com/r/blueteamsec"
+      description: "Blue team and defensive security discussions"
+
+# ==========================================
+# OSEE - Offensive Security Exploitation Expert
+# ==========================================
+OSEE:
+  official:
+    - name: "EXP-401: Advanced Windows Exploitation"
+      url: "https://www.offsec.com/courses/exp-401/"
+      type: "Official Course"
+      description: "The ultimate Windows exploitation course (formerly AWE)"
+      cost: "Paid (Live Training - $8500+)"
+      
+  practice_platforms:
+    - name: "PWNable.kr"
+      url: "https://pwnable.kr/"
+      type: "Exploitation Challenges"
+      description: "Advanced exploitation challenges"
+      difficulty: "Intermediate to Expert"
+      cost: "Free"
+      
+    - name: "Exploit-Exercises"
+      url: "https://exploit.education/"
+      type: "Practice VMs"
+      description: "Protostar, Fusion, and Phoenix VMs for exploitation practice"
+      difficulty: "Intermediate to Advanced"
+      cost: "Free"
+      
+    - name: "HackTheBox - PWN Challenges"
+      url: "https://www.hackthebox.com/"
+      type: "CTF Platform"
+      description: "Binary exploitation and pwn challenges"
+      difficulty: "Advanced to Expert"
+      cost: "Free + VIP"
+      
+    - name: "Pwn.College"
+      url: "https://pwn.college/"
+      type: "Educational Platform"
+      description: "ASU's comprehensive exploitation course"
+      difficulty: "Beginner to Expert"
+      cost: "Free"
+      
+    - name: "Defcon CTF Quals Archive"
+      url: "https://archive.ooo/"
+      type: "CTF Challenges"
+      description: "World-class exploitation challenges"
+      difficulty: "Expert"
+      cost: "Free"
+  
+  tutorials:
+    - name: "Corelan Team Exploit Writing Tutorials"
+      url: "https://www.corelan.be/index.php/2009/07/19/exploit-writing-tutorial-part-1-stack-based-overflows/"
+      type: "Tutorial Series"
+      description: "Legendary in-depth exploit development tutorials"
+      cost: "Free"
+      
+    - name: "FuzzySecurity Windows Exploitation"
+      url: "https://www.fuzzysecurity.com/tutorials.html"
+      type: "Tutorials"
+      description: "Comprehensive Windows exploitation tutorials"
+      cost: "Free"
+      
+    - name: "OSDev.org"
+      url: "https://wiki.osdev.org/Main_Page"
+      type: "Wiki"
+      description: "OS development wiki - essential for kernel exploitation"
+      cost: "Free"
+      
+    - name: "j00ru's Windows Kernel Exploitation"
+      url: "https://j00ru.vexillium.org/"
+      type: "Research Blog"
+      description: "Advanced Windows kernel research and exploitation"
+      cost: "Free"
+  
+  research:
+    - name: "Project Zero Blog"
+      url: "https://googleprojectzero.blogspot.com/"
+      type: "Security Research"
+      description: "Cutting-edge vulnerability research from Google"
+      cost: "Free"
+      
+    - name: "Uninformed Journal"
+      url: "http://www.uninformed.org/"
+      type: "Research Papers"
+      description: "Advanced security research papers"
+      cost: "Free"
+      
+    - name: "OffSec Exploit Database"
+      url: "https://www.exploit-db.com/"
+      type: "Exploit Archive"
+      description: "Public exploit database for research"
+      cost: "Free"
+  
+  books:
+    - name: "Windows Internals (7th Edition)"
+      description: "MANDATORY reading for OSEE - deep Windows architecture"
+      cost: "$60-$80"
+      priority: "Critical"
+      
+    - name: "The Art of Software Security Assessment"
+      description: "Comprehensive vulnerability analysis techniques"
+      cost: "$70"
+      
+    - name: "A Guide to Kernel Exploitation"
+      description: "Advanced kernel exploitation techniques"
+      cost: "$50-$60"
+      
+    - name: "The Shellcoder's Handbook"
+      description: "Classic exploitation reference"
+      cost: "$45"
+  
+  tools:
+    debuggers:
+      - "WinDbg Preview (Critical)"
+      - "x64dbg"
+      - "GDB"
+      
+    disassemblers:
+      - "IDA Pro (expensive but industry standard)"
+      - "Ghidra (free, powerful alternative)"
+      - "Binary Ninja"
+      - "Radare2"
+      
+    development:
+      - "Visual Studio"
+      - "Python 3 + Pwntools"
+      - "ROPgadget"
+      - "Ropper"
+      
+    analysis:
+      - "Process Hacker"
+      - "Process Monitor"
+      - "API Monitor"
+      - "Lighthouse (code coverage)"
+      
+    fuzzing:
+      - "WinAFL"
+      - "AFL++"
+      - "Honggfuzz"
+      - "Custom Python fuzzers"
+  
+  communities:
+    - name: "OffSec Discord - OSEE Channel"
+      url: "https://discord.gg/offsec"
+      description: "Elite exploit developer community"
+      
+    - name: "r/ExploitDev"
+      url: "https://reddit.com/r/ExploitDev"
+      description: "Exploit development discussions"
+      
+    - name: "Exploit Development Twitter Community"
+      description: "Follow researchers like @j00ru, @halvarflake, @fox0x01"
+  
+  note:
+    - "OSEE is EXPERT level - OSED is essentially prerequisite"
+    - "Expect 6-12 months of dedicated study post-OSED"
+    - \"Focus on Windows Internals book and WinDbg mastery"
+    - "Practice kernel debugging extensively"
+
+
+# ==========================================
+# OSMR - OffSec macOS Researcher
+# ==========================================
+OSMR:
+  official:
+    - name: "EXP-312: Advanced macOS Control Bypasses"
+      url: "https://www.offsec.com/courses/exp-312/"
+      type: "Official Course"
+      description: "Advanced macOS security bypasses and privilege escalation"
+      cost: "Paid"
+      
+    - name: "OSMR Exam Guide"
+      url: "https://help.offsec.com/hc/en-us/articles/18858894691220-OSMR-Exam-Guide"
+      type: "Exam Information"
+      description: "Official OSMR exam structure and requirements"
+      cost: "Free"
+
+  notice:
+    title: "⚠️ Important Update"
+    message: "OffSec will discontinue issuing new OSMR certifications starting November 2, 2025. The EXP-312 course remains available, but the certification exam will no longer be offered after this date."
+
+  tools:
+    - name: "LLDB (Low Level Debugger)"
+      url: "https://lldb.llvm.org/"
+      type: "Debugger"
+      description: "Apple's debugger for macOS development and reverse engineering"
+      
+    - name: "Hopper Disassembler"
+      url: "https://www.hopperapp.com/"
+      type: "Reverse Engineering"
+      description: "Disassembler and decompiler for macOS binaries"
+      
+    - name: "Ghidra"
+      url: "https://ghidra-sre.org/"
+      type: "Reverse Engineering"
+      description: "NSA's free reverse engineering framework"
+      
+    - name: "IDA Pro / IDA Free"
+      url: "https://hex-rays.com/ida-pro/"
+      type: "Reverse Engineering"
+      description: "Industry-standard disassembler and debugger"
+      
+    - name: "Frida"
+      url: "https://frida.re/"
+      type: "Dynamic Instrumentation"
+      description: "Dynamic instrumentation toolkit for reverse engineering"
+      
+    - name: "class-dump"
+      url: "https://github.com/nygard/class-dump"
+      type: "Analysis Tool"
+      description: "Utility for examining Objective-C runtime information"
+      
+    - name: "otool"
+      url: "https://www.unix.com/man-page/osx/1/otool/"
+      type: "Binary Analysis"
+      description: "Object file displaying tool (built into macOS)"
+
+  books:
+    - name: "macOS and iOS Internals, Volume I"
+      author: "Jonathan Levin"
+      url: "http://newosxbook.com/MOXiI.pdf"
+      description: "Deep dive into macOS internals and architecture"
+      
+    - name: "macOS and iOS Internals, Volume III"
+      author: "Jonathan Levin"
+      url: "http://newosxbook.com/home.html"
+      description: "Advanced topics in macOS security"
+      
+    - name: "The Mac Hacker's Handbook"
+      author: "Charlie Miller, Dino Dai Zovi"
+      url: "https://www.amazon.com/Mac-Hackers-Handbook-Charlie-Miller/dp/0470395362"
+      description: "Foundational book on macOS exploitation"
+
+  videos:
+    - name: "Black Hat macOS Security Talks"
+      url: "https://www.youtube.com/c/BlackHatOfficialYT"
+      type: "Conference Talks"
+      description: "macOS security research presentations"
+      
+    - name: "Objective-See YouTube Channel"
+      url: "https://www.youtube.com/c/ObjectiveSee"
+      type: "YouTube Channel"
+      description: "macOS security tools and research by Patrick Wardle"
+
+  writeups:
+    - name: "OSMR Review - Atlas Gondal"
+      url: "https://atlasgondal.com/osmr-offsec-macos-researcher-certification-review/"
+      type: "Exam Review"
+      description: "Detailed OSMR exam experience and review covering course content, exam challenges, and tips"
+      
+    - name: "EXP-312 Review - Medium (AppleBois)"
+      url: "https://medium.com/@applebois/offensive-security-macos-researcher-osmr-exp-312-review-4e8b5dbb99be"
+      type: "Course Review"
+      description: "Comprehensive review of the EXP-312 course and OSMR certification journey"
+      
+    - name: "OSMR Journey - Zeyad Azima"
+      url: "https://zeyadazima.com/posts/osmr-journey/"
+      type: "Certification Experience"
+      description: "Personal journey through OSMR certification with preparation insights"
+      
+    - name: "OSMR Review - Medium (Offensive Security Experience)"
+      url: "https://medium.com/@peanutbr/experiencing-osmr-offensive-security-macos-researcher-certification-4cbb8b5a7c99"
+      type: "Exam Experience"
+      description: "First-hand account of the OSMR exam and course experience"
+
+  communities:
+    - name: "OffSec Discord"
+      url: "https://discord.gg/offsec"
+      type: "Community"
+      description: "Official OffSec Discord server"
+      
+    - name: "macOS Security Reddit"
+      url: "https://www.reddit.com/r/macsysadmin/"
+      type: "Forum"
+      description: "macOS system administration and security discussions"
+
+  key_topics:
+    - "macOS Internals and Architecture"
+    - "Debugging and Tracing (LLDB)"
+    - "Shellcoding for macOS (ASM/C)"
+    - "Dylib Injection and Hooking"
+    - "Mach IPC and Mach Injection"
+    - "XPC Service Exploitation"
+    - "Sandbox Escape Techniques"
+    - "TCC (Transparency, Consent, Control) Bypass"
+    - "Symlink and Hardlink Attacks"
+    - "Kernel Code Execution and KEXT Loading"
+
+  prerequisites:
+    - "Strong C programming skills"
+    - "AMD64/ARM assembly knowledge"
+    - "Reverse engineering experience"
+    - "Debugging with LLDB or similar tools"
+    - "Basic macOS user experience"
+    - "Understanding of exploitation fundamentals"
+
+
+# ==========================================
+# General Resources (All Certifications)
+# ==========================================
+general:
+  note_taking:
+    - name: "CherryTree"
+      url: "https://www.giuspen.com/cherrytree/"
+      description: "Hierarchical note-taking application (great for OSCP)"
+      
+    - name: "Obsidian"
+      url: "https://obsidian.md"
+      description: "Markdown-based knowledge management"
+      
+    - name: "Notion"
+      url: "https://www.notion.so"
+      description: "All-in-one workspace for notes and project management"
+      
+    - name: "Joplin"
+      url: "https://joplinapp.org"
+      description: "Open-source note-taking app"
+
+  report_writing:
+    - name: "OffSec Exam Report Templates"
+      url: "https://help.offsec.com/hc/en-us/articles/360046787731-Pen-Testing-Report-Templates"
+      description: "Official exam report templates"
+      
+    - name: "Noraj's OSCP Report Templates"
+      url: "https://github.com/noraj/OSCP-Exam-Report-Template-Markdown"
+      description: "Community-created Markdown report templates"
+
+  study_groups:
+    - name: "OffSec Discord"
+      url: "https://discord.gg/offsec"
+      description: "Official OffSec community"
+      
+    - name: "InfoSec Prep Discord"
+      url: "https://discord.gg/infosecprep"
+      description: "Cybersecurity learning community"
+
+  podcasts:
+    - name: "Darknet Diaries"
+      url: "https://darknetdiaries.com"
+      description: "True stories from the dark side of the Internet"
+      
+    - name: "Security Now"
+      url: "https://twit.tv/shows/security-now"
+      description: "Weekly security news and analysis"
+
+  blogs:
+    - name: "0xdf Hacks Stuff"
+      url: "https://0xdf.gitlab.io"
+      description: "Detailed HTB writeups and tutorials"
+      
+    - name: "Rana Khalil's Blog"
+      url: "https://rana-khalil.gitbook.io/hack-the-box-oscp-preparation/"
+      description: "OSCP preparation guide and HTB writeups"
