@@ -89,7 +89,7 @@ The bot uses **Google Gemini AI** - completely FREE with generous quotas!
 
 Prefer watching instead of reading?  
 Watch full setup guide here:  
-👉 [Full Setup Guide - ](https://youtu.be/oRFpiGiHWl8)
+👉 [Full Setup Guide](https://youtu.be/oRFpiGiHWl8)
 
 ---
 
@@ -242,16 +242,16 @@ python main.py
 **You should see:**
 
 ```
-╔════════════════════════════════════════════════════════════╗
-║                  🎯 TRY-HARDER-AI BOT v2.0.0-gemini        ║
-║             Your Personal OffSec Certification Mentor      ║
-║               Powered by Google Gemini AI 🤖               ║
-║                                                            ║
-║  Supported Certifications : 12                             ║
-║  AI Model                 : gemini-1.5-flash               ║
-║  Context Window           : 1M tokens                      ║
-║  Status                   : Ready to Help You Try Harder! 💪║
-╚════════════════════════════════════════════════════════════╝
+╔═══════════════════════════════════════════════════════════════╗
+║                  🎯 TRY-HARDER-AI BOT v2.0.0-gemini          ║
+║             Your Personal OffSec Certification Mentor         ║
+║               Powered by Google Gemini AI 🤖                 ║
+║                                                               ║
+║  Supported Certifications : 12                                ║
+║  AI Model                 : gemini-1.5-flash                  ║
+║  Context Window           : 1M tokens                         ║
+║  Status                   : Ready to Help You Try Harder! 💪 ║
+╚═══════════════════════════════════════════════════════════════╝
 
 🔥 FREE Tier Active:
    • Gemini 1.5 Flash : 15 requests/minute
@@ -509,6 +509,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 _Last Updated: February 16, 2026_  
 _Version: 2.0.0-gemini_  
 _Powered by: Google Gemini AI (FREE Tier)_
+
 
 
 
