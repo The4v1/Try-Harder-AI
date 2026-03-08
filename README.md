@@ -1,6 +1,6 @@
 # 🎯 Try-Harder-AI Discord Bot
 
-> **Your Personal OffSec Certification Mentor - Powered by Google Gemini AI (100% FREE!)**
+> **Your Personal OffSec Certification Mentor - Built for the OffSec community (100% FREE!)**
 
 [![Python Version](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 [![Discord.py](https://img.shields.io/badge/discord.py-2.3+-blue.svg)](https://github.com/Rapptz/discord.py)
@@ -509,6 +509,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 _Last Updated: February 16, 2026_  
 _Version: 2.0.0-gemini_  
 _Powered by: Google Gemini AI (FREE Tier)_
+
 
 
 
